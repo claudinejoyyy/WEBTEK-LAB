@@ -1,21 +1,88 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript" src="scripts.js"></script>
     </head>
+    <link rel="stylesheet" type="text/css" href="layout.css">
+    <script type="text/javascript" src="scripts.js"></script>
     <body>
+        <div id="id01"></div>
 
-    Activity:
-    <select name="activities" onchange="getApparatus(this.value)">
-        <option selected disabled>Choose here</option>
-        <option value="Activity 1">Activity 1</option>
-        <option value="Activity 2">Activity 2</option>
-        <option value="Activity 3">Activity 3</option>
-    </select>
-        
-    <br><br>
-        
-    <table id="apparatus">
-    </table>
+        Activity:
+        <select name="activities" onchange="getApparatus(this.value)">
+            <option selected disabled>Choose here</option>
+            <option value="Activity 1">Activity 1</option>
+            <option value="Activity 2">Activity 2</option>
+            <option value="Activity 3">Activity 3</option>
+        </select>
+        <br><br>
+
+        <table id="apparatus"></table>
+        <div id = "data">
+            <h2>Add/Update Borrow Form</h2>
+            <form id = "person">
+                Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
+                <br><br>
+
+                Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "text">
+                <br><br>
+                Instructor: &nbsp;&nbsp;
+                <select id = "instructor" name = "instructor">
+                    <option>Instructor 1</option>
+                    <option>Instructor 2</option>
+                    <option>Instructor 3</option>
+                </select>
+                <br><br>
+
+                Activity:
+                <select name="activities" onchange="getApparatus(this.value)">
+                    <option selected disabled>Choose here</option>
+                    <option value="Activity 1">Activity 1</option>
+                    <option value="Activity 2">Activity 2</option>
+                    <option value="Activity 3">Activity 3</option>
+                </select>
+                <br><br>
+                <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
+                <input id = "button" type = "button" value = " Add " onclick = "addData()">
+                <input id = "button" type = "button" value = " Update ">
+            </form>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <h3>Currently Borrowed</h3>
+                    <div id = "tab">
+                        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
+                            <thead>
+                                <tr>
+                                    <td>Borrower</td>
+                                    <td>Group Number</td>
+                                    <td>Instructor</td>
+                                    <td>Borrowed Apparatus</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="six columns">
+                    <h3>Returned</h3>
+                    <div id = "tab">
+                        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
+                            <thead>
+                                <tr>
+                                    <td>Borrower</td>
+                                    <td>Group Number</td>
+                                    <td>Instructor</td>
+                                    <td>Borrowed Apparatus</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
