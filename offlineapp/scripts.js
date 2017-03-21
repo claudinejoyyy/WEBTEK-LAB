@@ -92,3 +92,46 @@ function dragstart(e) {
     source = e.target;
     e.dataTransfer.effectAllowed = 'move';
 }
+
+if (typeof (Storage) !== "undefined") {
+
+    var person = {
+        "firstName": "Shravan Kumar",
+        "lastName": "Kasagoni",
+        "age": "25",
+        "mobileNumber": "1234567890"
+    };
+
+    localStorage.setItem('person', person);
+}
+else {
+    alert("Sorry, your browser does not support web storage...");
+}
+
+//Still in development
+
+// function setManual(manual){
+//     var xmlhttp = new XMLHttpRequest();
+//     var url = manual+".json";
+
+//     xmlhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             var arr = JSON.parse(this.responseText);
+//             // displayApparatus(myArr, getApparatus);
+//             var out = "<th>Apparatus</th>";
+//             var i;
+//             var j;
+
+//             for(i = 0; i < arr.length; i++) {
+//                 if(arr[i].activity === activity){
+//                 for (j = 0; j < arr[i].apparatus.length; j++) {
+//                         out += '<tr><td>' + arr[i].apparatus[j]+ '</td></tr>'
+//                     }
+//                 }
+//             }
+//                 document.getElementById("apparatus").innerHTML = out;
+//         }
+//     };
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send();
+// }

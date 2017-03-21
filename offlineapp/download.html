@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title>Download Manual</title>
+		<link rel="stylesheet" href="layout.css">
+	</head>
+	<body>
+		<h3>Download manual</h3>
+		<form action="">
+			<select name="manuals" onchange="setManual(this.value)">
+            <option selected disabled>Choose here</option>
+            <option value="manual1">Manual 1</option>
+            <option value="manual2">Manual 2</option>
+            </select>
+		</form>
+		<button onclick="downloadManual()">Download</button>
+	</body>
+</html>
