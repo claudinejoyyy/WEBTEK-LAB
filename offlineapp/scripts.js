@@ -40,8 +40,19 @@ function addData() {
         var tbody = document.querySelector("#list tbody");
         var tr = document.createElement("tr");
 
+        //make table row draggable
+        tr.setAttribute("draggable", "true");
+        tr.setAttribute("ondragenter", "dragenter(event)");
+        tr.setAttribute("ondragstart", "dragstart(event)");
+
         tr.innerHTML = rows;
-        tbody.appendChild(tr)
+        var emptyRow;
+        for(var i = 0; i < 4; i++){
+        	emptyRow += "<td></td>"
+        }
+        tbody.appendChild(tr);
+        tr = emptyRow;
+        tbody.appendchild(tr);
 
         //
     }
@@ -49,4 +60,35 @@ function addData() {
 
 function resetForm() {
     document.getElementById("person").reset();
+}
+
+var source;
+
+function isbefore(a, b) {
+    if (a.parentNode == b.parentNode) {
+        for (var cur = a; cur; cur = cur.previousSibling) {
+            if (cur === b) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+function dragenter(e) {
+    var targetelem = e.target;
+    if (targetelem.nodeName == "TD") {
+       targetelem = targetelem.parentNode;   
+    }  
+
+    if (isbefore(source, targetelem)) {
+        targetelem.parentNode.insertBefore(source, targetelem);
+    } else {
+        targetelem.parentNode.insertBefore(source, targetelem.nextSibling);
+    }
+}
+
+function dragstart(e) {
+    source = e.target;
+    e.dataTransfer.effectAllowed = 'move';
 }

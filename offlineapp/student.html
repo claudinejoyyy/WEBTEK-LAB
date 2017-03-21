@@ -9,40 +9,36 @@
         <div class="container">
             <div class="row">
                 <div id = "data">
-            <h2>Add/Update Borrow Form</h2>
-            <form id = "person">
-                Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
-                <br><br>
-
-                Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "text">
-                <br><br>
-                Instructor: &nbsp;&nbsp;
-                <select id = "instructor" name = "instructor">
-                    <option>Instructor 1</option>
-                    <option>Instructor 2</option>
-                    <option>Instructor 3</option>
-                </select>
-                <br><br>
-
-                Activity:
-                <select name="activities" onchange="getApparatus(this.value)">
-                    <option selected disabled>Choose here</option>
-                    <option value="Activity 1">Activity 1</option>
-                    <option value="Activity 2">Activity 2</option>
-                    <option value="Activity 3">Activity 3</option>
-                </select>
-                <br><br>
-                <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
-                <input id = "button" type = "button" value = " Add " onclick = "addData()">
-                <input id = "button" type = "button" value = " Update ">
-            </form>
-        </div>
+                    <h2>Add/Update Borrow Form</h2>
+                    <form id = "person">
+                        Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
+                        <br><br>
+                        Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "text">
+                        <br><br>
+                        Instructor: &nbsp;&nbsp;
+                        <select id = "instructor" name = "instructor">
+                            <option>Instructor 1</option>
+                            <option>Instructor 2</option>
+                            <option>Instructor 3</option>
+                        </select>
+                        <br><br>
+                        Activity:
+                        <select name="activities" onchange="getApparatus(this.value)">
+                            <option selected disabled>Choose here</option>
+                            <option value="Activity 1">Activity 1</option>
+                            <option value="Activity 2">Activity 2</option>
+                            <option value="Activity 3">Activity 3</option>
+                        </select>
+                        <br><br>
+                        <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
+                        <input id = "button" type = "button" value = " Add " onclick = "addData()">
+                        <input id = "button" type = "button" value = " Update ">
+                    </form>
+                </div>
             </div>
         </div>
         <br><br>
-
         <table id="apparatus"></table>
-        
         <div class="container">
             <div class="row">
                 <div class="six columns">
@@ -55,8 +51,18 @@
                                     <td>Group Number</td>
                                     <td>Instructor</td>
                                     <td>Borrowed Apparatus</td>
+                                    <td>Remarks</td>
+                                    <td>Actions</td>
                                 </tr>
                             </thead>
+                            <tr draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                            </tr>
                             <tbody>
                             </tbody>
                         </table>
@@ -72,6 +78,12 @@
                                     <td>Group Number</td>
                                     <td>Instructor</td>
                                     <td>Borrowed Apparatus</td>
+                                </tr>
+                                <tr draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                             </thead>
                             <tbody>
