@@ -1,0 +1,22 @@
+[
+{
+"username": "custodianA",
+"password" : "physics"
+}
+{
+"username": "custodianB",
+"password" : "chemistry"
+}
+{
+"username": "custodianC",
+"password" : "biology"
+}
+{
+"username": "custodianD",
+"password" : "zoology"
+}
+{
+"username": "custodianE",
+"password" : "botany"
+}
+]
