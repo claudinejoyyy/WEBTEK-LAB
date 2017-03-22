@@ -111,7 +111,8 @@ else {
 //Still in development
 
 function setManual(manual){
-        document.getElementById("download").setAttribute('onclick', ("downloadManual('"+manual+"')"));
+        document.getElementById("download").setAttribute('onclick', "downloadManual('"+manual+"')");
+        //.onclick =  "downloadManual('"+manual+"')"
 }
 
 function downloadManual(manual){
@@ -123,9 +124,10 @@ function downloadManual(manual){
             var arr = JSON.parse(this.responseText);
             var i;
 
-            for(i = 0; i<arr.length; i++){
-                localStorage.setItem('Activity'+(i+1), JSON.stringify(arr[i]));
-            }
+            // for(i = 0; i<arr.length; i++){
+            //     // localStorage.setItem('Activity'+(i+1), JSON.stringify(arr[i]));
+            // }
+            localStorage.setItem('Manual', JSON.stringify(arr))
             alert('Manual downloaded!');
         }
     };
