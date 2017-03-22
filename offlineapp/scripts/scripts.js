@@ -111,25 +111,22 @@ else {
 //Still in development
 
 function setManual(manual){
+        document.getElementById("download").setAttribute('onclick', ("downloadManual('"+manual+"')"));
+}
+
+function downloadManual(manual){
     var xmlhttp = new XMLHttpRequest();
     var url = "../json/"+manual+".json";
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
             var arr = JSON.parse(this.responseText);
-            // displayApparatus(myArr, getApparatus);
-            var out = "<th>Apparatus</th>";
             var i;
-            var j;
 
-            for(i = 0; i < arr.length; i++) {
-                if(arr[i].activity === activity){
-                for (j = 0; j < arr[i].apparatus.length; j++) {
-                        out += '<tr><td>' + arr[i].apparatus[j]+ '</td></tr>'
-                    }
-                }
+            for(i = 0; i<arr.length; i++){
+                localStorage.setItem('Activity'+(i+1), JSON.stringify(arr[i]));
             }
-                document.getElementById("apparatus").innerHTML = out;
+            alert('Manual downloaded!');
         }
     };
     xmlhttp.open("GET", url, true);
