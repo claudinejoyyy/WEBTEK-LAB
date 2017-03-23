@@ -22,12 +22,20 @@
                             <option>Instructor 3</option>
                         </select>
                         <br><br>
-                        Activity:
-                        <select name="activities" onchange="getApparatus(this.value)">
+                        Manual:
+                        <select name="manuals" onchange="setActivities(this.value)" id="manual">
                             <option selected disabled>Choose here</option>
-                            <option value="Activity 1">Activity 1</option>
+                            <option value="Manual">Manual</option>
+                            <!-- <option value="Activity 2">Activity 2</option>
+                            <option value="Activity 3">Activity 3</option> -->
+                        </select>
+                        <br><br>
+                        Activity:
+                        <select name="activities" onchange="getApparatus(this.value)" id="activities">
+                            <option selected disabled>Choose here</option>
+                            <!-- <option value="Activity 1">Activity 1</option>
                             <option value="Activity 2">Activity 2</option>
-                            <option value="Activity 3">Activity 3</option>
+                            <option value="Activity 3">Activity 3</option> -->
                         </select>
                         <br><br>
                         <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;

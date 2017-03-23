@@ -1,3 +1,6 @@
+var a;
+var b;
+
 function getApparatus(activity){
 	var xmlhttp = new XMLHttpRequest();
 	var url = "../json/activities.json";
@@ -123,14 +126,27 @@ function downloadManual(manual){
         if (this.readyState == 4 && this.status == 200) {
             var arr = JSON.parse(this.responseText);
             var i;
-
-            // for(i = 0; i<arr.length; i++){
-            //     // localStorage.setItem('Activity'+(i+1), JSON.stringify(arr[i]));
-            // }
+            
             localStorage.setItem('Manual', JSON.stringify(arr))
             alert('Manual downloaded!');
+            a = JSON.parse(localStorage.getItem('Manual'));
+            var select = document.getElementById("manual");
+            // select.options[select.options.length] = new Option(a, i);
         }
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+}
+
+function setActivities(manual){
+    a = JSON.parse(localStorage.getItem(manual));
+    b = a.chapters;
+
+    for(i = 1; i <= Object.keys(b).length; i++) {
+            var x = document.getElementById("activities");
+            var option = document.createElement("option");
+            option.text = b[i].activityName;
+            option.setAttribute("value", b[i].activityName);
+            x.add(option);
+        }
 }
