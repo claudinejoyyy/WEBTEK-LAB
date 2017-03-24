@@ -1,0 +1,5 @@
+addtoTable (store to global variable then use sync())
+	- borrowed
+	- returned
+sync()
+dynamic adding to options in select (in student form and possibly download page)

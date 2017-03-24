@@ -1,6 +1,8 @@
 var a;
 var b;
-
+var borrowed = {};
+var returned = {};
+// localStorage.setItem('borrowed', borrowed)
 function getApparatus(activity){
 	var xmlhttp = new XMLHttpRequest();
 	var url = "../json/activities.json";
@@ -26,7 +28,9 @@ function getApparatus(activity){
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send();
 }
+
 function addData() {
+    alert('Added to borrowed table');
     var x = document.getElementById("groupno").value;
     var y = document.getElementById("name").value;
     var letters = '/^[a-zA-Z]+$/';
@@ -37,9 +41,15 @@ function addData() {
         var name = document.getElementById("name").value;
         var groupno = document.getElementById("groupno").value;
         var instructor = document.getElementById("instructor").value;
-        var apparatus = document.getElementById("apparatus").value;
-
-        rows += "<td>" + name + "</td><td>" + groupno + "</td><td>" + instructor + "</td><td>" + apparatus + "</td>";
+        var apparatus = "<ul>";
+        for(var c = 0; c < Object.keys(b).length; c++){
+            apparatus += "<li>"+b[1].apparatus[c]+"</li>";
+        }
+        apparatus += "</ul>";
+        // var remarks = document.getElementById("apparatus").value;
+        rows += "<td>" + name + "</td><td>" + groupno + "</td><td>" + instructor + "</td><td>" + apparatus + "</td>"
+        +"<td></td>"+"<td><button class='button' onclick='alert()'>Add Remark/s</button><br>"+
+        "<button class='button' onclick='alert()'>Return</button></td>";
         var tbody = document.querySelector("#list tbody");
         var tr = document.createElement("tr");
 
@@ -98,14 +108,14 @@ function dragstart(e) {
 
 if (typeof (Storage) !== "undefined") {
 
-    var person = {
-        "firstName": "Shravan Kumar",
-        "lastName": "Kasagoni",
-        "age": "25",
-        "mobileNumber": "1234567890"
-    };
+    // var person = {
+    //     "firstName": "Shravan Kumar",
+    //     "lastName": "Kasagoni",
+    //     "age": "25",
+    //     "mobileNumber": "1234567890"
+    // };
 
-    localStorage.setItem('person', person);
+    // localStorage.setItem('person', person);
 }
 else {
     alert("Sorry, your browser does not support web storage...");

@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="styles/layout.css">
-</head>
-<body>
-
-<!-- Trigger/Open The Modal -->
-<button id="DR">Daily Report</button><br>
-<button id="RN">Return</button><br>
-<button id="BR">Borrow</button><br>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <a href="pages/student.html"> Student </a>
-    <br><br>
-    <a href="pages/instructor.html"> Instructor </a>
-  </div>
-
-</div>
-<a href="pages/download.html">Download Manual</a>
-<script src = "scripts/login.js">
-</script>
-
-</body>
+   <head>
+      <link rel="stylesheet" type="text/css" href="styles/layout.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="twelve columns">
+               <div class="nav">
+               </div>
+               <!-- Trigger/Open The Modal -->
+               <a class="button" id="DR">Daily Report</a>
+               <a class="button" id="RN">Return</a>
+               <a class="button"  id="BR">Borrow</a>
+               <a class="button" href="pages/download.html">Download Manual</a>
+            </div>
+         </div>
+      </div>
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <a href="pages/student.html"> Student </a>
+            <br><br>
+            <a href="pages/instructor.html"> Instructor </a>
+         </div>
+      </div>
+      <script src = "scripts/login.js"></script>
+   </body>
 </html>
