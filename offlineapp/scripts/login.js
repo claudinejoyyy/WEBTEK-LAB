@@ -26,6 +26,7 @@ function validate(username, password)
     xmlhttp.open("GET", url, true);
     xmlhttp.send();    
   }
+<<<<<<< HEAD
 
 //   // Get the modal
 // var modal = document.getElementById('myModal');
@@ -52,3 +53,5 @@ function validate(username, password)
 //         modal.style.display = "none";
 //     }
 // }
+=======
+>>>>>>> c8679272a7796a016bb6daa1eb22641dc2052214
