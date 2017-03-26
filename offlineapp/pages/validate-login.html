@@ -3,21 +3,23 @@
 <head>
   <title> validator </title>
   <script src = "../scripts/login.js"></script>
+  <link rel="stylesheet" type="text/css" href="../styles/login.css">
 </head>
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="twelve columns">
-				<form>
-			      	<input type="text" placeholder="Username" id="username"/>
-			      	<br>
-			      	<input type="password" placeholder="Password" id="password"/>
-			      	<br>
-			      	<input type="button" value="Login"  onclick="validate()" />
-			  	</form>
-			</div>
+			<div class="twelve columns"></div>
 		</div>
 	</div>
-  
+	<div class="login-header">
+		<div>i<span>Borrow</span></div>
+	</div>
+	<form>
+		<input type="text" placeholder="Username" id="username"/>
+		<br>
+		<input type="password" placeholder="Password" id="password"/>
+		<br>
+		<input type="button" value="Login"  onclick="validate()" />
+	</form>  
 </body>
 </html>
