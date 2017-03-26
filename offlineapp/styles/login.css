@@ -18,7 +18,7 @@ body{
   height: auto;
   background-image: url(../images/login-background.jpg);
   background-size: cover;
-  -webkit-filter: blur(2px);
+  -webkit-filter: blur(3px);
   z-index: 0;
 }
 
@@ -134,4 +134,30 @@ form input[type=button]:focus{
 
 ::-moz-input-placeholder{
    color: rgba(255,255,255,0.6);
+}
+
+/* Mobile first queries */
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+  .container {
+    width: auto;
+    float: none;
+  }
+}
+
+/* Larger than phablet */
+@media (min-width: 550px) {
+  .container {
+    width: auto;
+    float: none;
+  }
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .container {
+    width: auto;
+    float: none;
+  }
 }
