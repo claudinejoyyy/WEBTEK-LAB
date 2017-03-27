@@ -1,8 +1,13 @@
 var a;
 var b;
-var borrowed = {};
-var returned = {};
-// localStorage.setItem('borrowed', borrowed)
+var borrowers = [];
+var returnees = [];
+var borrower;
+var returnee;
+function sync(){
+    localStorage.setItem('Borrowers', JSON.stringify(borrowers));
+    localStorage.setItem('Returnees', JSON.stringify(returnees));
+}
 function getApparatus(activity){
 	var xmlhttp = new XMLHttpRequest();
 	var url = "../json/activities.json";
@@ -10,7 +15,6 @@ function getApparatus(activity){
 	xmlhttp.onreadystatechange = function() {
 	    if (this.readyState == 4 && this.status == 200) {
 	        var arr = JSON.parse(this.responseText);
-	        // displayApparatus(myArr, getApparatus);
 	        var out = "<th>Apparatus</th>";
 		    var i;
 		    var j;
@@ -41,11 +45,27 @@ function addData() {
         var name = document.getElementById("name").value;
         var groupno = document.getElementById("groupno").value;
         var instructor = document.getElementById("instructor").value;
+        var activity = document.getElementById("activities").value;
+        var borrowedApparatus= "";
         var apparatus = "<ul>";
-        for(var c = 0; c < Object.keys(b).length; c++){
-            apparatus += "<li>"+b[1].apparatus[c]+"</li>";
+
+        for(var cc = 1; cc<=Object.keys(b).length; cc++){
+            if(b[cc].activityName == activity){
+                for(var c = 0; c < Object.keys(b[cc].apparatus).length; c++){
+                    borrowedApparatus += b[cc].apparatus[c];
+                    apparatus += "<li>"+b[cc].apparatus[c]+"</li>";
+                }
+            }
         }
+        
         apparatus += "</ul>";
+
+        borrower = {name:name, groupNumber:groupno, instructor:instructor, 
+                        borrowedApparatus:borrowedApparatus};  
+        borrowers.push(borrower);
+        // alert(borrower)
+        sync();
+
         // var remarks = document.getElementById("apparatus").value;
         rows += "<td>" + name + "</td><td>" + groupno + "</td><td>" + instructor + "</td><td>" + apparatus + "</td>"
         +"<td></td>"+"<td><button class='button' onclick='alert()'>Add Remark/s</button><br>"+
@@ -64,8 +84,8 @@ function addData() {
         	emptyRow += "<td></td>"
         }
         tbody.appendChild(tr);
-        tr = emptyRow;
-        tbody.appendchild(tr);
+        // tr = emptyRow;
+        // tbody.appendChild(tr);
 
         //
     }
@@ -161,28 +181,3 @@ function setActivities(manual){
         }
 }
 
-  // Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("BR");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
