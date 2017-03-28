@@ -16,6 +16,10 @@ function validate(){
         }
             
         if (flag === true) {
+          var sessionTimeout = 1; //hours
+          var loginDuration = new Date();
+          loginDuration.setTime(loginDuration.getTime()+(sessionTimeout*60*60*1000));
+          document.cookie = "session=Valid; "+loginDuration.toGMTString()+"; path=/";
           location.href = "../index.html";
         }else{
           alert("Invalid login. Please try again.")
