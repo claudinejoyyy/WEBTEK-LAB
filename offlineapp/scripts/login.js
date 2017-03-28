@@ -16,7 +16,6 @@ function validate(){
         }
             
         if (flag === true) {
-          alert("Validation success! Welcome "+username);
           location.href = "../index.html";
         }else{
           alert("Invalid login. Please try again.")
