@@ -138,67 +138,72 @@ form input[type=button]:focus{
 @media screen and (min-width: 768px) {
 
   .container{
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background-image: url(../images/login-background.jpg);
-  background-size: cover;
-  -webkit-filter: blur(2px);
-  z-index: 0;
+    margin-right: 0%;
+    margin-left: -40%;
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position:center;
+    background-image: url(../images/login-background.jpg);
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    z-index: 0;
   }
 
   .row{
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-  z-index: 1;
-  opacity: 0.7;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+    opacity: 0.7;
   }
 
   .login-header{
-  position: absolute;
-  top: calc(50% - 35px);
-  left: calc(50% - 255px);
-  z-index: 2;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 255px);
+    z-index: 2;
   }
 }
 
 @media screen and (max-width: 768px) {
-
   .container{
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background-image: url(../images/login-background.jpg);
-  background-size: cover;
-  -webkit-filter: blur(2px);
-  z-index: 0;
+    margin-right: 5%;
+    margin-left: -40%;
+    position: fixed;
+    width: auto;
+    height: auto;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position:center;
+    background-image: url(../images/login-background.jpg);
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    z-index: 0;
   }
 
   .row{
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-  z-index: 1;
-  opacity: 0.7;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+    opacity: 0.7;
   }
 
   .login-header{
@@ -263,6 +268,35 @@ form input[type=button]{
 }
 
 @media screen and (max-width: 571px) {
+  .container{
+    margin-left: -100%;
+    margin-right: 10%;
+    width: auto;
+    height: auto;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position:center;
+    background-image: url(../images/login-background.jpg);
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    z-index: 0;
+  }
+
+  .row{
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+    opacity: 0.7;
+  }
+
   .login-header{
   position: fixed;
   top: calc(30% - 35px);
@@ -323,33 +357,34 @@ form input[type=button]{
 }
 }
 
-@media screen and (max-width: 290px) {
-
+@media screen and (max-width: 295px) {
   .container{
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background-image: url(../images/login-background.jpg);
-  background-size: cover;
-  -webkit-filter: blur(2px);
-  z-index: 0;
+    margin-right: 10%;
+    margin-left: -120%;
+    width: auto;
+    height: auto;
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-position:center;
+    background-image: url(../images/login-background.jpg);
+    background-size: cover;
+    -webkit-filter: blur(2px);
+    z-index: 0;
   }
 
   .row{
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  right: -40px;
-  bottom: -40px;
-  width: auto;
-  height: auto;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
-  z-index: 1;
-  opacity: 0.7;
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+    opacity: 0.7;
   }
 
   .login-header{
