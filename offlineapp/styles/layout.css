@@ -263,20 +263,16 @@ ol
   display: table;
   clear: both; }
 
-
-
-
-
-
-
-
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     /*width: 40%;
     height: 10vh;*/
     background-color: white;
+    
+}
+.row .card{
+  margin-bottom: 5000px;
 }
 .entry{
   overflow-y: auto;
@@ -286,3 +282,20 @@ ol
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+.entry {
+        margin-bottom: 25px;
+    }
+    .row {
+      display: flex; /* equal height of the children */
+    }
+
+    .columns {
+      flex: 1; /* additionally, equal width */
+    }
+    #div {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    height: 100vh;
+    }

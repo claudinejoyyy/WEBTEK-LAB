@@ -3,7 +3,40 @@
     <head>
     </head>
     <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-    <script defer type="text/javascript" src="../scripts/scripts.js"></script>
+    <script type="text/javascript" src="../scripts/scripts.js"></script>
+//     <script type="text/javascript">
+//     function allowDrop(ev) {
+//     ev.preventDefault();
+// }
+
+// function drag(ev) {
+//     ev.dataTransfer.setData("text", ev.target.id);
+// }
+
+// function drop(ev) {
+//     ev.preventDefault();
+//     var data = ev.dataTransfer.getData("text");
+//     ev.target.appendChild(document.getElementById(data));
+// }</script>
+    <style>
+    .entry {
+        margin-bottom: 25px;
+    }
+    .row {
+      display: flex; /* equal height of the children */
+    }
+
+    .columns {
+      flex: 1; /* additionally, equal width */
+    }
+    #div {
+    width: 350px;
+    height: 70px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+    height: 100vh;
+    }
+    </style>
     <body>
         <div id="id01"></div>
         <div class="container">
@@ -12,6 +45,8 @@
                     <h2>Add/Update Borrow Form</h2>
                     <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a href="../pages/download.html" target="_blank">here.</a></h6>
                     <form id = "person">
+                        ID Number: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
+                        <br><br>
                         Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
                         <br><br>
                         Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "text">
@@ -47,76 +82,15 @@
             </div>
         </div>
         <br><br>
-        <table id="apparatus"></table>
-        <!-- <div class="container">
-            <div class="row">
-                <div class="ten columns">
-                    <h3>Currently Borrowed</h3>
-                    <div id = "tab">
-                        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
-                            <thead>
-                                <tr>
-                                    <td>Borrower</td>
-                                    <td>Group Number</td>
-                                    <td>Instructor</td>
-                                    <td>Borrowed Apparatus</td>
-                                    <td>Remarks</td>
-                                    <td>Actions</td>
-                                </tr>
-                            </thead>
-                            <tr draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                            </tr>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>    
-                </div>
-                <div class="row">
-                    <div class="ten columns">
-                    <h3>Returned</h3>
-                    <div id = "tab">
-                        <table id = "list" cellspacing = "0px" cellpadding = "20px" text-align = "center">
-                            <thead>
-                                <tr>
-                                    <td>Borrower</td>
-                                    <td>Group Number</td>
-                                    <td>Instructor</td>
-                                    <td>Borrowed Apparatus</td>
-                                    <td>Remarks</td>
-                                    <td>Actions</td>
-                                </tr>
-                                <tr draggable="true" ondragenter="dragenter(event)" ondragstart="dragstart(event)">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <br><br>
         <div class="container">
             <div class="row">
                 <div class="six columns"><h3>Borrowed</h3><hr></div>
                 <div class="six columns"><h3>Returned</h3><hr></div>
             </div>
-            <div class="row card">
-                <!-- <h3>Borrowed</h3> -->
-                <div class="six columns entry">
+            <div class="row">
+                <!-- Borrowed Column -->
+                <div class="six columns entry" id="borrowed">
+                    <div id="div1"class="row card entry" src="img_logo.gif" draggable="true" ondragstart="drag(event)">
                     Name:
                     <br>
                     ID No.:
@@ -124,16 +98,49 @@
                     Grp. No.:
                     <br>
                     Apparatus Borrowed:
+                    </div>
+
+                    <div id="div1" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
+                        Name:
+                    <br>
+                    ID No.:
+                    <br>
+                    Grp. No.:
+                    <br>
+                    Apparatus Borrowed:
+                    </div>
+                    <div id="div2" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
+                        Name:
+                    <br>
+                    ID No.:
+                    <br>
+                    Grp. No.:
+                    <br>
+                    Apparatus Borrowed:
+                    </div>
+                    <div id="div3" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
+                        Name:
+                    <br>
+                    ID No.:
+                    <br>
+                    Grp. No.:
+                    <br>
+                    Apparatus Borrowed:
+                    </div>
+                    <div id="div4" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
+                        Name:
+                    <br>
+                    ID No.:
+                    <br>
+                    Grp. No.:
+                    <br>
+                    Apparatus Borrowed:
+                    </div>
+                    
                 </div>
-                <!-- <h3>Returned</h3> -->
-                <div class="six columns entry">
-                    Name:
-                    <br>
-                    ID No.:
-                    <br>
-                    Grp. No.:
-                    <br>
-                    Apparatus Borrowed:
+                
+                <!-- Returned Column -->
+                <div class="six columns entry" id="div" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
             </div>
         </div>
