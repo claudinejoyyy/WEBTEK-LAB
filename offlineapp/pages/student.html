@@ -3,40 +3,9 @@
     <head>
     </head>
     <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-    <script type="text/javascript" src="../scripts/scripts.js"></script>
-//     <script type="text/javascript">
-//     function allowDrop(ev) {
-//     ev.preventDefault();
-// }
-
-// function drag(ev) {
-//     ev.dataTransfer.setData("text", ev.target.id);
-// }
-
-// function drop(ev) {
-//     ev.preventDefault();
-//     var data = ev.dataTransfer.getData("text");
-//     ev.target.appendChild(document.getElementById(data));
-// }</script>
-    <style>
-    .entry {
-        margin-bottom: 25px;
-    }
-    .row {
-      display: flex; /* equal height of the children */
-    }
-
-    .columns {
-      flex: 1; /* additionally, equal width */
-    }
-    #div {
-    width: 350px;
-    height: 70px;
-    padding: 10px;
-    border: 1px solid #aaaaaa;
-    height: 100vh;
-    }
-    </style>
+    <script defer type="text/javascript" src="../scripts/scripts.js"></script>
+   
+    
     <body>
         <div id="id01"></div>
         <div class="container">
@@ -45,7 +14,7 @@
                     <h2>Add/Update Borrow Form</h2>
                     <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a href="../pages/download.html" target="_blank">here.</a></h6>
                     <form id = "person">
-                        ID Number: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
+                        ID Number: &nbsp;&nbsp;<input id = "idno" name = "name" type = "text">
                         <br><br>
                         Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
                         <br><br>
@@ -61,7 +30,7 @@
                         Manual:
                         <select name="manuals" onchange="setActivities(this.value)" id="manual">
                             <option selected disabled>Choose here</option>
-                            <option value="Manual">Manual</option>
+                            <!-- <option value="Manual">Manual</option> -->
                             <!-- <option value="Activity 2">Activity 2</option>
                             <option value="Activity 3">Activity 3</option> -->
                         </select>
@@ -90,17 +59,7 @@
             <div class="row">
                 <!-- Borrowed Column -->
                 <div class="six columns entry" id="borrowed">
-                    <div id="div1"class="row card entry" src="img_logo.gif" draggable="true" ondragstart="drag(event)">
-                    Name:
-                    <br>
-                    ID No.:
-                    <br>
-                    Grp. No.:
-                    <br>
-                    Apparatus Borrowed:
-                    </div>
-
-                    <div id="div1" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
+                    <!-- <div id="div4" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
                         Name:
                     <br>
                     ID No.:
@@ -108,34 +67,7 @@
                     Grp. No.:
                     <br>
                     Apparatus Borrowed:
-                    </div>
-                    <div id="div2" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
-                        Name:
-                    <br>
-                    ID No.:
-                    <br>
-                    Grp. No.:
-                    <br>
-                    Apparatus Borrowed:
-                    </div>
-                    <div id="div3" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
-                        Name:
-                    <br>
-                    ID No.:
-                    <br>
-                    Grp. No.:
-                    <br>
-                    Apparatus Borrowed:
-                    </div>
-                    <div id="div4" class="row card entry"  src="img_logo.gif" draggable="true" ondragstart="drag(event)">
-                        Name:
-                    <br>
-                    ID No.:
-                    <br>
-                    Grp. No.:
-                    <br>
-                    Apparatus Borrowed:
-                    </div>
+                    </div> -->
                     
                 </div>
                 

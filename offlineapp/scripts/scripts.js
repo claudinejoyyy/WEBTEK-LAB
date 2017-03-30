@@ -35,6 +35,10 @@ function getApparatus(activity) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
+function getApparatus(activity){
+    var manual = JSON.parse(localStorage.getItem('Manual'));
+    var apparatus = manual
+}
 
 function addData() {
     alert('Added to borrowed table');
@@ -45,9 +49,10 @@ function addData() {
         alert("Wrong Value Entered");
     } else {
         var rows = "";
-        var name = document.getElementById("name").value;
-        var groupno = document.getElementById("groupno").value;
-        var instructor = document.getElementById("instructor").value;
+        var idno = "ID No.: "+document.getElementById("idno").value;
+        var name = "Name: "+document.getElementById("name").value;
+        var groupno = "Group: "+document.getElementById("groupno").value;
+        var instructor = "Instructor: "+document.getElementById("instructor").value;
         var activity = document.getElementById("activities").value;
         var borrowedApparatus = "";
         var apparatus = "<ul>";
@@ -55,14 +60,13 @@ function addData() {
         for (var cc = 1; cc <= Object.keys(b).length; cc++) {
             if (b[cc].activityName == activity) {
                 for (var c = 0; c < Object.keys(b[cc].apparatus).length; c++) {
-                    borrowedApparatus += b[cc].apparatus[c];
-                    apparatus += "<li>" + b[cc].apparatus[c] + "</li>";
+                    borrowedApparatus += b[cc].apparatus[c].name;
+                    apparatus += "<li>" + b[cc].apparatus[c].name + "</li>";
                 }
             }
         }
 
         apparatus += "</ul>";
-
         borrower = {
             name: name,
             groupNumber: groupno,
@@ -74,23 +78,18 @@ function addData() {
         sync();
 
         // var remarks = document.getElementById("apparatus").value;
-        rows += "<td>" + name + "</td><td>" + groupno + "</td><td>" + instructor + "</td><td>" + apparatus + "</td>" +
-            "<td></td>" + "<td><button class='button' onclick='alert()'>Add Remark/s</button><br>" +
-            "<button class='button' onclick='alert()'>Return</button></td>";
-        var tbody = document.querySelector("#list tbody");
-        var tr = document.createElement("tr");
+        rows += name + "<br>" + idno + "<br>" + groupno + "<br>" + instructor + "<br>" + "Apparatus: " +apparatus + "<br>";
+        var borrowed = document.querySelector("#borrowed");
+        var div = document.createElement("div");
 
         //make table row draggable
-        tr.setAttribute("draggable", "true");
-        tr.setAttribute("ondragenter", "dragenter(event)");
-        tr.setAttribute("ondragstart", "dragstart(event)");
+        div.id = "div1"
+        div.className = "row card entry"
+        div.setAttribute("draggable", "true");
+        div.setAttribute("ondragstart", "drag(event)");
 
-        tr.innerHTML = rows;
-        var emptyRow;
-        for (var i = 0; i < 4; i++) {
-            emptyRow += "<td></td>"
-        }
-        tbody.appendChild(tr);
+        div.innerHTML = rows;
+        borrowed.appendChild(div);
     }
 }
 
@@ -137,11 +136,14 @@ function downloadManual(manual) {
             var arr = JSON.parse(this.responseText);
             var i;
 
-            localStorage.setItem('Manual', JSON.stringify(arr))
+            localStorage.setItem(manual, JSON.stringify(arr))
             alert('Manual downloaded!');
-            a = JSON.parse(localStorage.getItem('Manual'));
+            a = JSON.parse(localStorage.getItem(manual));
             var select = document.getElementById("manual");
             // select.options[select.options.length] = new Option(a, i);
+            var manuals = [];
+            manuals.push(a.manualName);
+            localStorage.setItem('manuals', JSON.stringify(manuals))
         }
     };
     xmlhttp.open("GET", url, true);
@@ -160,3 +162,12 @@ function setActivities(manual) {
         x.add(option);
     }
 }
+    var g = JSON.parse(localStorage.getItem('manuals'))
+
+    for (i = 0; i < g.length; i++) {
+        var x = document.getElementById("manual");
+        var option = document.createElement("option");
+        option.text = g[i]
+        option.setAttribute("value", g[i]);
+        x.add(option);
+    }
