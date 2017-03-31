@@ -3,7 +3,10 @@
     <head>
     </head>
     <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-    <script defer type="text/javascript" src="../scripts/scripts.js"></script>
+    <script defer type="text/javascript" src="../scripts/scripts.js">
+        if (document.cookie.indexOf("session=Valid") == -1) {
+          location.href = "pages/validate-login.html";
+    </script>
    
     <style type="text/css">
     .s{
