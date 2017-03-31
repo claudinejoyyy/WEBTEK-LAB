@@ -78,7 +78,7 @@ function addData() {
         sync();
 
         // var remarks = document.getElementById("apparatus").value;
-        rows += name + "<br>" + idno + "<br>" + groupno + "<br>" + instructor + "<br>" + "Apparatus: " +apparatus + "<br>";
+        rows += "<div class='t'>"+name + "<br>" + idno + "<br>" + groupno + "<br>" + instructor + "<br>" + "Apparatus: " +apparatus + "<br>"+"</div>";
         var borrowed = document.querySelector("#borrowed");
         var div = document.createElement("div");
 
@@ -90,6 +90,7 @@ function addData() {
 
         div.innerHTML = rows;
         borrowed.appendChild(div);
+        resetForm();
     }
 }
 
