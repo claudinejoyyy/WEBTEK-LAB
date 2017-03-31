@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <script type="text/javascript">
+         if (document.cookie.indexOf("session=Valid") == -1) {
+          location.href = "pages/validate-login.html";
+        }
+      </script>
     </head>
     <link rel="stylesheet" type="text/css" href="layout.css">
-    <script type="text/javascript" src="scripts.js">
-        if (document.cookie.indexOf("session=Valid") == -1) {
-          location.href = "pages/validate-login.html";
-    </script>
+    <script type="text/javascript" src="scripts.js"></script>
+
     <body>
         <div id="id01"></div>
         <div class="container">
