@@ -6,6 +6,10 @@ var borrower;
 var returnee;
 var source;
 
+// check if logged in
+if (document.cookie.indexOf("session=Valid") == -1) {
+     location.href = "validate-login.html";
+}
 function sync() {
     localStorage.setItem('Borrowers', JSON.stringify(borrowers));
     localStorage.setItem('Returnees', JSON.stringify(returnees));
@@ -172,3 +176,4 @@ function setActivities(manual) {
         option.setAttribute("value", g[i]);
         x.add(option);
     }
+
