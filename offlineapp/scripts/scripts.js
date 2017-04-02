@@ -5,11 +5,183 @@ var returnees = [];
 var borrower;
 var returnee;
 var source;
+var bs;
+getBorrower();
+getReturnees();
+
+function getReturnees(){
+    rs = JSON.parse(localStorage.getItem('Returnees'))
+    if (rs === undefined || rs == null || typeof rs[0] === 'undefined') {
+        // array empty or does not exist
+        
+    }else{
+        
+        for(var i = 0; i < rs.length; i++){
+            // var rows = "";
+            
+            var idno = rs[i].idno;
+            var name = rs[i].name   ;
+            var groupno = rs[i].groupNumber
+            var instructor = rs[i].instructor
+            
+            var rows = "<div class='t'>"+"ID No.: "+idno+"<br>"+"Name: "+name+ 
+            "<br>"+"Group: "+groupno+"<br>"+"Instructor: "+instructor;
+            var apparatus = "<ul>";
+
+            for(var j = 0; j < rs[i].borrowedApparatus.length; j++){
+                apparatus += "<li>" + rs[i].borrowedApparatus[j].name + "</li>";
+            }
+
+            apparatus += "</ul>" 
+            rows += "<br>"+"Apparatus: "+apparatus+"</div>"
+            var borrowed = document.querySelector("#div");
+            var div = document.createElement("div");
+
+            //make table row draggable
+            div.id = "div1"
+            div.className = "row card entry"
+            div.setAttribute("draggable", "true");
+            div.setAttribute("ondragstart", "drag(event)");
+            // div.setAttribute("ondragend", "returns("+idno+")");
+            div.innerHTML = rows;
+            
+            borrowed.appendChild(div);
+        }
+    }
+}
+
+// check if Borrowers item in local storage is empty
+// if empty, re initialize as array
+// else, set local storage data of Borrowers to var borrowers
+{
+borrowers = JSON.parse(localStorage.getItem("Borrowers"));
+returnees = JSON.parse(localStorage.getItem("Returnees"));
+    if(borrowers == null || returnees == null){
+        borrowers = [];
+        returnees = [];
+    }
+}
+
+function addData() {
+    alert('Added to borrowed table');
+    var x = document.getElementById("groupno").value;
+    var y = document.getElementById("name").value;
+    var letters = '/^[a-zA-Z]+$/';
+    if ((parseInt(x) != (x)) && (y == parseInt(y))) {
+        alert("Wrong Value Entered");
+    } else {
+        var rows = "";
+        var idno = document.getElementById("idno").value;
+        var name = document.getElementById("name").value;
+        var groupno = document.getElementById("groupno").value;
+        var instructor = document.getElementById("instructor").value;
+        var activity = document.getElementById("activities").value;
+        var borrowedApparatus;
+        var apparatus = "<ul>";
+
+        for (var cc = 1; cc <= Object.keys(b).length; cc++) {
+            if (b[cc].activityName == activity) {
+                borrowedApparatus = b[cc].apparatus;
+                for (var c = 0; c < Object.keys(b[cc].apparatus).length; c++) {
+                    // borrowedApparatus += b[cc].apparatus[c].name;
+                    // borrowedApparatus += ", "
+                    apparatus += "<li>" + b[cc].apparatus[c].name + "</li>";
+                }
+            }
+        }
+
+        apparatus += "</ul>";
+        borrower = {
+            idno: idno,
+            name: name,
+            groupNumber: groupno,
+            instructor: instructor,
+            borrowedApparatus: borrowedApparatus
+        };
+        borrowers.push(borrower);
+        // alert(borrower)
+        sync();
+
+        // var remarks = document.getElementById("apparatus").value;
+        rows += "<div class='t'>"+"ID No.: "+idno + "<br>" + "Name: "+name + "<br>"+"Group: "+ groupno + "<br>" +"Instructor: " + instructor + "<br>" + "Apparatus: " +apparatus + "<br>"+"</div>";
+        var borrowed = document.querySelector("#borrowed");
+        var div = document.createElement("div");
+
+        //make table row draggable
+        div.id = "div1"
+        div.className = "row card entry"
+        div.setAttribute("draggable", "true");
+        div.setAttribute("ondragstart", "drag(event)")
+        div.setAttribute("ondragend", "returns("+idno+")");
+
+        div.innerHTML = rows;
+        borrowed.appendChild(div);
+        resetForm();
+    }
+}
+
+// remove borrower from borrowers variable and add to returnees variable
+function returns(idno){
+    // alert("wawets")
+    for(var i = 0; i < borrowers.length; i++) {
+    if(borrowers[i].idno == idno) {
+        returnee = borrowers[i];
+        returnees.push(returnee);
+        borrowers.splice(i, 1);
+        sync();
+        break;
+    }
+}
+}
+
+// store in var bs content of local storage item Borrowers
+// and iterate and display per object on screen 
+function getBorrower(){
+    bs = JSON.parse(localStorage.getItem('Borrowers'))
+    if (bs === undefined || bs == null || typeof bs[0] == 'undefined') {
+        // array empty or does not exist
+        // alert()
+    }else{
+        for(var i = 0; i < bs.length; i++){
+            // var rows = "";
+            var idno = bs[i].idno;
+            var name = bs[i].name   ;
+            var groupno = bs[i].groupNumber
+            var instructor = bs[i].instructor
+            // alert()
+            var rows = "<div class='t'>"+"ID No.: "+idno+"<br>"+"Name: "+name+ 
+            "<br>"+"Group: "+groupno+"<br>"+"Instructor: "+instructor;
+            var apparatus = "<ul>";
+
+            for(var j = 0; j < bs[i].borrowedApparatus.length; j++){
+                apparatus += "<li>" + bs[i].borrowedApparatus[j].name + "</li>";
+            }
+
+            apparatus += "</ul>" 
+            rows += "<br>"+"Apparatus: "+apparatus+"</div>"
+            var borrowed = document.querySelector("#borrowed");
+            var div = document.createElement("div");
+
+            //make table row draggable
+            div.id = "div1"
+            div.className = "row card entry"
+            div.setAttribute("draggable", "true");
+            div.setAttribute("ondragstart", "drag(event)");
+            div.setAttribute("ondragstart", "returns("+idno+")");
+            div.innerHTML = rows;
+            borrowed.appendChild(div);
+        }
+    }
+}
+
+
+
 
 // check if logged in
-if (document.cookie.indexOf("session=Valid") == -1) {
-     location.href = "validate-login.html";
-}
+// if (document.cookie.indexOf("session=Valid") == -1) {
+//      location.href = "validate-login.html";
+// }
+
 function sync() {
     localStorage.setItem('Borrowers', JSON.stringify(borrowers));
     localStorage.setItem('Returnees', JSON.stringify(returnees));
@@ -44,61 +216,16 @@ function getApparatus(activity){
     var apparatus = manual
 }
 
-function addData() {
-    alert('Added to borrowed table');
-    var x = document.getElementById("groupno").value;
-    var y = document.getElementById("name").value;
-    var letters = '/^[a-zA-Z]+$/';
-    if ((parseInt(x) != (x)) && (y == parseInt(y))) {
-        alert("Wrong Value Entered");
-    } else {
-        var rows = "";
-        var idno = "ID No.: "+document.getElementById("idno").value;
-        var name = "Name: "+document.getElementById("name").value;
-        var groupno = "Group: "+document.getElementById("groupno").value;
-        var instructor = "Instructor: "+document.getElementById("instructor").value;
-        var activity = document.getElementById("activities").value;
-        var borrowedApparatus = "";
-        var apparatus = "<ul>";
 
-        for (var cc = 1; cc <= Object.keys(b).length; cc++) {
-            if (b[cc].activityName == activity) {
-                for (var c = 0; c < Object.keys(b[cc].apparatus).length; c++) {
-                    borrowedApparatus += b[cc].apparatus[c].name;
-                    apparatus += "<li>" + b[cc].apparatus[c].name + "</li>";
-                }
-            }
-        }
-
-        apparatus += "</ul>";
-        borrower = {
-            name: name,
-            groupNumber: groupno,
-            instructor: instructor,
-            borrowedApparatus: borrowedApparatus
-        };
-        borrowers.push(borrower);
-        // alert(borrower)
-        sync();
-
-        // var remarks = document.getElementById("apparatus").value;
-        rows += "<div class='t'>"+name + "<br>" + idno + "<br>" + groupno + "<br>" + instructor + "<br>" + "Apparatus: " +apparatus + "<br>"+"</div>";
-        var borrowed = document.querySelector("#borrowed");
-        var div = document.createElement("div");
-
-        //make table row draggable
-        div.id = "div1"
-        div.className = "row card entry"
-        div.setAttribute("draggable", "true");
-        div.setAttribute("ondragstart", "drag(event)");
-
-        div.innerHTML = rows;
-        borrowed.appendChild(div);
-        resetForm();
-    }
-}
 
 function resetForm() {
+    var select = document.getElementById("activities")
+    for(var i = 0; i <= select.length; i++){
+        if (select.length > 0) {
+            select.remove(select.length-1);
+        }    
+    }
+    
     document.getElementById("person").reset();
 }
 
@@ -123,6 +250,7 @@ function drag(ev) {
 
 function drop(ev) {
     ev.preventDefault();
+    // returns();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
 }

@@ -3,7 +3,9 @@
     <head>
     </head>
     <link rel="stylesheet" type="text/css" href="../styles/layout.css">
+    <script defer type="text/javascript" src="../scripts/events.js"></script>
     <script defer type="text/javascript" src="../scripts/scripts.js"></script>
+
     <style type="text/css">
     .s{
         background-color: white;
@@ -14,9 +16,9 @@
     </style>
     <body>
         <div id="id01"></div>
-        <div class="container s">
+        <div class="container main">
             <div class="row t">
-                <div id = "data" class="one columns">
+                <div id = "data" class="seven columns">
                     <h2>Add/Update Borrow Form</h2>
                     <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a href="../pages/download.html" target="_blank">here.</a></h6>
                     <form id = "person">
@@ -32,15 +34,21 @@
                             <option>Instructor 2</option>
                             <option>Instructor 3</option>
                         </select>
-                        <br><br>
+                        &nbsp;&nbsp;
                         Manual:
                         <select name="manuals" onchange="setActivities(this.value)" id="manual">
                             <option selected disabled>Choose here</option>
+                            <!-- <option value="Manual">Manual</option> -->
+                            <!-- <option value="Activity 2">Activity 2</option>
+                            <option value="Activity 3">Activity 3</option> -->
                         </select>
                         <br><br>
                         Activity:
                         <select name="activities" onchange="getApparatus(this.value)" id="activities">
                             <option selected disabled>Choose here</option>
+                            <!-- <option value="Activity 1">Activity 1</option>
+                            <option value="Activity 2">Activity 2</option>
+                            <option value="Activity 3">Activity 3</option> -->
                         </select>
                         <br><br>
                         <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
@@ -48,10 +56,14 @@
                         <input id = "button" type = "button" value = " Update ">
                     </form>
                 </div>
+                <!-- <div class="five columns">
+                    <table border="1">
+                        <tr>
+                            <th>asdasd</th>
+                        </tr>
+                    </table>
+                </div> -->
             </div>
-        </div>
-        <br><br>
-        <div class="container">
             <div class="row">
                 <div class="six columns"><h3>Borrowed</h3><hr></div>
                 <div class="six columns"><h3>Returned</h3><hr></div>
@@ -60,11 +72,14 @@
                 <!-- Borrowed Column -->
                 <div class="six columns entry" id="borrowed">
                 </div>
-                
-                <!-- Returned Column -->
-                <div class="six columns entry" id="div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="six columns entry droptarget" id="div" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
             </div>
+        
+        <!-- <div class="container"> -->
+            
+        <!-- </div> -->
         </div>
+
     </body>
 </html>

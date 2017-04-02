@@ -272,11 +272,11 @@ ol
     
 }
 .row .card{
-  margin-bottom: 25px;
+  margin-bottom: 75px;
 }
 .entry{
   overflow-y: auto;
-  max-height: 50vh;
+  max-height: 20vh;
 }
 
 .card:hover {
@@ -299,3 +299,9 @@ ol
     border: 1px solid #aaaaaa;
     height: 100vh;
     }
+.main{
+  height: vh;
+}
+#div1{
+  width: 85%;
+}
