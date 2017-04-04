@@ -1,3 +1,8 @@
+// check if logged in
+if (document.cookie.indexOf("session=Valid") == -1) {
+     location.href = "validate-login.html";
+}
+
 var a;
 var b;
 var borrowers = [];
@@ -174,13 +179,6 @@ function getBorrower(){
     }
 }
 
-
-
-
-// check if logged in
-// if (document.cookie.indexOf("session=Valid") == -1) {
-//      location.href = "validate-login.html";
-// }
 
 function sync() {
     localStorage.setItem('Borrowers', JSON.stringify(borrowers));
