@@ -1,24 +1,100 @@
 {
 "1": {
-"activity": "Activity 1",
+"activity": "Activity 1: Measurements",
 "apparatus": 
-  ["test tube",
-  "bunsen burner"
+  ["Vernier Caliper",
+  "Micrometer Screw",
+  "Spherometer",
+  "Metal Cylinder",
+  "Head Lens",
+  "Ruler"
   ]
 },
 "2": {
-"activity": "Activity 2",
+"activity": "Activity 2: Uniformly Accelerated Motion",
 "apparatus": 
-  ["pestle",
-  "mortar",
-  "lighter"
+  ["Trolley",
+  "Metal Rail",
+  "Iron Stand",
+  "Stopwatch",
+  "Meter Stick"
   ]
 },
 "3": {
-"activity": "Activity 3",
+"activity": "Activity 3: Vectors",
 "apparatus": 
-  ["magnifying glass",
-  "dropper"
+  ["Force Table",
+  "3 Pulleys with Clamps",
+  "3 Pans",
+  "1 Set of Slotted Masses",
+  "Spirit Level",
+  "Ruler",
+  "Protractor",
+  "Force Scale"
+  ]
+}
+"4": {
+"activity": "Activity 4: Motion of a Free Falling Body",
+"apparatus": 
+  ["Dextrose Bottle",
+  "Stop Watch",
+  "Water Container",
+  "Meter Stick",
+  "Iron Stand"
+  ]
+}
+"5": {
+"activity": "Activity 5: Projectile Motion",
+"apparatus": 
+  ["Spring Gun with Metal Ball",
+  "2 Meter Sticks",
+  "Plywood Board",
+  "Carbon Paper",
+  "Coupon Bond"
+  ]
+}
+"6": {
+"activity": "Activity 6: Kinetic and Static Friction",
+"apparatus": 
+  ["Wooden Plane",
+  "Wooden Block with Rubber Sole",
+  "Spring Balance",
+  "Iron Stand",
+  "1 Set of Weights"
+  ]
+}
+"7": {
+"activity": "Activity 7: Newton's Second Law of Motion",
+"apparatus": 
+  ["Atwood's Machine",
+  "Rotating Pulley",
+  "2 Pans",
+  "Two-meter Long String",
+  "1 Set of Slotted Weights",
+  "Stop Watch",
+  "Meter Stick"
+  ]
+}"8": {
+"activity": "Activity 8: Torque or Moment of a Force",
+"apparatus": 
+  ["Student's Model Balance",
+  "2 Wide Pans with Hangers",
+  "1 Set of Brass Weights",
+  "Platform Balance"
+  ]
+}
+"9": {
+"activity": "Activity 9: Static Equilibrium",
+"apparatus": 
+  ["Model Crane",
+  "Large Iron Stand",
+  "Tensile Spring Scale",
+  "Compressive Spring Scale",
+  "Pan",
+  "Mass of 4 kg",
+  "Meter Stick",
+  "Big Protractor",
+  "Spirit Level"
   ]
 }
 }
