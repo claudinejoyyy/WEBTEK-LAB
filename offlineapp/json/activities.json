@@ -97,4 +97,105 @@
   "Spirit Level"
   ]
 }
+"10": {
+"activity": "Activity 10: The Compound Wheel and Axle",
+"apparatus": 
+  ["Compound Wheel and Axle",
+  "2 pieces of String",
+  "Movable Pulley",
+  "Set of Slotted Weights",
+  "Set of Brass Weights",
+  "2 Pans of Holding Weights",
+  "Iron Stand with Clamp",
+  "Meter Stick"
+  ]
+}
+"11": {
+"activity": "Activity 11: Rotational Inertia",
+"apparatus": 
+  ["Rotational Inertia Disk",
+  "Small Pan for holding weights",
+  "Set of Brass Weights",
+  "Stop Watch",
+  "Meter Stick",
+  "2-meter long length of string",
+  "Vernier Caliper"
+  ]
+}
+"12": {
+"activity": "Activity 12: Coefficient of Restitution",
+"apparatus": 
+  ["Small Balls (wood, metal, rubber, etc)",
+  "Block of Wood",
+  "Meter Stick"
+  ]
+}
+"13": {
+"activity": "Activity 13: Hooke's Law of Elasticity",
+"apparatus": 
+  ["Cylindrical Spring",
+  "Calibrated Vertical Stand",
+  "Pen for holding weights",
+  "Set of weights"
+  ]
+}
+"14": {
+"activity": "Activity 14: Boyle's Law",
+"apparatus": 
+  ["Boyle's Law apparatus (J-tube)",
+  "Bottle of mercury",
+  "Medicine Dropper",
+  "Barometer",
+  "Glass Funnel",
+  "Ruler/Meter Stick"
+  ]
+}
+"15": {
+"activity": "Activity 15: Specific Gravity by Archimedes Principle",
+"apparatus": 
+  ["Iron Stand",
+  "Solid materials (cork and brass)",
+  "Liquid specimens (alcohol, kerosene)",
+  "Metal Sinker",
+  "Triple beam Balance",
+  "Hydrometer",
+  "Hydormeter Jar",
+  "String",
+  "Beaker"
+  ]
+}
+"16": {
+"activity": "Activity 16: Coefficient of Linear Expansion",
+"apparatus": 
+  ["Linear Expansion apparatus",
+  "Thermometer",
+  "Electric Stove",
+  "Glass flask with rubber stopper and rubber tubing",
+  "2 metal rods (different materials)",
+  "Meter Stick"
+  ]
+}
+"17": {
+"activity": "Activity 17: Specific Heat of Solids",
+"apparatus": 
+  ["Calorimeter",
+  "Triple beam balance",
+  "Electric Stove",
+  "String (about 30cm)",
+  "2 pieces of metal (different materials)",
+  "Thermometer",
+  "Water Container"
+  ]
+}
+"18": {
+"activity": "Activity 18: Heat of Fusion of Ice",
+"apparatus": 
+  ["Calorimeter",
+  "Thermometer",
+  "Water Container",
+  "Ice Cubes",
+  "Triple beam balance",
+  "Electric Stove"
+  ]
+}
 }
