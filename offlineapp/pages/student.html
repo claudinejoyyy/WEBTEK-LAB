@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../styles/layout.css">
     <script defer type="text/javascript" src="../scripts/events.js"></script>
     <script defer type="text/javascript" src="../scripts/scripts.js"></script>
-
+    <script defer type="text/javascript" src="../scripts/modal.js"></script>
     <style type="text/css">
     .s{
         background-color: white;
@@ -20,7 +20,7 @@
             <div class="row t">
                 <div id = "data" class="seven columns">
                     <h2>Add/Update Borrow Form</h2>
-                    <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a href="../pages/download.html" target="_blank">here.</a></h6>
+                    <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a id="BR">here.</a></h6>
                     <form id = "person">
                         ID Number: &nbsp;&nbsp;<input id = "idno" name = "name" type = "text">
                         <br><br>
@@ -75,7 +75,21 @@
                 <div class="six columns entry droptarget" id="div" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
             </div>
-        
+        <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Download manual</h3>
+            <form action="">
+                <select name="manuals" onchange="setManual(this.value)">
+                <option selected disabled>Choose here</option>
+                <option value="Medtech 1">Medtech1</option>
+                <option value="manual2">Manual 2</option>
+                </select>
+            </form>
+            <button id="download" onclick="downloadManual()">Download</button>
+         </div>
+      </div>
         <!-- <div class="container"> -->
             
         <!-- </div> -->

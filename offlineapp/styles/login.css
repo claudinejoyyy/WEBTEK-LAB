@@ -14,7 +14,7 @@ body{
   width: auto;
   height: auto;
   background-size: cover;
-  -webkit-filter: blur(2px);
+  /*-webkit-filter: blur(2px);*/
   z-index: 0;
 }
 
@@ -150,7 +150,7 @@ form input[type=button]:focus{
     background-position:center;
     background-image: url(../images/login-background.jpg);
     background-size: cover;
-    -webkit-filter: blur(2px);
+    /*-webkit-filter: blur(2px);*/
     z-index: 0;
   }
 
@@ -189,7 +189,7 @@ form input[type=button]:focus{
     background-position:center;
     background-image: url(../images/login-background.jpg);
     background-size: cover;
-    -webkit-filter: blur(2px);
+    /*-webkit-filter: blur(2px);*/
     z-index: 0;
   }
 
@@ -280,7 +280,7 @@ form input[type=button]{
     background-position:center;
     background-image: url(../images/login-background.jpg);
     background-size: cover;
-    -webkit-filter: blur(2px);
+    /*-webkit-filter: blur(2px);*/
     z-index: 0;
   }
 
@@ -370,7 +370,7 @@ form input[type=button]{
     background-position:center;
     background-image: url(../images/login-background.jpg);
     background-size: cover;
-    -webkit-filter: blur(2px);
+    /*-webkit-filter: blur(2px);*/
     z-index: 0;
   }
 
@@ -446,6 +446,9 @@ form input[type=button]{
   margin-top: 10px;
 }
 
+}
+a{
+  text-decoration: none;
 }
 
 /*End of responsive*/

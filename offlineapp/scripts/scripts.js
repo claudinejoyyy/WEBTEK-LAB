@@ -1,8 +1,3 @@
-// check if logged in
-if (document.cookie.indexOf("session=Valid") == -1) {
-     location.href = "validate-login.html";
-}
-
 var a;
 var b;
 var borrowers = [];
@@ -10,9 +5,48 @@ var returnees = [];
 var borrower;
 var returnee;
 var source;
+var manuals
 var bs;
-getBorrower();
-getReturnees();
+
+window.onload = function(){
+    // check if user is logged in and redirect to home page if authorized
+    if (document.cookie.indexOf("session=Valid") == -1) {
+        location.href = "validate-login.html";
+    }
+
+    // check if there are no manuals downloaded and redirect 
+    // to download page upon confirmation.
+    if(document.URL.indexOf("student.html") >= 0){
+        if (localStorage.getItem("manuals") === null) {
+            if (window.confirm('You havent downloaded any manual.\n\nDo you want to download now?')){
+                window.location.href = 'download.html';
+            }
+        }
+        getBorrower();
+        getReturnees();
+    }
+
+    // check if Borrowers item in local storage is empty
+    // if empty, re initialize as array
+    // else, set local storage data of Borrowers to var borrowers
+    // and same with Returnees
+    borrowers = JSON.parse(localStorage.getItem("Borrowers"));
+    returnees = JSON.parse(localStorage.getItem("Returnees"));
+    if(borrowers == null || returnees == null){
+        borrowers = [];
+        returnees = [];
+    }
+
+    manuals = JSON.parse(localStorage.getItem('manuals'))
+
+    for (i = 0; i < manuals.length; i++) {
+        var manual = document.getElementById("manual");
+        var option = document.createElement("option");
+        option.text = manuals[i]
+        option.setAttribute("value", manuals[i]);
+        manual.add(option);
+    }
+}
 
 function getReturnees(){
     rs = JSON.parse(localStorage.getItem('Returnees'))
@@ -52,18 +86,6 @@ function getReturnees(){
             
             borrowed.appendChild(div);
         }
-    }
-}
-
-// check if Borrowers item in local storage is empty
-// if empty, re initialize as array
-// else, set local storage data of Borrowers to var borrowers
-{
-borrowers = JSON.parse(localStorage.getItem("Borrowers"));
-returnees = JSON.parse(localStorage.getItem("Returnees"));
-    if(borrowers == null || returnees == null){
-        borrowers = [];
-        returnees = [];
     }
 }
 
@@ -179,7 +201,6 @@ function getBorrower(){
     }
 }
 
-
 function sync() {
     localStorage.setItem('Borrowers', JSON.stringify(borrowers));
     localStorage.setItem('Returnees', JSON.stringify(returnees));
@@ -209,12 +230,11 @@ function getApparatus(activity) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
+
 function getApparatus(activity){
     var manual = JSON.parse(localStorage.getItem('Manual'));
     var apparatus = manual
 }
-
-
 
 function resetForm() {
     var select = document.getElementById("activities")
@@ -279,9 +299,15 @@ function downloadManual(manual) {
     };
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
+
+    if(document.URL.indexOf("student.html") >= 0){
+        location.href = "student.html";
+    }
+    
 }
 
 function setActivities(manual) {
+    // alert()
     a = JSON.parse(localStorage.getItem(manual));
     b = a.chapters;
 
@@ -293,13 +319,4 @@ function setActivities(manual) {
         x.add(option);
     }
 }
-    var g = JSON.parse(localStorage.getItem('manuals'))
-
-    for (i = 0; i < g.length; i++) {
-        var x = document.getElementById("manual");
-        var option = document.createElement("option");
-        option.text = g[i]
-        option.setAttribute("value", g[i]);
-        x.add(option);
-    }
 
