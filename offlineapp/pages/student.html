@@ -22,7 +22,7 @@
                     <h2>Add/Update Borrow Form</h2>
                     <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a id="BR">here.</a></h6>
                     <form id = "person">
-                        ID Number: &nbsp;&nbsp;<input id = "idno" name = "name" type = "text">
+                        ID Number: &nbsp;&nbsp;<input id = "idno" name = "idno" type = "number"  oninput="idLengthCheck(this)" min = "2000000" max ="2169999" maxlength="7">
                         <br><br>
                         Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
                         <br><br>
