@@ -54,6 +54,12 @@ function idLengthCheck(object)
       object.value = object.value.slice(0, object.maxLength)
 }
 
+function grpLengthCheck(object)
+{
+    if (object.value.length > object.maxLength)
+      object.value = object.value.slice(0, object.maxLength)
+}
+
 function getReturnees(){
     rs = JSON.parse(localStorage.getItem('Returnees'))
     if (rs === undefined || rs == null || typeof rs[0] === 'undefined') {
