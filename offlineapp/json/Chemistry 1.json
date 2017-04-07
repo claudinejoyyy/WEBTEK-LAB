@@ -1,0 +1,299 @@
+{
+  "manualName": "General and Inorganic Chemistry",
+  "chapters":{
+    "1":{
+      "activity": "Activity 1: The Bunsen Burner",
+      "apparatus": 
+        [{"name": "Bunsen Burner",
+          "quantity": 1},
+         {"name": "Evaporating Dish",
+          "quantity": 1}, 
+         {"name": "Crucible Tong",
+          "quantity": 1},
+         {"name": "Wire Gauze",
+          "quantity": 1}
+        ]
+      },
+  "2": {
+    "activity": "Activity 2: Common Laboratory Measurements",
+    "apparatus": 
+      [{"name": "Zinc",
+        "quantity": 20},
+       {"name": "Triple Beam Balance",
+        "quantity": 1},
+       {"name": "Wooden Cube",
+        "quantity": 1},
+       {"name": "50 mL Graduated Cylinder",
+        "quantity": 1}
+      ]
+    },
+  "3": {
+    "activity": "Activity 3: Physical and Chemical Changes",
+    "apparatus": 
+      [{"name": "Bunsen Burner",
+        "quantity": 1},
+       {"name": "Evaporating Dish",
+        "quantity": 1},
+        {"name": "Iron Stand with Ring",
+        "quantity": 1},
+       {"name": "50 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "10 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "Test Tube Brush",
+        "quantity": 1},
+       {"name": "Test Tube Holder",
+        "quantity": 1},
+       {"name": "Stirring Rod",
+        "quantity": 1},
+       {"name": "Watch Glass",
+        "quantity": 1},
+       {"name": "Triple Beam Balance",
+        "quantity": 1},
+       {"name": "Rack",
+        "quantity": 1},
+       {"name": "Test Tubes",
+        "quantity": 10},
+       {"name": "Wire Gauze",
+        "quantity": 1},
+       {"name": "Dropper",
+        "quantity": 1},
+       {"name": "Water Trough",
+        "quantity": 1}
+      ]
+    },
+  "4": {
+    "activity": "Activity 4: Law of Conservation of Mass",
+    "apparatus": 
+      [{"name": "Big Corks",
+        "quantity": 2},
+       {"name": "250 mL Erlenmeyer Flasks",
+        "quantity": 2},
+       {"name": "50 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "5 mL Test Tubes",
+        "quantity": 2},
+       {"name": "Test Tube Brush",
+        "quantity": 1},
+       {"name": "Triple Beam Balance",
+        "quantity": 1}
+      ]
+    },
+  "5": {
+    "activity": "Activity 5: The Periodic Table",
+    "apparatus": 
+      [{"name": "Graphing Papers",
+        "quantity": 1},
+       {"name": "Colored Ball Pens or Pencils",
+        "quantity": 1},
+       {"name": "French Curves",
+        "quantity": 1},
+       {"name": "Periodic Table",
+        "quantity": 1}
+      ]
+    },
+  "6": {
+    "activity": "Activity 6: Chemical Nomenclature",
+    "apparatus": 
+      [{"name": "Periodic Table",
+        "quantity": 1}
+      ]
+    },
+  "7": {
+    "activity": "Activity 7: Types of Chemical Reactions",
+    "apparatus": 
+      [{"name": "Bunsen Burner",
+        "quantity": 1},
+       {"name": "50 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "10 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "Test Tube Rack",
+        "quantity": 1},
+       {"name": "Test Tubes",
+        "quantity": 10},
+       {"name": "Test Tube Holder",
+        "quantity": 1},
+       {"name": "Watch Glass",
+        "quantity": 1},
+       {"name": "Test Tube Brush",
+        "quantity": 1},
+       {"name": "Strring Rod",
+        "quantity": 1}
+      ]
+    },
+  "8": {
+    "activity": "Activity 8: Formula of a Hydrate",
+    "apparatus": 
+      [{"name": "Bunsen Burner",
+        "quantity": 1},
+       {"name": "Clay Triangle",
+        "quantity": 1},
+        {"name": "Wire Gauze",
+        "quantity": 1},
+       {"name": "Stirring Rod",
+        "quantity": 1},
+       {"name": "Porcelain Crucible with Cover",
+        "quantity": 1},
+       {"name": "Crucible Tong",
+        "quantity": 1},
+       {"name": "Triple Beam Balance",
+        "quantity": 1}
+      ]
+    },
+  "9": {
+    "activity": "Activity 9: Percentage Yield of a Chemical Reactions",
+    "apparatus": 
+      [{"name": "Bunsen Burner",
+        "quantity": 1},
+       {"name": "Clay Triangle",
+        "quantity": 1},
+       {"name": "Crucible Tong",
+        "quantity": 1},
+       {"name": "Magnesium Ribbon",
+        "quantity": 1},
+       {"name": "Wire Gauze",
+        "quantity": 1},
+       {"name": "Porcelain Crucible with cover",
+        "quantity": 1},
+       {"name": "Dropper",
+        "quantity": 1},
+       {"name": "Stirring Rod",
+        "quantity": 1},
+       {"name": "Triple Beam Balance",
+        "quantity": 1}
+      ]
+    },
+  "10": {
+    "activity": "Activity 10: Boyle's Law",
+    "apparatus": 
+      [{"name": "Boyle's Law apparatus",
+        "quantity": 1},
+       {"name": "Blocks of Wood",
+        "quantity": 4},
+       {"name": "Triple Beam Balance",
+        "quantity": 1},
+       {"name": "Graphing Papers",
+        "quantity": 1}
+      ]
+    },
+  "11": {
+    "activity": "Activity 11: Graham's Law",
+    "apparatus": 
+      [{"name": "Safety Goggles",
+        "quantity": 2},
+       {"name": "Glass Tube, 1cm x 70cm",
+        "quantity": 1},
+       {"name": "50 mL Beakers",
+        "quantity": 2},
+       {"name": "Watch Glasses",
+        "quantity": 2},
+       {"name": "Medicine Droppers",
+        "quantity": 2},
+       {"name": "Iron Stands",
+        "quantity": 2},
+       {"name": "Utility Clamps",
+        "quantity": 2},
+       {"name": "Rubber Stoppers",
+        "quantity": 2},
+       {"name": "Meter Stick",
+        "quantity": 1},
+       {"name": "Plastic Wash Bottle",
+        "quantity": 1},
+       {"name": "Timer, with second hand",
+        "quantity": 1},
+       {"name": "Tweezer",
+        "quantity": 1}
+      ]
+    },
+  "12": {
+    "activity": "Activity 12: Charles's Law",
+    "apparatus": 
+      [{"name": "Boiling Stones",
+        "quantity": 3},
+       {"name": "Bunsen Burner (or hot plate)",
+        "quantity": 1},
+       {"name": "250 mL Erlenmeyer flasks",
+        "quantity": 2},
+       {"name": "800 mL Beakers",
+        "quantity": 2},
+       {"name": "Utility Clamp",
+        "quantity": 1},
+       {"name": "Glass Tubing (6 to 8 cm length; 7 mm OD)",
+        "quantity": 1},
+       {"name": "50 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "One Holed Rubber Stopper (size #6)",
+        "quantity": 1},
+       {"name": "Iron Stand",
+        "quantity": 1},
+       {"name": "Rubber Tubing (2 ft length)",
+        "quantity": 1},
+       {"name": "Thermometer, 110 C)",
+        "quantity": 1},
+       {"name": "Wire Gauze",
+        "quantity": 1},
+       {"name": "Marking pencil",
+        "quantity": 1}
+      ]
+    },
+  "13": {
+    "activity": "Activity 13: Preparation and Properties of Oxygen",
+    "apparatus": 
+      [{"name": "Bunsen Burner",
+        "quantity": 1},
+       {"name": "Big test tube",
+        "quantity": 1},
+       {"name": "Iron Clamp",
+        "quantity": 1},
+       {"name": "Bent tube with cork",
+        "quantity": 1},
+       {"name": "Test Tube Holder",
+        "quantity": 1},
+       {"name": "Glass Tubings",
+        "quantity": 5},
+       {"name": "Rubber Tubing",
+        "quantity": 1},
+       {"name": "Test Tube Rack",
+        "quantity": 1},
+       {"name": "Test Tubes",
+        "quantity": 10},
+       {"name": "Corks",
+        "quantity": 5},
+       {"name": "Water Trough",
+        "quantity": 1},
+       {"name": "Test Tube Brush",
+        "quantity": 1}
+      ]
+    },
+  "14": {
+    "activity": "Activity 14: Preparation and Properties of Hydrogen",
+    "apparatus": 
+      [{"name": "500 mL Suction Flask with Rubber Tubing",
+        "quantity": 1},
+       {"name": "Thistle Tube with Cork",
+        "quantity": 1},
+       {"name": "Rubber Tubing",
+        "quantity": 1},
+       {"name": "Wooden Splinter",
+        "quantity": 1},
+       {"name": "10 mL Graduated Cylinder",
+        "quantity": 1},
+       {"name": "Test Tube Holder",
+        "quantity": 1},
+       {"name": "Water Trough",
+        "quantity": 1},
+       {"name": "Test Tube Brush",
+        "quantity": 1},
+       {"name": "Test Tube Rack",
+        "quantity": 1},
+       {"name": "Test Tubes",
+        "quantity": 6},
+       {"name": "Corks",
+        "quantity": 6},
+       {"name": "Triple Beam Balance",
+        "quantity": 1}
+      ]
+    }
+  }
+}
