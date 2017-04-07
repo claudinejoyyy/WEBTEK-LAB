@@ -1,0 +1,21 @@
+{
+	"manualName": "Physics 1",
+	"chapters": {
+		"1": {
+			"activity": "Activity 1: ",
+			"apparatus":
+			[{
+
+			}
+			]
+		}
+		"2": {
+			"activity": "Activity 1: ",
+			"apparatus":
+			[{
+				
+			}
+			]
+		}
+	}
+}
