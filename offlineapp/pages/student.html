@@ -24,7 +24,7 @@
                     <form id = "person">
                         ID Number: &nbsp;&nbsp;<input id = "idno" name = "idno" type = "number"  oninput="idLengthCheck(this)" min = "2000000" max ="2169999" maxlength="7">
                         <br><br>
-                        Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text">
+                        Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*'>
                         <br><br>
                         Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "number" oninput="grpLengthCheck(this)" min = "1" max ="20" maxlength="2">                        
                         <br><br>
