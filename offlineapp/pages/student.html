@@ -6,6 +6,7 @@
     <script defer type="text/javascript" src="../scripts/events.js"></script>
     <script defer type="text/javascript" src="../scripts/scripts.js"></script>
     <script defer type="text/javascript" src="../scripts/modal.js"></script>
+    <script type="text/javascript" src="../scripts/formValidation.js"></script>
     <style type="text/css">
     .s{
         background-color: white;
@@ -21,12 +22,12 @@
                 <div id = "data" class="seven columns">
                     <h2>Add/Update Borrow Form</h2>
                     <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a id="BR">here.</a></h6>
-                    <form id = "person">
+                    <form id = "person" onsubmit="addData()">
                         ID Number: &nbsp;&nbsp;<input id = "idno" name = "idno" type = "number"  oninput="idLengthCheck(this)" min = "2000000" max ="2169999" maxlength="7">
                         <br><br>
-                        Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*'>
+                        Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*' oninvalid="setCustomValidity('Name cannot contain numbers or special characters')">
                         <br><br>
-                        Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "number" oninput="grpLengthCheck(this)" min = "1" max ="20" maxlength="2">                        
+                        Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "number" oninput="grpLengthCheck(this)" min = "1" max ="20" maxlength="2">
                         <br><br>
                         Instructor: &nbsp;&nbsp;
                         <select id = "instructor" name = "instructor">
@@ -52,8 +53,7 @@
                         </select>
                         <br><br>
                         <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
-                        <input id = "button" type = "button" value = " Add " onclick = "addData()">
-                        <input id = "button" type = "button" value = " Update ">
+                        <input id = "submit" type = "submit" value = " Add ">
                     </form>
                 </div>
                 <!-- <div class="five columns">
@@ -90,6 +90,7 @@
             <button id="download" onclick="downloadManual()">Download</button>
          </div>
       </div>
+      <div id="aw"></div>
         <!-- <div class="container"> -->
             
         <!-- </div> -->

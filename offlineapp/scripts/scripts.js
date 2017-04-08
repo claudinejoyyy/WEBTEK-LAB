@@ -147,7 +147,7 @@ function addData() {
         var div = document.createElement("div");
 
         //make table row draggable
-        div.id = "div1"
+        div.id = idno
         div.className = "row card entry"
         div.setAttribute("draggable", "true");
         div.setAttribute("ondragstart", "drag(event)")
