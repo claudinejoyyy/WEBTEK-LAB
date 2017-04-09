@@ -89,7 +89,7 @@ function getReturnees(){
             var div = document.createElement("div");
 
             //make table row draggable
-            div.id = "div1"
+            div.id = idno
             div.className = "row card entry"
             div.setAttribute("draggable", "true");
             div.setAttribute("ondragstart", "drag(event)");
@@ -147,11 +147,11 @@ function addData() {
         var div = document.createElement("div");
 
         //make table row draggable
-        div.id = idno
+        div.id = idno; 
         div.className = "row card entry"
         div.setAttribute("draggable", "true");
-        div.setAttribute("ondragstart", "drag(event)")
-        div.setAttribute("ondragend", "returns("+idno+")");
+        div.setAttribute("ondragstart", "drag(event, "+idno+")")
+        // div.setAttribute("ondragend", "returns("+idno+")");
 
         div.innerHTML = rows;
         borrowed.appendChild(div);
@@ -161,7 +161,6 @@ function addData() {
 
 // remove borrower from borrowers variable and add to returnees variable
 function returns(idno){
-    // alert("wawets")
     for(var i = 0; i < borrowers.length; i++) {
     if(borrowers[i].idno == idno) {
         returnee = borrowers[i];
@@ -202,11 +201,11 @@ function getBorrower(){
             var div = document.createElement("div");
 
             //make table row draggable
-            div.id = "div1"
+            div.id = idno
             div.className = "row card entry"
             div.setAttribute("draggable", "true");
             div.setAttribute("ondragstart", "drag(event)");
-            div.setAttribute("ondragstart", "returns("+idno+")");
+            // div.setAttribute("ondragstart", "returns("+idno+")");
             div.innerHTML = rows;
             borrowed.appendChild(div);
         }
@@ -279,10 +278,12 @@ function drag(ev) {
 }
 
 function drop(ev) {
-    ev.preventDefault();
-    // returns();
     var data = ev.dataTransfer.getData("text");
+    returns(data);
+    alert(data);
+    ev.preventDefault();
     ev.target.appendChild(document.getElementById(data));
+    
 }
 
 function setManual(manual) {
