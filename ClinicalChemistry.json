@@ -1,0 +1,530 @@
+{
+  "manualName": "Clinical Chemistry 1",
+  "chapters":{
+    "1":{
+      "activity": "Activity 1: Glassware, Equipment And other Supplies Used In Clinical Chemistry Laboratory",
+      "apparatus": 
+        [{"name": "Plain test tubes - 15 x 100mm, 13 x 100mm, 12 x 75mm",
+          "quantity": 3},
+         {"name": "Evacuated test tubes - red top(plain), blue top, gray, green, yellow, lavender"
+          "quantity": 6},
+		 {"name": "Centrifuge tubes - plain, graduated"
+          "quantity": 2},
+         {"name": "Special tubes - BUN tube, NPN tube, Folin-Wu tube"
+          "quantity": 2},
+		 {"name": "Cuvets - glass cuvet (13 x 100mm), plastic cuvet(micromethod)"
+          "quantity": 2}, 
+		 {"name": "Pipettes"
+          "quantity": 2},
+		 {"name": "Flasks - Volumetric, Erlenmeyer"
+          "quantity": 2},
+		 {"name": "Beaker"
+          "quantity": 1},
+		 {"name": "Graduated cylinder"
+          "quantity": 1},
+		 {"name": "Funnel"
+          "quantity": 1},
+		 {"name": "Stirring rod"
+          "quantity": 1},
+	     {"name": "Thermometer"
+          "quantity": 1},
+		 {"name": "Reagent bottles - Amber glass, Clear glass"
+          "quantity": 2},
+		 {"name": "Blood Collection set"
+          "quantity": 1},
+		 {"name": "Disposable pipette tips"
+          "quantity": 3},
+		 {"name": "Wash bottle"
+          "quantity": 1},
+		 {"name": "Test tube rack"
+          "quantity": 1},
+		 {"name": "Parafilm / Nescofilm / filter paper"
+          "quantity": 1},
+		 {"name": "Rubber pipettol"
+          "quantity": 1},
+		 {"name": "Timing device"
+          "quantity": 1},
+		 {"name": "Spectrophotometer"
+          "quantity": 1}, 
+		 {"name": "Clinical centrifuge"
+          "quantity": 1},
+		 {"name": "Water bath"
+          "quantity": 1},
+		 {"name": "Balances - Analytical, Rough"
+          "quantity": 2},
+		 {"name": "Hot air sterilizer"
+          "quantity": 1},
+		 {"name": "Pipette washer"
+          "quantity": 1}
+		]
+      }
+    },
+  "2": {
+    "activity": "Activity 2: General Principles Of Quality And Safety In Clinical Chemistry",
+    "apparatus": 
+      [{"name": "Antiseptic Solutions",
+        "quantity": 2},
+       {"name": "Chart of hazard logos",
+        "quantity": 1}
+      ]
+    },
+  "3": {
+    "activity": "Activity 3: Study Of Pipets And Pipetting Technique",
+    "apparatus": 
+      [{"name": "Serologic pipettes - 10ml, 5ml, 2ml, 1ml, 0.2ml, 0.1ml",
+        "quantity": 6},
+       {"name": "Mohr Pipets - 5ml, 10ml",
+        "quantity": 2},
+        {"name": "Volumetric Pipets - 5ml, 10ml",
+        "quantity": 2},
+       {"name": "Ostwald-Folin pipette - 5ml",
+        "quantity": 1},
+       {"name": "Automatic Micropipette and disposable tips",
+        "quantity": 3},
+       {"name": "Pasteur pipettes",
+        "quantity": 2},
+       {"name": "Test tubes - 5 x 100mm, 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Beaker or Erlenmeyer flask with water",
+        "quantity": 1},
+       {"name": "Test tube racks",
+        "quantity": 3},
+	   {"name": "Tissue papers",
+        "quantity": 3},
+	   {"name": "Rubber pipettol",
+        "quantity": 1}
+      ]
+    },
+  "4": {
+    "activity": "Activity 4: Calibration Of TD Pipette",
+    "apparatus": 
+      [{"name": "TD pipette - Serologic pipettes in various volumes(10ml, 5ml, 2ml, 1ml)",
+        "quantity": 4},
+	   {"name": "Flask with distilled water",
+        "quantity": 1},
+	   {"name": "Thermometer",
+        "quantity": 1},
+	   {"name": "Weighing bottle",
+        "quantity": 1},
+	   {"name": "Rubber pipettol",
+        "quantity": 1},
+	   {"name": "Tissue paper",
+        "quantity": 1},
+	   {"name": "Analytical balance and analytical weights",
+        "quantity": 2}
+      ]
+    },
+  "5": {
+    "activity": "Activity 5: Preparation And Use Of Quality Control Chart (Levey-Jennings Chart With Application Of The WestGard Rules)",
+    "apparatus": 
+      [{"name": "Control sera and brochures",
+        "quantity": 2},
+       {"name": "Prepared quality control(Levey-Jennings) chart",
+        "quantity": 1},
+       {"name": "Data of pre-analyzed control samples",
+        "quantity": 1},
+       {"name": "Millimeter graphing papers",
+        "quantity": 4},
+       {"name": "Colored pencils",
+        "quantity": 5}
+      ]
+    },
+  "6": {
+    "activity": "Activity 6: Study Of The Principle Of Spectrophotometry",
+    "apparatus": 
+      [{"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Prepared analyte solutions - unknown, blank, standard",
+        "quantity": 3},
+       {"name": "Test tube rack",
+        "quantity": 1},
+       {"name": "Tissue paper",
+        "quantity": 1},
+       {"name": "Spectrophotometer",
+        "quantity": 1},
+       {"name": "Chart illustration of the spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "7": {
+    "activity": "Activity 7: Constructing A Reference / Calibration Curve",
+    "apparatus": 
+      [{"name": "Atwood's Machine",
+        "quantity": 1},
+       {"name": "Meter Stick",
+        "quantity": 1}
+      ]
+    },
+  "8": {
+    "activity": "Activity 8: Blood Specimen Collection For Chemistry Assay",
+    "apparatus": 
+      [{"name": "Lancet",
+        "quantity": 1},
+       {"name": "Venipuncture set - tourniquet, arm support, hypodermic syringe(glass or plastic), needle(21 or 22 gauge), evacuated tube set, cotton pads / cotton balls, micropore / plaster, 70% ethyl alcohol",
+        "quantity": 8},
+        {"name": "Labeling tapes",
+        "quantity": 2},
+       {"name": "13 x 100mm test tubes - plain, with 3.8% Sodium Citrate anticoagulant",
+        "quantity": 2},
+       {"name": "Capillary tubing(capillet), heparinized",
+        "quantity": 2},
+	   {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Gloves",
+        "quantity": 1}
+      ]
+    },
+  "9": {
+    "activity": "Activity 9: Sample Preparation For Chemistry Assay",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tube - 13 x 100mm, 12 x 75mm",
+        "quantity": 2},
+       {"name": "Pasteur pipets",
+        "quantity": 2},
+       {"name": "Serologic pipet - 1ml",
+        "quantity": 1},
+       {"name": "Nescofilm",
+        "quantity": 1},
+       {"name": "Applicator sticks",
+        "quantity": 3},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Labeling tape",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1}
+      ]
+    },
+  "10": {
+    "activity": "Activity 10: Preparation Of Protein Free Filtrate",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 5 x 100mm, 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Centrifuge tubes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 10ml, 5ml, 2ml, 1ml",
+        "quantity": 4},
+       {"name": "Test tube rack",
+        "quantity": 1},
+       {"name": "Labeling tape",
+        "quantity": 1},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube stopper or nescofilm/parafilm",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1}
+      ]
+    },
+  "11": {
+    "activity": "Activity 11: Enzymatic-Colorimetric Glucose Oxidase-Pap Method (Trinder Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 2},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+        "quantity": 2},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "12": {
+    "activity": "Activity 12: Total Cholesterol Determination Enzymatic Colorimetric - Cholesterol Oxidase-Pap Method (Trinder Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+        "quantity": 2},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "13": {
+    "activity": "Activity 13: HDL-Cholesterol Determination",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - centrifuge tubes, 13 x 100mm, 12 x 75mm",
+        "quantity": 2},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+        "quantity": 2},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "14": {
+    "activity": "Activity 14: Triglycerides Determination",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+        "quantity": 2},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "15": {
+    "activity": "Activity 15: Blood Urea Nitrogen(BUN) Determination (Kinetic: Urease-Glutamate Dehydrogenase Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+        "quantity": 2},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "16": {
+    "activity": "Activity 16: Creatinine Determination (Colorimetric Method - JAFFE Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 2ml",
+        "quantity": 2},
+	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+        "quantity": 1},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "17": {
+    "activity": "Activity 17: Uric Acid Determination (Colorimetric: Uricase - Trinder Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 2ml",
+        "quantity": 2},
+	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+        "quantity": 1},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "18": {
+    "activity": "Activity 18: Total Protein Determination (Colorimetric Method - Biuret Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 2ml",
+        "quantity": 2},
+	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+        "quantity": 1},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+  "19": {
+    "activity": "Activity 19: Serum Albumin Determination (Colorimetric Method - Bromcresol Green Dye Binding Reaction)",
+    "apparatus": 
+      [{"name": "Venipuncture set",
+        "quantity": 1},
+       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+        "quantity": 3},
+       {"name": "Cuvettes",
+        "quantity": 2},
+       {"name": "Pasteur pipettes",
+        "quantity": 3},
+       {"name": "Serologic pipettes - 1ml, 2ml",
+        "quantity": 2},
+	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+        "quantity": 1},
+       {"name": "Rubber pipettol",
+        "quantity": 1},
+       {"name": "Test tube rack",
+        "quantity": 1},
+	   {"name": "Labeling tape",
+        "quantity": 1},
+	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1},
+	   {"name": "Applicator sticks",
+        "quantity": 3},
+	   {"name": "Timer",
+        "quantity": 1},
+	   {"name": "Centrifuge",
+        "quantity": 1},
+	   {"name": "Water bath, 37 C",
+        "quantity": 1},
+	   {"name": "Spectrophotometer",
+        "quantity": 1}
+      ]
+    },
+}
