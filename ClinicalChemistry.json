@@ -4,20 +4,22 @@
     "1":{
       "activity": "Activity 1: Glassware, Equipment And other Supplies Used In Clinical Chemistry Laboratory",
       "apparatus": 
-        [{"name": "Plain test tubes - 15 x 100mm, 13 x 100mm, 12 x 75mm",
+        [{"name": "Plain test tubes",
           "quantity": 3},
-         {"name": "Evacuated test tubes - red top(plain), blue top, gray, green, yellow, lavender"
+         {"name": "Evacuated test tubes"
           "quantity": 6},
-		 {"name": "Centrifuge tubes - plain, graduated"
+		 {"name": "Centrifuge tubes"
           "quantity": 2},
-         {"name": "Special tubes - BUN tube, NPN tube, Folin-Wu tube"
-          "quantity": 2},
-		 {"name": "Cuvets - glass cuvet (13 x 100mm), plastic cuvet(micromethod)"
+         {"name": "Special tubes"
+          "quantity": 3},
+		 {"name": "Cuvets"
           "quantity": 2}, 
 		 {"name": "Pipettes"
-          "quantity": 2},
-		 {"name": "Flasks - Volumetric, Erlenmeyer"
-          "quantity": 2},
+          "quantity": 5},
+		 {"name": "Volumetric flask"
+          "quantity": 1},
+		{"name": "Erlenmeyer flask"
+          "quantity": 1},     
 		 {"name": "Beaker"
           "quantity": 1},
 		 {"name": "Graduated cylinder"
@@ -28,17 +30,17 @@
           "quantity": 1},
 	     {"name": "Thermometer"
           "quantity": 1},
-		 {"name": "Reagent bottles - Amber glass, Clear glass"
+		 {"name": "Reagent bottles"
           "quantity": 2},
 		 {"name": "Blood Collection set"
-          "quantity": 1},
+          "quantity": 1}, //not found in the inventory, must be brought by the students
 		 {"name": "Disposable pipette tips"
           "quantity": 3},
 		 {"name": "Wash bottle"
           "quantity": 1},
 		 {"name": "Test tube rack"
           "quantity": 1},
-		 {"name": "Parafilm / Nescofilm / filter paper"
+		 {"name": "Parafilm"
           "quantity": 1},
 		 {"name": "Rubber pipettol"
           "quantity": 1},
@@ -50,19 +52,35 @@
           "quantity": 1},
 		 {"name": "Water bath"
           "quantity": 1},
-		 {"name": "Balances - Analytical, Rough"
-          "quantity": 2},
+		 {"name": "Analytical balance"
+          "quantity": 1},
+		 {"name": "Rough balance"
+          "quantity": 1}, 
 		 {"name": "Hot air sterilizer"
           "quantity": 1},
 		 {"name": "Pipette washer"
           "quantity": 1}
+		 {"name": "Refrigerator"
+          "quantity": 1} //one for each class
 		]
       }
     },
   "2": {
     "activity": "Activity 2: General Principles Of Quality And Safety In Clinical Chemistry",
     "apparatus": 
-      [{"name": "Antiseptic Solutions",
+      [{"name": "Laboratory gown"
+          "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Mask"
+          "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Gloves"
+          "quantity": 1},
+	   {"name": "Eye goggle"
+          "quantity": 1},
+	   {"name": "Hand towel"
+          "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Soap"
+          "quantity": 1}, //not found in the inventory, must be brought by the students	
+	   {"name": "Antiseptic Solutions",
         "quantity": 2},
        {"name": "Chart of hazard logos",
         "quantity": 1}
@@ -71,26 +89,28 @@
   "3": {
     "activity": "Activity 3: Study Of Pipets And Pipetting Technique",
     "apparatus": 
-      [{"name": "Serologic pipettes - 10ml, 5ml, 2ml, 1ml, 0.2ml, 0.1ml",
+      [{"name": "Serologic pipettes",
         "quantity": 6},
-       {"name": "Mohr Pipets - 5ml, 10ml",
+       {"name": "Mohr Pipets",
         "quantity": 2},
-        {"name": "Volumetric Pipets - 5ml, 10ml",
+        {"name": "Volumetric Pipets",
         "quantity": 2},
-       {"name": "Ostwald-Folin pipette - 5ml",
+       {"name": "Ostwald-Folin pipette",
         "quantity": 1},
        {"name": "Automatic Micropipette and disposable tips",
         "quantity": 3},
        {"name": "Pasteur pipettes",
         "quantity": 2},
-       {"name": "Test tubes - 5 x 100mm, 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
-       {"name": "Beaker or Erlenmeyer flask with water",
+	   {"name": "Beaker",
+        "quantity": 1},	
+       {"name": "Erlenmeyer flask with water",
         "quantity": 1},
        {"name": "Test tube racks",
         "quantity": 3},
 	   {"name": "Tissue papers",
-        "quantity": 3},
+        "quantity": 3}, //not found in the inventory, must be brought by the students	
 	   {"name": "Rubber pipettol",
         "quantity": 1}
       ]
@@ -98,7 +118,7 @@
   "4": {
     "activity": "Activity 4: Calibration Of TD Pipette",
     "apparatus": 
-      [{"name": "TD pipette - Serologic pipettes in various volumes(10ml, 5ml, 2ml, 1ml)",
+      [{"name": "TD pipette",
         "quantity": 4},
 	   {"name": "Flask with distilled water",
         "quantity": 1},
@@ -109,8 +129,10 @@
 	   {"name": "Rubber pipettol",
         "quantity": 1},
 	   {"name": "Tissue paper",
-        "quantity": 1},
-	   {"name": "Analytical balance and analytical weights",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Analytical balance",
+        "quantity": 2},
+	   {"name": "Analytical weights",
         "quantity": 2}
       ]
     },
@@ -126,7 +148,9 @@
        {"name": "Millimeter graphing papers",
         "quantity": 4},
        {"name": "Colored pencils",
-        "quantity": 5}
+        "quantity": 5} //not found in the inventory, must be brought by the students
+	   {"name": "Calculator",
+        "quantity": 1} //not found in the inventory, must be brought by the students	
       ]
     },
   "6": {
@@ -134,7 +158,7 @@
     "apparatus": 
       [{"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Prepared analyte solutions - unknown, blank, standard",
+       {"name": "Prepared analyte solutions",
         "quantity": 3},
        {"name": "Test tube rack",
         "quantity": 1},
@@ -143,7 +167,7 @@
        {"name": "Spectrophotometer",
         "quantity": 1},
        {"name": "Chart illustration of the spectrophotometer",
-        "quantity": 1}
+        "quantity": 1} //not found in the inventory, must be brought by the students
       ]
     },
   "7": {
@@ -160,13 +184,13 @@
     "apparatus": 
       [{"name": "Lancet",
         "quantity": 1},
-       {"name": "Venipuncture set - tourniquet, arm support, hypodermic syringe(glass or plastic), needle(21 or 22 gauge), evacuated tube set, cotton pads / cotton balls, micropore / plaster, 70% ethyl alcohol",
+       {"name": "Venipuncture set",
         "quantity": 8},
         {"name": "Labeling tapes",
+        "quantity": 2}, //not found in the inventory, must be brought by the students
+       {"name": "Plain test tubes",
         "quantity": 2},
-       {"name": "13 x 100mm test tubes - plain, with 3.8% Sodium Citrate anticoagulant",
-        "quantity": 2},
-       {"name": "Capillary tubing(capillet), heparinized",
+       {"name": "Capillary tubing",
         "quantity": 2},
 	   {"name": "Test tube rack",
         "quantity": 1},
@@ -179,11 +203,11 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tube - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tube",
         "quantity": 2},
        {"name": "Pasteur pipets",
         "quantity": 2},
-       {"name": "Serologic pipet - 1ml",
+       {"name": "Serologic pipet",
         "quantity": 1},
        {"name": "Nescofilm",
         "quantity": 1},
@@ -194,7 +218,9 @@
        {"name": "Labeling tape",
         "quantity": 1},
        {"name": "Test tube rack",
-        "quantity": 1}
+        "quantity": 1},
+	   {"name": "Clinical centrifuge",
+        "quantity": 1}	
       ]
     },
   "10": {
@@ -202,21 +228,21 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 5 x 100mm, 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Centrifuge tubes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 10ml, 5ml, 2ml, 1ml",
+       {"name": "Serologic pipettes",
         "quantity": 4},
        {"name": "Test tube rack",
         "quantity": 1},
        {"name": "Labeling tape",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
        {"name": "Rubber pipettol",
         "quantity": 1},
-       {"name": "Test tube stopper or nescofilm/parafilm",
+       {"name": "Test tube stopper",
         "quantity": 1},
 	   {"name": "Centrifuge",
         "quantity": 1}
@@ -227,29 +253,29 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 2},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+       {"name": "Serologic pipettes",
         "quantity": 2},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -260,29 +286,29 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+       {"name": "Serologic pipettes",
         "quantity": 2},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -293,29 +319,29 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - centrifuge tubes, 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 2},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+       {"name": "Serologic pipettes",
         "quantity": 2},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -326,29 +352,29 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+       {"name": "Serologic pipettes",
         "quantity": 2},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -359,29 +385,29 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 0.1ml or Automatic pipette",
+       {"name": "Serologic pipettes",
         "quantity": 2},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -392,31 +418,31 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 2ml",
+       {"name": "Serologic pipettes",
         "quantity": 2},
-	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+	   {"name": "Micropipette",
         "quantity": 1},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -427,31 +453,31 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 2ml",
+       {"name": "Serologic pipettes",
         "quantity": 2},
-	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+	   {"name": "Micropipette",
         "quantity": 1},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -462,31 +488,31 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 2ml",
+       {"name": "Serologic pipettes",
         "quantity": 2},
-	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+	   {"name": "Micropipette",
         "quantity": 1},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
@@ -497,31 +523,31 @@
     "apparatus": 
       [{"name": "Venipuncture set",
         "quantity": 1},
-       {"name": "Test tubes - 13 x 100mm, 12 x 75mm",
+       {"name": "Test tubes",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
        {"name": "Pasteur pipettes",
         "quantity": 3},
-       {"name": "Serologic pipettes - 1ml, 2ml",
+       {"name": "Serologic pipettes",
         "quantity": 2},
-	   {"name": "Micropipette - 0.1ml or Automatic pipette",
+	   {"name": "Micropipette",
         "quantity": 1},
        {"name": "Rubber pipettol",
         "quantity": 1},
        {"name": "Test tube rack",
         "quantity": 1},
 	   {"name": "Labeling tape",
-        "quantity": 1},
-	   {"name": "Nescofilm / Parafilm",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Nescofilm",
         "quantity": 1},
 	   {"name": "Applicator sticks",
         "quantity": 3},
 	   {"name": "Timer",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Centrifuge",
         "quantity": 1},
-	   {"name": "Water bath, 37 C",
+	   {"name": "Water bath",
         "quantity": 1},
 	   {"name": "Spectrophotometer",
         "quantity": 1}
