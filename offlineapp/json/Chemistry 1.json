@@ -71,7 +71,7 @@
         "quantity": 2},
        {"name": "50 mL Graduated Cylinder",
         "quantity": 1},
-       {"name": "5 mL Test Tubes",
+       {"name": "5 mL Test Tube",
         "quantity": 2},
        {"name": "Test Tube Brush",
         "quantity": 1},
@@ -83,20 +83,20 @@
     "activity": "Activity 5: The Periodic Table",
     "apparatus": 
       [{"name": "Graphing Papers",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by students
        {"name": "Colored Ball Pens or Pencils",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by students
        {"name": "French Curves",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by students
        {"name": "Periodic Table",
-        "quantity": 1}
+        "quantity": 1} //not found in the inventory, must be brought by students
       ]
     },
   "6": {
     "activity": "Activity 6: Chemical Nomenclature",
     "apparatus": 
       [{"name": "Periodic Table",
-        "quantity": 1}
+        "quantity": 1} //not found in the inventory, must be brought by students
       ]
     },
   "7": {
@@ -110,7 +110,7 @@
         "quantity": 1},
        {"name": "Test Tube Rack",
         "quantity": 1},
-       {"name": "Test Tubes",
+       {"name": "Test Tube",
         "quantity": 10},
        {"name": "Test Tube Holder",
         "quantity": 1},
@@ -174,7 +174,7 @@
        {"name": "Triple Beam Balance",
         "quantity": 1},
        {"name": "Graphing Papers",
-        "quantity": 1}
+        "quantity": 1} //not found in the inventory, must be brought by students
       ]
     },
   "11": {
@@ -182,25 +182,25 @@
     "apparatus": 
       [{"name": "Safety Goggles",
         "quantity": 2},
-       {"name": "Glass Tube, 1cm x 70cm",
+       {"name": "Glass Tube",
         "quantity": 1},
-       {"name": "50 mL Beakers",
+       {"name": "50 mL Beaker",
         "quantity": 2},
-       {"name": "Watch Glasses",
+       {"name": "Watch Glass",
         "quantity": 2},
-       {"name": "Medicine Droppers",
+       {"name": "Medicine Dropper",
         "quantity": 2},
-       {"name": "Iron Stands",
+       {"name": "Iron Stand",
         "quantity": 2},
-       {"name": "Utility Clamps",
+       {"name": "Utility Clamp",
         "quantity": 2},
-       {"name": "Rubber Stoppers",
+       {"name": "Rubber Stopper",
         "quantity": 2},
        {"name": "Meter Stick",
         "quantity": 1},
        {"name": "Plastic Wash Bottle",
         "quantity": 1},
-       {"name": "Timer, with second hand",
+       {"name": "Timer",
         "quantity": 1},
        {"name": "Tweezer",
         "quantity": 1}
@@ -211,30 +211,30 @@
     "apparatus": 
       [{"name": "Boiling Stones",
         "quantity": 3},
-       {"name": "Bunsen Burner (or hot plate)",
+       {"name": "Bunsen Burner",
         "quantity": 1},
        {"name": "250 mL Erlenmeyer flasks",
         "quantity": 2},
-       {"name": "800 mL Beakers",
+       {"name": "800 mL Beaker",
         "quantity": 2},
        {"name": "Utility Clamp",
         "quantity": 1},
-       {"name": "Glass Tubing (6 to 8 cm length; 7 mm OD)",
+       {"name": "Glass Tube",
         "quantity": 1},
        {"name": "50 mL Graduated Cylinder",
         "quantity": 1},
-       {"name": "One Holed Rubber Stopper (size #6)",
+       {"name": "Rubber Stopper",
         "quantity": 1},
        {"name": "Iron Stand",
         "quantity": 1},
-       {"name": "Rubber Tubing (2 ft length)",
+       {"name": "Rubber Tubing",
         "quantity": 1},
-       {"name": "Thermometer, 110 C)",
+       {"name": "Thermometer",
         "quantity": 1},
        {"name": "Wire Gauze",
         "quantity": 1},
        {"name": "Marking pencil",
-        "quantity": 1}
+        "quantity": 1} //not found in the inventory, must be brought by students
       ]
     },
   "13": {
@@ -246,11 +246,11 @@
         "quantity": 1},
        {"name": "Iron Clamp",
         "quantity": 1},
-       {"name": "Bent tube with cork",
+       {"name": "Bent Tube with Cork",
         "quantity": 1},
        {"name": "Test Tube Holder",
         "quantity": 1},
-       {"name": "Glass Tubings",
+       {"name": "Glass Tube",
         "quantity": 5},
        {"name": "Rubber Tubing",
         "quantity": 1},
@@ -258,7 +258,7 @@
         "quantity": 1},
        {"name": "Test Tubes",
         "quantity": 10},
-       {"name": "Corks",
+       {"name": "Cork",
         "quantity": 5},
        {"name": "Water Trough",
         "quantity": 1},
@@ -269,9 +269,11 @@
   "14": {
     "activity": "Activity 14: Preparation and Properties of Hydrogen",
     "apparatus": 
-      [{"name": "500 mL Suction Flask with Rubber Tubing",
+      [{"name": "500 mL Suction Flask",
         "quantity": 1},
-       {"name": "Thistle Tube with Cork",
+       {"name": "Rubber Tubing",
+        "quantity": 1},
+       {"name": "Thistle Tube",
         "quantity": 1},
        {"name": "Rubber Tubing",
         "quantity": 1},
@@ -289,7 +291,7 @@
         "quantity": 1},
        {"name": "Test Tubes",
         "quantity": 6},
-       {"name": "Corks",
+       {"name": "Cork",
         "quantity": 6},
        {"name": "Triple Beam Balance",
         "quantity": 1}
