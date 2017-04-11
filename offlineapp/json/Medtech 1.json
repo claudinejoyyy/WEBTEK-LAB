@@ -4,15 +4,15 @@
     "1": {
         "activityName": "Experiment No. 1 STUDY OF INSTRUMENTS IN BLOOD BANKING",
         "apparatus": 
-          [{"name": "Plain test tubes: 15x100mm, 13x100mm, 12xmm, 8x75mm", 
+          [{"name": "Plain test tubes", 
           "quantity": 1},
           {"name": "Graduated centrifuge tube", 
           "quantity": 1},
           {"name": "Pasteur pipet", 
           "quantity": 1},
-          {"name": "Serologic pipets: 0.1 mL or 1.2 mL, 1 mL or 2mL, 5mL or 10mL", 
+          {"name": "Serologic pipets", 
           "quantity": 1},
-          {"name": "Glass syringe (Alternative: plastic syringe)", 
+          {"name": "Glass syringe", 
           "quantity": 1},
           {"name": "Plain glass slide", 
           "quantity": 1},
@@ -83,7 +83,7 @@
           "quantity": 1},
           {"name": "Counting Chamber", 
           "quantity": 1},
-          {"name": "Dilulating Pipettes (WBC)", 
+          {"name": "Dilulating Pipettes", 
           "quantity": 1}
           ]
         },
