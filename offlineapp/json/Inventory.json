@@ -11,7 +11,10 @@
 	"item": "Barometer",
 	"quantity": 23
 }, {
-	"item": "Beaker",
+	"item": "50 mL Beaker",
+	"quantity": 25
+}, {
+	"item": "800 mL Beaker",
 	"quantity": 25
 }, {
 	"item": "Bent Tube with Cork",
@@ -149,7 +152,7 @@
 	"item": "Electric Stove",
 	"quantity": 8
 }, {
-	"item": "Erlenmeyer Flasks",
+	"item": "250 mL Erlenmeyer Flasks",
 	"quantity": 20
 }, {
 	"item": "Evaporating Dish",
@@ -182,8 +185,14 @@
 	"item": "Graduated Centrifuge Tube",
 	"quantity": 65
 }, {
-	"item": "Graduated Cylinder",
-	"quantity": 33
+	"item": "50 mL Graduated Cylinder",
+	"quantity": 50
+}, {
+	"item": "10 mL Graduated Cylinder",
+	"quantity": 50
+}, {
+	"item": "Gloves",
+	"quantity": 50
 }, {
 	"item": "Hanger",
 	"quantity": 21
@@ -383,6 +392,9 @@
 	"item": "Small Ball",
 	"quantity": 55
 }, {
+	"item": "Small Pan",
+	"quantity": 35
+}, {
 	"item": "Spherometer",
 	"quantity": 23
 }, {
@@ -391,6 +403,9 @@
 }, {
 	"item": "Spring Balance",
 	"quantity": 10
+}, {
+	"item": "Spring Gun with Metal Ball",
+	"quantity": 20
 }, {
 	"item": "Staining Dish",
 	"quantity": 42
@@ -413,14 +428,20 @@
 	"item": "Suction Flask",
 	"quantity": 50
 }, {
+	"item": "500 mL Suction Flask",
+	"quantity": 50
+}, {
 	"item": "Surgical Blade",
 	"quantity": 108
 }, {
 	"item": "Tensile Spring Scale",
 	"quantity": 15
 }, {
-	"item": "Test Tube",
-	"quantity": 130
+	"item": "5 mL Test Tube",
+	"quantity": 100
+}, {
+	"item": "Test Tubes",
+	"quantity": 100
 }, {
 	"item": "Test Tube Brush",
 	"quantity": 50
