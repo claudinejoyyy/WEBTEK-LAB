@@ -10,11 +10,11 @@
           "quantity": 1}, 
          {"name": "Spherometer",
           "quantity": 1},
-         {"name": "Metal Cylinder"
+         {"name": "Metal Cylinder",
           "quantity": 1},
          {"name": "Head Lens",
           "quantity": 1},
-         {"name": "Ruler"
+         {"name": "Ruler",
           "quantity": 1}
         ]
       }
@@ -113,7 +113,7 @@
         "quantity": 1},
        {"name": "Pans",
         "quantity": 2},
-       {"name": "String (2-Meters Long)",
+       {"name": "String",
         "quantity": 1},
        {"name": "Set of Slotted Weights",
         "quantity": 1},
@@ -189,7 +189,7 @@
     "apparatus": 
       [{"name": "Rotational Inertia Disk",
         "quantity": 1},
-       {"name": "Small Pan for holding weights",
+       {"name": "Small Pan",
         "quantity": 1},
        {"name": "Set of Brass Weights",
         "quantity": 1},
@@ -206,7 +206,7 @@
   "12": {
     "activity": "Activity 12: Coefficient of Restitution",
     "apparatus": 
-      [{"name": "Small Ball (wood, metal, rubber, etc)",
+      [{"name": "Small Ball",
         "quantity": 1},
        {"name": "Wood",
         "quantity": 1},
@@ -230,7 +230,7 @@
   "14": {
     "activity": "Activity 14: Boyle's Law",
     "apparatus": 
-      [{"name": "Boyle's Law Apparatus (J-tube)",
+      [{"name": "Boyle's Law Apparatus",
         "quantity": 1},
        {"name": "Bottle of Mercury",
         "quantity": 1},
@@ -286,7 +286,7 @@
         "quantity": 1},
        {"name": "Rubber Tubing",
         "quantity": 1},
-       {"name": "Metal Rod (different materials)",
+       {"name": "Metal Rod",
         "quantity": 2},
        {"name": "Meter Stick",
         "quantity": 1}
@@ -303,7 +303,7 @@
         "quantity": 1},
        {"name": "String (about 30cm)",
         "quantity": 1},
-       {"name": "Metal (different materials)",
+       {"name": "Metal",
         "quantity": 2},
        {"name": "Thermometer",
         "quantity": 1},
