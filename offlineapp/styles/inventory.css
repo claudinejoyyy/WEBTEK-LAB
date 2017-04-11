@@ -1,0 +1,39 @@
+#update, #add{
+  display: none;
+}
+
+#apparatusTable {
+	background-color: rgba(211,211,211,0.9);
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+    
+}
+
+#apparatusTable th, #apparatusTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#apparatusTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd; 
+}
+
+#apparatusTable tr.header, #apparatusTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+.searchArea{
+	max-height: auto;
+    height: 100vh;
+    overflow-y: auto; 
+}
+nav a.button{
+	border: 2px solid #66b2ff;
+}
+nav a.button:hover{
+	border: 2px solid #198cff;
+}

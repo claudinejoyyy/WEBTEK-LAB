@@ -10,14 +10,14 @@ var manual;
 var inventory;
 var bs;
 
-window.onload = function(){
-    // if (document.cookie.indexOf("session=Valid") == -1) {
-    //     location.href = "validate-login.html";
-    // }
-    setInventory
-    if(document.URL.indexOf("student.html") >= 0){
+window.onload = function() {
+    if (document.cookie.indexOf("session=Valid") == -1) {
+        location.href = "validate-login.html";
+    }
+    // setInventory
+    if (document.URL.indexOf("student.html") >= 0) {
         if (localStorage.getItem("manuals") === null) {
-            if (window.confirm('You havent downloaded any manual.\n\nDo you want to download now?')){
+            if (window.confirm('You havent downloaded any manual.\n\nDo you want to download now?')) {
                 window.location.href = 'download.html';
             }
         }
@@ -26,7 +26,7 @@ window.onload = function(){
     }
     borrowers = JSON.parse(localStorage.getItem("Borrowers"));
     returnees = JSON.parse(localStorage.getItem("Returnees"));
-    if(borrowers == null || returnees == null){
+    if (borrowers == null || returnees == null) {
         borrowers = [];
         returnees = [];
     }
@@ -42,68 +42,43 @@ window.onload = function(){
     }
 }
 
-function setInventory(){
-    var xmlhttp = new XMLHttpRequest();
-    var url = "../json/Inventory.json";
-
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var arr = JSON.parse(this.responseText);
-
-            localStorage.setItem("inventory", JSON.stringify(arr))
-            // alert('Manual downloaded!');
-            alert("wawetssss")
-            // a = JSON.parse(localStorage.getItem(manual));
-            // var select = document.getElementById("manual");
-            // // select.options[select.options.length] = new Option(a, i);
-            // var manuals = [];
-            // manuals.push(a.manualName);
-            // localStorage.setItem('manuals', JSON.stringify(manuals))
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-}
-
-function idLengthCheck(object)
-{
+function idLengthCheck(object) {
     if (object.value.length > object.maxLength)
-      object.value = object.value.slice(0, object.maxLength)
+        object.value = object.value.slice(0, object.maxLength)
 }
 
-function grpLengthCheck(object)
-{
+function grpLengthCheck(object) {
     if (object.value.length > object.maxLength)
-      object.value = object.value.slice(0, object.maxLength)
+        object.value = object.value.slice(0, object.maxLength)
 }
 
-function getReturnees(){
+function getReturnees() {
     rs = JSON.parse(localStorage.getItem('Returnees'))
     if (rs === undefined || rs == null || typeof rs[0] === 'undefined') {
         // array empty or does not exist
-        
-    }else{
-        
-        for(var i = 0; i < rs.length; i++){
+
+    } else {
+
+        for (var i = 0; i < rs.length; i++) {
             var idno = rs[i].idno;
-            var name = rs[i].name   ;
+            var name = rs[i].name;
             var groupno = rs[i].groupNumber
             var instructor = rs[i].instructor
-            
-            var rows = "<div class='ten columns'>"+ "<strong>ID No.: </strong>"+idno+"<br>"+"<strong>Name: </strong>"+name+ 
-            "<br>"+"<strong>Group: </strong>"+groupno+"<br>"+"<strong>Instructor: </strong>"+instructor+"</div>";
+
+            var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
+                "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
             rows += "</div>";
             var borrowed = document.querySelector("#returned");
             var entry = document.createElement("div");
 
             var buttonsColumn = document.createElement("div")
             buttonsColumn.className = "two columns"
-            
+
             var reviewButton = document.createElement("button");
             reviewButton.innerHTML = "Review"
             // reviewButton.setAttribute("data-id", idno)
-            reviewButton.onclick = function(id){
-                return function(){
+            reviewButton.onclick = function(id) {
+                return function() {
                     alert(id)
                 }
             }(idno);
@@ -117,43 +92,43 @@ function getReturnees(){
             buttonsColumn.appendChild(reviewButton);
             entry.innerHTML = rows;
             entry.appendChild(buttonsColumn).parentNode
-            
+
             borrowed.appendChild(entry);
         }
     }
 }
 
-function getBorrower(){
+function getBorrower() {
     bs = JSON.parse(localStorage.getItem('Borrowers'))
     if (bs === undefined || bs == null || typeof bs[0] == 'undefined') {
         // array empty or does not exist
         // alert()
-    }else{
-        for(var i = 0; i < bs.length; i++){
+    } else {
+        for (var i = 0; i < bs.length; i++) {
             // var rows = "";
             var idno = bs[i].idno;
-            var name = bs[i].name   ;
+            var name = bs[i].name;
             var groupno = bs[i].groupNumber
             var instructor = bs[i].instructor
-            var rows = "<div class='ten columns'>"+ "<strong>ID No.: </strong>"+idno+"<br>"+"<strong>Name: </strong>"+name+ 
-            "<br>"+"<strong>Group: </strong>"+groupno+"<br>"+"<strong>Instructor: </strong>"+instructor+"</div>";
-            
+            var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
+                "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
+
             var borrowed = document.querySelector("#borrowed");
             var div = document.createElement("div");
             var entry = document.createElement("div");
 
             var buttonsColumn = document.createElement("div")
             buttonsColumn.className = "two columns"
-            
+
             var reviewButton = document.createElement("button");
-            reviewButton.className = "reviewBtn"+idno
+            reviewButton.className = "reviewBtn" + idno
             reviewButton.innerHTML = "Review"
             // reviewButton.setAttribute("data-id", idno)
-            reviewButton.onclick = function(id){
-                return function(){
-                // alert(id)
-                // Get the modal
-                var modal = document.getElementById("reviewModal")
+            reviewButton.onclick = function(id) {
+                return function() {
+                    // alert(id)
+                    // Get the modal
+                    var modal = document.getElementById("reviewModal")
                     // var divTable = document.getElementById("tebol")
                     var inner = document.getElementById("aw")
                     // modal.innerHTML = "";
@@ -172,7 +147,7 @@ function getBorrower(){
                     apparatusTable.appendChild(header)
 
                     for (var i = 0; i < borrowers.length; i++) {
-                        if (borrowers[i].idno == id){
+                        if (borrowers[i].idno == id) {
                             var apparatus = borrowers[i].borrowedApparatus
                             break;
                         }
@@ -190,10 +165,10 @@ function getBorrower(){
                         row.appendChild(quantity);
                         apparatusTable.appendChild(row);
                     };
-                    
+
                     inner.appendChild(apparatusTable);
-                modal.style.display = "block";
-                //pogi dito
+                    modal.style.display = "block";
+                    //pogi dito
                 }
             }(idno);
 
@@ -201,11 +176,11 @@ function getBorrower(){
             returnButton.className = "returnBtn"
             returnButton.innerHTML = "Return"
             // reviewButton.setAttribute("data-id", idno)
-            returnButton.onclick = function(id){
-                return function(){
-                    alert("Student with id number "+id+" put to returned column")
-                    for(var i = 0; i < borrowers.length; i++) {
-                        if(borrowers[i].idno == id) {
+            returnButton.onclick = function(id) {
+                return function() {
+                    alert("Student with id number " + id + " put to returned column")
+                    for (var i = 0; i < borrowers.length; i++) {
+                        if (borrowers[i].idno == id) {
                             returnee = borrowers[i];
                             returnees.push(returnee);
                             borrowers.splice(i, 1);
@@ -230,7 +205,7 @@ function getBorrower(){
             buttonsColumn.appendChild(returnButton);
             entry.innerHTML = rows;
             entry.appendChild(buttonsColumn).parentNode
-            
+
             borrowed.appendChild(entry);
         }
     }
@@ -275,11 +250,11 @@ function addData() {
     }
 }
 
-function inverntorSync(idno){
+function inverntorSync(idno) {
     alert("jeje")
     var borrowedApp
     var students = JSON.parse(localStorage.getItem('Borrowers'))
-    for (var i=0; i < students.length; i++) {
+    for (var i = 0; i < students.length; i++) {
         if (students[i].idno === idno) {
             borrowedApp = students[i].apparatus
             break;
@@ -288,13 +263,14 @@ function inverntorSync(idno){
     alert("whoawets")
     console.log(borrowedApp)
     // for (var i = 0; i < borrowedApp.length; i++) {
-        
+
     // };
 
 }
-function returns(idno){
-    for(var i = 0; i < borrowers.length; i++) {
-        if(borrowers[i].idno == idno) {
+
+function returns(idno) {
+    for (var i = 0; i < borrowers.length; i++) {
+        if (borrowers[i].idno == idno) {
             returnee = borrowers[i];
             returnees.push(returnee);
             borrowers.splice(i, 1);
@@ -334,7 +310,7 @@ function getApparatus(activity) {
     xmlhttp.send();
 }
 
-function getApparatus(chapterNumber){
+function getApparatus(chapterNumber) {
     manual = JSON.parse(localStorage.getItem(manual));
     // console.log(manual)
     var apparatus = manual.chapters[chapterNumber].apparatus;
@@ -343,12 +319,12 @@ function getApparatus(chapterNumber){
 
 function resetForm() {
     var select = document.getElementById("activities")
-    for(var i = 0; i <= select.length; i++){
+    for (var i = 0; i <= select.length; i++) {
         if (select.length > 0) {
-            select.remove(select.length-1);
-        }    
+            select.remove(select.length - 1);
+        }
     }
-    
+
     document.getElementById("person").reset();
 }
 
@@ -379,7 +355,7 @@ function drop(ev) {
     btn.click()
 
     ev.target.appendChild(document.getElementById(data));
-    
+
 }
 
 function setManual(manual) {
@@ -409,14 +385,13 @@ function downloadManual(manual) {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 
-    if(document.URL.indexOf("student.html") >= 0){
+    if (document.URL.indexOf("student.html") >= 0) {
         location.href = "student.html";
     }
-    
+
 }
 
 function setActivities(man) {
-    // alert()
     manual = man;
     a = JSON.parse(localStorage.getItem(manual));
     b = a.chapters;
@@ -428,31 +403,4 @@ function setActivities(man) {
         option.setAttribute("value", i);
         x.add(option);
     }
-}
-
-
-
-
-
-
-function searchBorrowed() {
-  // Declare variables 
-  var input, filter, table, tr, td, i;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  div = document.getElementById("borrowed");
-  entry = div.getElementsByTagName("div");
-  alert(entry)
-
-  // Loop through all table rows, and hide those who don't match the search query
-  // for (i = 0; i < tr.length; i++) {
-  //   td = tr[i].getElementsByTagName("td")[0];
-  //   if (td) {
-  //     if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-  //       tr[i].style.display = "";
-  //     } else {
-  //       tr[i].style.display = "none";
-  //     }
-  //   } 
-  // }
 }

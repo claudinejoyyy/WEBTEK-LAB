@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Add/Update Inventory</title>
+        <link rel="stylesheet" type="text/css" href="../styles/layout.css">
+        <link rel="stylesheet" type="text/css" href="../styles/inventory.css">
+        <script defer type="text/javascript" src="../scripts/inventory.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <a class="button" id="DR">Daily Report</a>
+                <a class="button" id="RN">Return</a>
+                <a class="button"  id="BR" href="student.html">Borrow</a>
+                <a class="button" href="download.html">Download Manual</a>
+                <a class="button" href="inventory.html">Inventory</a>
+            </nav>
+            <div class="row">
+                <div class="five columns">
+                    <h1>Add/Update Apparatus Inventory</h1>
+                    <button id="addNewItem">Add new item</button>
+                    <button id="updateItem">View Inventory</button>
+                </div>
+            </div>
+            <div id="add" class="row">
+                <div class="twelve columns">
+                    <h1>Add</h1>
+                    <form id="addApparatusForm">
+                        <strong><label for="apparatus">Apparatus:</label></strong>
+                        <input id="apparatus" type="text">
+                        <br>
+                        <strong><label for="quantity">Quantity:</label></strong>
+                        <input id="apparatusQuantity" type="number">
+                        <input type="submit" value="Add">
+                    </form>
+                </div>
+            </div>
+            <div id="update" class="row">
+                <div class="twelve columns">
+                    <div class="row">
+                        <div class="eight columns">
+                            <h1>Update</h1>
+                        </div>
+                        <div class="four columns">
+                            <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
+                        </div>
+                    </div>
+                    <div class="row searchArea">
+                        <table id="apparatusTable">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
