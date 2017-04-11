@@ -5,17 +5,16 @@ var returnees = [];
 var borrower;
 var returnee;
 var source;
-var manuals
+var manuals;
+var manual;
+var inventory;
 var bs;
 
 window.onload = function(){
-    // check if user is logged in and redirect to home page if authorized
-    if (document.cookie.indexOf("session=Valid") == -1) {
-        location.href = "validate-login.html";
-    }
-
-    // check if there are no manuals downloaded and redirect 
-    // to download page upon confirmation.
+    // if (document.cookie.indexOf("session=Valid") == -1) {
+    //     location.href = "validate-login.html";
+    // }
+    setInventory
     if(document.URL.indexOf("student.html") >= 0){
         if (localStorage.getItem("manuals") === null) {
             if (window.confirm('You havent downloaded any manual.\n\nDo you want to download now?')){
@@ -25,11 +24,6 @@ window.onload = function(){
         getBorrower();
         getReturnees();
     }
-
-    // check if Borrowers item in local storage is empty
-    // if empty, re initialize as array
-    // else, set local storage data of Borrowers to var borrowers
-    // and same with Returnees
     borrowers = JSON.parse(localStorage.getItem("Borrowers"));
     returnees = JSON.parse(localStorage.getItem("Returnees"));
     if(borrowers == null || returnees == null){
@@ -46,6 +40,29 @@ window.onload = function(){
         option.setAttribute("value", manuals[i]);
         manual.add(option);
     }
+}
+
+function setInventory(){
+    var xmlhttp = new XMLHttpRequest();
+    var url = "../json/Inventory.json";
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var arr = JSON.parse(this.responseText);
+
+            localStorage.setItem("inventory", JSON.stringify(arr))
+            // alert('Manual downloaded!');
+            alert("wawetssss")
+            // a = JSON.parse(localStorage.getItem(manual));
+            // var select = document.getElementById("manual");
+            // // select.options[select.options.length] = new Option(a, i);
+            // var manuals = [];
+            // manuals.push(a.manualName);
+            // localStorage.setItem('manuals', JSON.stringify(manuals))
+        }
+    };
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
 }
 
 function idLengthCheck(object)
@@ -68,35 +85,153 @@ function getReturnees(){
     }else{
         
         for(var i = 0; i < rs.length; i++){
-            // var rows = "";
-            
             var idno = rs[i].idno;
             var name = rs[i].name   ;
             var groupno = rs[i].groupNumber
             var instructor = rs[i].instructor
             
-            var rows = "<div class='t'>"+"ID No.: "+idno+"<br>"+"Name: "+name+ 
-            "<br>"+"Group: "+groupno+"<br>"+"Instructor: "+instructor;
-            var apparatus = "<ul>";
+            var rows = "<div class='ten columns'>"+ "<strong>ID No.: </strong>"+idno+"<br>"+"<strong>Name: </strong>"+name+ 
+            "<br>"+"<strong>Group: </strong>"+groupno+"<br>"+"<strong>Instructor: </strong>"+instructor+"</div>";
+            rows += "</div>";
+            var borrowed = document.querySelector("#returned");
+            var entry = document.createElement("div");
 
-            for(var j = 0; j < rs[i].borrowedApparatus.length; j++){
-                apparatus += "<li>" + rs[i].borrowedApparatus[j].name + "</li>";
-            }
-
-            apparatus += "</ul>" 
-            rows += "<br>"+"Apparatus: "+apparatus+"</div>"
-            var borrowed = document.querySelector("#div");
-            var div = document.createElement("div");
+            var buttonsColumn = document.createElement("div")
+            buttonsColumn.className = "two columns"
+            
+            var reviewButton = document.createElement("button");
+            reviewButton.innerHTML = "Review"
+            // reviewButton.setAttribute("data-id", idno)
+            reviewButton.onclick = function(id){
+                return function(){
+                    alert(id)
+                }
+            }(idno);
 
             //make table row draggable
-            div.id = idno
-            div.className = "row card entry"
-            div.setAttribute("draggable", "true");
-            div.setAttribute("ondragstart", "drag(event)");
-            // div.setAttribute("ondragend", "returns("+idno+")");
-            div.innerHTML = rows;
+            entry.id = idno
+            entry.className = "row entry"
+            entry.setAttribute("draggable", "true");
+            entry.setAttribute("ondragstart", "drag(event)");
+
+            buttonsColumn.appendChild(reviewButton);
+            entry.innerHTML = rows;
+            entry.appendChild(buttonsColumn).parentNode
             
-            borrowed.appendChild(div);
+            borrowed.appendChild(entry);
+        }
+    }
+}
+
+function getBorrower(){
+    bs = JSON.parse(localStorage.getItem('Borrowers'))
+    if (bs === undefined || bs == null || typeof bs[0] == 'undefined') {
+        // array empty or does not exist
+        // alert()
+    }else{
+        for(var i = 0; i < bs.length; i++){
+            // var rows = "";
+            var idno = bs[i].idno;
+            var name = bs[i].name   ;
+            var groupno = bs[i].groupNumber
+            var instructor = bs[i].instructor
+            var rows = "<div class='ten columns'>"+ "<strong>ID No.: </strong>"+idno+"<br>"+"<strong>Name: </strong>"+name+ 
+            "<br>"+"<strong>Group: </strong>"+groupno+"<br>"+"<strong>Instructor: </strong>"+instructor+"</div>";
+            
+            var borrowed = document.querySelector("#borrowed");
+            var div = document.createElement("div");
+            var entry = document.createElement("div");
+
+            var buttonsColumn = document.createElement("div")
+            buttonsColumn.className = "two columns"
+            
+            var reviewButton = document.createElement("button");
+            reviewButton.className = "reviewBtn"+idno
+            reviewButton.innerHTML = "Review"
+            // reviewButton.setAttribute("data-id", idno)
+            reviewButton.onclick = function(id){
+                return function(){
+                // alert(id)
+                // Get the modal
+                var modal = document.getElementById("reviewModal")
+                    // var divTable = document.getElementById("tebol")
+                    var inner = document.getElementById("aw")
+                    // modal.innerHTML = "";
+
+                    var apparatusTable = document.createElement("table")
+                    apparatusTable.border = "1"
+                    var header = document.createElement("tr")
+                    var apparatusHeader = document.createElement("th")
+                    apparatusHeader.innerHTML = "Apparatus"
+                    var quantityHeader = document.createElement("th")
+                    quantityHeader.innerHTML = "Quantity"
+                    var apparatus;
+
+                    header.appendChild(apparatusHeader)
+                    header.appendChild(quantityHeader)
+                    apparatusTable.appendChild(header)
+
+                    for (var i = 0; i < borrowers.length; i++) {
+                        if (borrowers[i].idno == id){
+                            var apparatus = borrowers[i].borrowedApparatus
+                            break;
+                        }
+                    }
+
+                    for (var i = 0; i < apparatus.length; i++) {
+                        var row = document.createElement("tr")
+                        // alert(row)
+                        var app = document.createElement("td");
+                        app.innerHTML = apparatus[i].name
+                        var quantity = document.createElement("td");
+                        quantity.innerHTML = apparatus[i].quantity
+
+                        row.appendChild(app);
+                        row.appendChild(quantity);
+                        apparatusTable.appendChild(row);
+                    };
+                    
+                    inner.appendChild(apparatusTable);
+                modal.style.display = "block";
+                //pogi dito
+                }
+            }(idno);
+
+            var returnButton = document.createElement("button");
+            returnButton.className = "returnBtn"
+            returnButton.innerHTML = "Return"
+            // reviewButton.setAttribute("data-id", idno)
+            returnButton.onclick = function(id){
+                return function(){
+                    alert("Student with id number "+id+" put to returned column")
+                    for(var i = 0; i < borrowers.length; i++) {
+                        if(borrowers[i].idno == id) {
+                            returnee = borrowers[i];
+                            returnees.push(returnee);
+                            borrowers.splice(i, 1);
+                            sync();
+                            break;
+                        }
+                    }
+                    document.getElementById(id).remove();
+                    // entry.parentElement.removechild(entry);
+                    document.getElementById("returned").innerHTML = ""
+                    getReturnees();
+                }
+            }(idno);
+
+            //make table row draggable
+            entry.id = idno
+            entry.className = "row entry"
+            entry.setAttribute("draggable", "true");
+            entry.setAttribute("ondragstart", "drag(event)");
+
+            buttonsColumn.appendChild(reviewButton);
+            buttonsColumn.appendChild(returnButton);
+            entry.innerHTML = rows;
+            entry.appendChild(buttonsColumn).parentNode
+            
+            borrowed.appendChild(entry);
         }
     }
 }
@@ -116,20 +251,13 @@ function addData() {
         var instructor = document.getElementById("instructor").value;
         var activity = document.getElementById("activities").value;
         var borrowedApparatus;
-        var apparatus = "<ul>";
 
         for (var cc = 1; cc <= Object.keys(b).length; cc++) {
-            if (b[cc].activityName == activity) {
+            if (cc == activity) {
                 borrowedApparatus = b[cc].apparatus;
-                for (var c = 0; c < Object.keys(b[cc].apparatus).length; c++) {
-                    // borrowedApparatus += b[cc].apparatus[c].name;
-                    // borrowedApparatus += ", "
-                    apparatus += "<li>" + b[cc].apparatus[c].name + "</li>";
-                }
             }
         }
 
-        apparatus += "</ul>";
         borrower = {
             idno: idno,
             name: name,
@@ -137,77 +265,41 @@ function addData() {
             instructor: instructor,
             borrowedApparatus: borrowedApparatus
         };
+        alert()
         borrowers.push(borrower);
-        // alert(borrower)
         sync();
-
-        // var remarks = document.getElementById("apparatus").value;
-        rows += "<div class='t'>"+"ID No.: "+idno + "<br>" + "Name: "+name + "<br>"+"Group: "+ groupno + "<br>" +"Instructor: " + instructor + "<br>" + "Apparatus: " +apparatus + "<br>"+"</div>";
-        var borrowed = document.querySelector("#borrowed");
-        var div = document.createElement("div");
-
-        //make table row draggable
-        div.id = idno; 
-        div.className = "row card entry"
-        div.setAttribute("draggable", "true");
-        div.setAttribute("ondragstart", "drag(event, "+idno+")")
-        // div.setAttribute("ondragend", "returns("+idno+")");
-
-        div.innerHTML = rows;
-        borrowed.appendChild(div);
+        inventorySync(idno);
+        alert("jejejejeje")
+        getBorrower();
         resetForm();
     }
 }
 
-// remove borrower from borrowers variable and add to returnees variable
+function inverntorSync(idno){
+    alert("jeje")
+    var borrowedApp
+    var students = JSON.parse(localStorage.getItem('Borrowers'))
+    for (var i=0; i < students.length; i++) {
+        if (students[i].idno === idno) {
+            borrowedApp = students[i].apparatus
+            break;
+        }
+    }
+    alert("whoawets")
+    console.log(borrowedApp)
+    // for (var i = 0; i < borrowedApp.length; i++) {
+        
+    // };
+
+}
 function returns(idno){
     for(var i = 0; i < borrowers.length; i++) {
-    if(borrowers[i].idno == idno) {
-        returnee = borrowers[i];
-        returnees.push(returnee);
-        borrowers.splice(i, 1);
-        sync();
-        break;
-    }
-}
-}
-
-// store in var bs content of local storage item Borrowers
-// and iterate and display per object on screen 
-function getBorrower(){
-    bs = JSON.parse(localStorage.getItem('Borrowers'))
-    if (bs === undefined || bs == null || typeof bs[0] == 'undefined') {
-        // array empty or does not exist
-        // alert()
-    }else{
-        for(var i = 0; i < bs.length; i++){
-            // var rows = "";
-            var idno = bs[i].idno;
-            var name = bs[i].name   ;
-            var groupno = bs[i].groupNumber
-            var instructor = bs[i].instructor
-            // alert()
-            var rows = "<div class='t'>"+"ID No.: "+idno+"<br>"+"Name: "+name+ 
-            "<br>"+"Group: "+groupno+"<br>"+"Instructor: "+instructor;
-            var apparatus = "<ul>";
-
-            for(var j = 0; j < bs[i].borrowedApparatus.length; j++){
-                apparatus += "<li>" + bs[i].borrowedApparatus[j].name + "</li>";
-            }
-
-            apparatus += "</ul>" 
-            rows += "<br>"+"Apparatus: "+apparatus+"</div>"
-            var borrowed = document.querySelector("#borrowed");
-            var div = document.createElement("div");
-
-            //make table row draggable
-            div.id = idno
-            div.className = "row card entry"
-            div.setAttribute("draggable", "true");
-            div.setAttribute("ondragstart", "drag(event)");
-            // div.setAttribute("ondragstart", "returns("+idno+")");
-            div.innerHTML = rows;
-            borrowed.appendChild(div);
+        if(borrowers[i].idno == idno) {
+            returnee = borrowers[i];
+            returnees.push(returnee);
+            borrowers.splice(i, 1);
+            sync();
+            break;
         }
     }
 }
@@ -242,9 +334,11 @@ function getApparatus(activity) {
     xmlhttp.send();
 }
 
-function getApparatus(activity){
-    var manual = JSON.parse(localStorage.getItem('Manual'));
-    var apparatus = manual
+function getApparatus(chapterNumber){
+    manual = JSON.parse(localStorage.getItem(manual));
+    // console.log(manual)
+    var apparatus = manual.chapters[chapterNumber].apparatus;
+    // console.log(apparatus)
 }
 
 function resetForm() {
@@ -279,9 +373,11 @@ function drag(ev) {
 
 function drop(ev) {
     var data = ev.dataTransfer.getData("text");
-    returns(data);
-    alert(data);
     ev.preventDefault();
+    var div = document.getElementById(data)
+    var btn = div.querySelector(".returnBtn")
+    btn.click()
+
     ev.target.appendChild(document.getElementById(data));
     
 }
@@ -319,8 +415,9 @@ function downloadManual(manual) {
     
 }
 
-function setActivities(manual) {
+function setActivities(man) {
     // alert()
+    manual = man;
     a = JSON.parse(localStorage.getItem(manual));
     b = a.chapters;
 
@@ -328,8 +425,34 @@ function setActivities(manual) {
         var x = document.getElementById("activities");
         var option = document.createElement("option");
         option.text = b[i].activityName;
-        option.setAttribute("value", b[i].activityName);
+        option.setAttribute("value", i);
         x.add(option);
     }
 }
 
+
+
+
+
+
+function searchBorrowed() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  div = document.getElementById("borrowed");
+  entry = div.getElementsByTagName("div");
+  alert(entry)
+
+  // Loop through all table rows, and hide those who don't match the search query
+  // for (i = 0; i < tr.length; i++) {
+  //   td = tr[i].getElementsByTagName("td")[0];
+  //   if (td) {
+  //     if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+  //       tr[i].style.display = "";
+  //     } else {
+  //       tr[i].style.display = "none";
+  //     }
+  //   } 
+  // }
+}

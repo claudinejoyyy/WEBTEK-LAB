@@ -5,15 +5,25 @@
 		<link rel="stylesheet" href="../styles/layout.css">
 	</head>
 	<body>
-		<a href="../index.html"><button>Back</button></a>
-		<h3>Download manual</h3>
-		<form action="">
-			<select name="manuals" onchange="setManual(this.value)">
-            <option selected disabled>Choose here</option>
-            <option value="Medtech 1">Medtech1</option>
-            <option value="manual2">Manual 2</option>
-            </select>
-		</form>
-		<button id="download" onclick="downloadManual()">Download</button>
+		<div class="container">
+			<div class="row">
+				<div class="six columns">
+					<div class="four columns">
+					<a href="../index.html"><button>Back</button></a>
+					<h3>Download manual</h3>
+					<form action="">
+						<select name="manuals" onchange="setManual(this.value)">
+			            <option selected disabled>Choose here</option>
+			            <option value="Medtech 1">Medtech1</option>
+			            <option value="manual2">Manual 2</option>
+			            </select>
+					</form>
+					
+						<button id="download" onclick="downloadManual()">Download</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</body>
 </html>

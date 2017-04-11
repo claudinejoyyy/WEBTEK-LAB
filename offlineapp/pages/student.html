@@ -18,58 +18,65 @@
         <div id="id01"></div>
         <div class="container main">
             <div class="row t">
-                <div id = "data" class="seven columns">
-                    <h2>Add/Update Borrow Form</h2>
-                    <h6><strong>NOTE</strong>: Download a manual first. You can download manuals <a id="BR">here.</a></h6>
+                <div id = "data" class="six columns">
+                    <h2>Add Borrower Form</h2>
+                    <h6><strong>NOTE</strong>: If you haven't downloaded any manual Download a manual first. You can download manuals <a id="BR">here.</a></h6>
                     <form id = "person" onsubmit="addData()">
-                        ID Number: &nbsp;&nbsp;<input id = "idno" name = "idno" type = "number"  oninput="idLengthCheck(this)" min = "2000000" max ="2169999" maxlength="7">
-                        <br><br>
-                        Name: &nbsp;&nbsp;<input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*' oninvalid="setCustomValidity('Name cannot contain numbers or special characters')">
-                        <br><br>
-                        Group Number: &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "number" oninput="grpLengthCheck(this)" min = "1" max ="20" maxlength="2">
-                        <br><br>
-                        Instructor: &nbsp;&nbsp;
+                        <strong>ID Number:</strong> &nbsp;&nbsp;<input id = "idno" name = "idno" type = "number"  oninput="idLengthCheck(this)" min = "2000000" max ="2169999" maxlength="7" required>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Group Number:</strong> &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "number" oninput="grpLengthCheck(this)" min = "1" max ="20" maxlength="2" required>
+                        <br>
+                        <strong>Name:</strong> &nbsp;&nbsp;<input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*' required>
+                        <br>
+                        <strong>Instructor:</strong> &nbsp;&nbsp;
                         <select id = "instructor" name = "instructor">
                             <option>Instructor 1</option>
                             <option>Instructor 2</option>
                             <option>Instructor 3</option>
                         </select>
                         &nbsp;&nbsp;
-                        Manual:
+                        <strong>Manual:</strong>
                         <select name="manuals" onchange="setActivities(this.value)" id="manual">
                             <option selected disabled>Choose here</option>
-                            <!-- <option value="Manual">Manual</option> -->
-                            <!-- <option value="Activity 2">Activity 2</option>
-                                <option value="Activity 3">Activity 3</option> -->
                         </select>
-                        <br><br>
-                        Activity:
+                        <br>
+                        <strong>Activity:</strong>
                         <select name="activities" onchange="getApparatus(this.value)" id="activities">
                             <option selected disabled>Choose here</option>
-                            <!-- <option value="Activity 1">Activity 1</option>
-                                <option value="Activity 2">Activity 2</option>
-                                <option value="Activity 3">Activity 3</option> -->
                         </select>
                         <br><br>
                         <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
                         <input id = "submit" type = "submit" value = " Add ">
                     </form>
                 </div>
-                <!-- <div class="five columns">
-                    <table border="1">
+                <div id="tebol"class="six columns">
+                    <!-- <table iborder="1">
                         <tr>
                             <th>asdasd</th>
                         </tr>
-                    </table>
-                    </div> -->
+                    </table> -->
+                </div>
             </div>
             <div class="row">
                 <div class="six columns">
-                    <h3>Borrowed</h3>
+                    <div class="row">
+                        <div class="eight columns">
+                            <h3>Borrowed</h3>
+                        </div>
+                        <div class="four columns">
+                            <input type="text" id="borrowedInput" onkeyup="searchBorrowed()" placeholder="Search.." class="searchInput">
+                        </div>
+                    </div>
                     <hr>
                 </div>
                 <div class="six columns">
-                    <h3>Returned</h3>
+                    <div class="row">
+                        <div class="eight columns">
+                            <h3>Returned</h3>
+                        </div>
+                        <div class="four columns">
+                            <input type="text" id="returnedInput" onkeyup="searchReturned()" placeholder="Search.." class="searchInput">
+                        </div>
+                    </div>
                     <hr>
                 </div>
             </div>
@@ -77,7 +84,7 @@
                 <!-- Borrowed Column -->
                 <div class="six columns entry" id="borrowed">
                 </div>
-                <div class="six columns entry droptarget" id="div" ondrop="drop(event)" ondragover="allowDrop(event)">
+                <div class="six columns entry droptarget" id="returned" ondrop="drop(event)" ondragover="allowDrop(event)">
                 </div>
             </div>
             <div id="myModal" class="modal">
@@ -95,9 +102,74 @@
                     <button id="download" onclick="downloadManual()">Download</button>
                 </div>
             </div>
+
             <!-- <div id="aw"></div> -->
             <!-- <div class="container"> -->
             <!-- </div> -->
+            <div id="reviewModal" class="modal">
+                <!-- Modal content -->
+                <div class="modal-content" id="aw">
+                    <!-- <span class="close">&times;</span>
+                    <h3>Download manual</h3>
+                    <form action="">
+                        <select name="manuals" onchange="setManual(this.value)">
+                            <option selected disabled>Choose here</option>
+                            <option value="Medtech 1">Medtech1</option>
+                            <option value="manual2">Manual 2</option>
+                        </select>
+                    </form>
+                    <button id="download" onclick="downloadManual()">Download</button> -->
+                </div>
+            </div>
         </div>
+        <script>
+        function searchBorrowed() {
+        // Declare variables 
+        // alert()
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("borrowedInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("borrowed");
+        entries = div.getElementsByClassName("entry");
+        // alert(entries.length)
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < entries.length; i++) {
+            entry = entries[i].getElementsByClassName("ten columns")[0];
+                if (entry) {
+                    // alert(entry.innerHTML)
+                    if (entry.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    entries[i].style.display = "";
+                    } else {
+                        entries[i].style.display = "none";
+                    }
+                } 
+        }
+        }
+
+        function searchReturned() {
+        // Declare variables 
+        // alert()
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("returnedInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("returned");
+        entries = div.getElementsByClassName("entry");
+        // alert(entries.length)
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < entries.length; i++) {
+            entry = entries[i].getElementsByClassName("ten columns")[0];
+                if (entry) {
+                    // alert(entry.innerHTML)
+                    if (entry.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    entries[i].style.display = "";
+                    } else {
+                        entries[i].style.display = "none";
+                    }
+                } 
+        }
+        }
+        </script>
     </body>
 </html>
