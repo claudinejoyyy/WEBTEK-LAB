@@ -4,11 +4,11 @@
     "1":{
       "activity": "Activity 1: Glassware, Equipment And other Supplies Used In Clinical Chemistry Laboratory",
       "apparatus": 
-        [{"name": "Plain test tubes",
+        [{"name": "Plain Test Tube",
           "quantity": 3},
-         {"name": "Evacuated test tubes"
+         {"name": "Evacuated Test Tube"
           "quantity": 6},
-		 {"name": "Centrifuge tubes"
+		 {"name": "Centrifuge Tubes"
           "quantity": 2},
          {"name": "Special tubes"
           "quantity": 3},
@@ -16,47 +16,47 @@
           "quantity": 2}, 
 		 {"name": "Pipettes"
           "quantity": 5},
-		 {"name": "Volumetric flask"
+		 {"name": "Volumetric Flask"
           "quantity": 1},
-		{"name": "Erlenmeyer flask"
+		{"name": "Erlenmeyer Flask"
           "quantity": 1},     
 		 {"name": "Beaker"
           "quantity": 1},
-		 {"name": "Graduated cylinder"
+		 {"name": "Graduated Cylinder"
           "quantity": 1},
 		 {"name": "Funnel"
           "quantity": 1},
-		 {"name": "Stirring rod"
+		 {"name": "Stirring Rod"
           "quantity": 1},
 	     {"name": "Thermometer"
           "quantity": 1},
-		 {"name": "Reagent bottles"
+		 {"name": "Reagent Bottles"
           "quantity": 2},
-		 {"name": "Blood Collection set"
+		 {"name": "Blood Collection Set"
           "quantity": 1}, //not found in the inventory, must be brought by the students
-		 {"name": "Disposable pipette tips"
+		 {"name": "Disposable Pipette Tips"
           "quantity": 3},
-		 {"name": "Wash bottle"
+		 {"name": "Wash Bottle"
           "quantity": 1},
-		 {"name": "Test tube rack"
+		 {"name": "Test Rube Rack"
           "quantity": 1},
 		 {"name": "Parafilm"
           "quantity": 1},
-		 {"name": "Rubber pipettol"
+		 {"name": "Rubber Pipettol"
           "quantity": 1},
 		 {"name": "Timing device"
-          "quantity": 1},
+          "quantity": 1}, //not found in the inventory, must be brought by the students
 		 {"name": "Spectrophotometer"
           "quantity": 1}, 
-		 {"name": "Clinical centrifuge"
+		 {"name": "Clinical Centrifuge"
           "quantity": 1},
-		 {"name": "Water bath"
+		 {"name": "Water Bath"
           "quantity": 1},
-		 {"name": "Analytical balance"
+		 {"name": "Analytical Balance"
           "quantity": 1},
-		 {"name": "Rough balance"
+		 {"name": "Rough Balance"
           "quantity": 1}, 
-		 {"name": "Hot air sterilizer"
+		 {"name": "Hot Air Sterilizer"
           "quantity": 1},
 		 {"name": "Pipette washer"
           "quantity": 1}
@@ -72,67 +72,67 @@
           "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Mask"
           "quantity": 1}, //not found in the inventory, must be brought by the students
-	   {"name": "Gloves"
+	   {"name": "Gloves"  //not found in the inventory, must be brought by the students
           "quantity": 1},
-	   {"name": "Eye goggle"
+	   {"name": "Eye Goggle"
           "quantity": 1},
-	   {"name": "Hand towel"
+	   {"name": "Hand Towel"
           "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Soap"
           "quantity": 1}, //not found in the inventory, must be brought by the students	
 	   {"name": "Antiseptic Solutions",
         "quantity": 2},
        {"name": "Chart of hazard logos",
-        "quantity": 1}
+        "quantity": 1}    //not found in the inventory, must be brought by the students
       ]
     },
   "3": {
     "activity": "Activity 3: Study Of Pipets And Pipetting Technique",
     "apparatus": 
-      [{"name": "Serologic pipettes",
+      [{"name": "Serological Pipettestes",
         "quantity": 6},
        {"name": "Mohr Pipets",
         "quantity": 2},
         {"name": "Volumetric Pipets",
         "quantity": 2},
-       {"name": "Ostwald-Folin pipette",
+       {"name": "Ostwald-Folin Pipette",
         "quantity": 1},
        {"name": "Automatic Micropipette and disposable tips",
         "quantity": 3},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 2},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
 	   {"name": "Beaker",
         "quantity": 1},	
        {"name": "Erlenmeyer flask with water",
         "quantity": 1},
-       {"name": "Test tube racks",
+       {"name": "Test Rube Racks",
         "quantity": 3},
 	   {"name": "Tissue papers",
         "quantity": 3}, //not found in the inventory, must be brought by the students	
-	   {"name": "Rubber pipettol",
+	   {"name": "Rubber Pipettol",
         "quantity": 1}
       ]
     },
   "4": {
     "activity": "Activity 4: Calibration Of TD Pipette",
     "apparatus": 
-      [{"name": "TD pipette",
+      [{"name": "TD Pipette",
         "quantity": 4},
-	   {"name": "Flask with distilled water",
+	   {"name": "Flask",
         "quantity": 1},
 	   {"name": "Thermometer",
         "quantity": 1},
-	   {"name": "Weighing bottle",
+	   {"name": "Weighing Bottle",
         "quantity": 1},
-	   {"name": "Rubber pipettol",
+	   {"name": "Rubber Pipettol",
         "quantity": 1},
 	   {"name": "Tissue paper",
         "quantity": 1}, //not found in the inventory, must be brought by the students
-	   {"name": "Analytical balance",
+	   {"name": "Analytical Balance",
         "quantity": 2},
-	   {"name": "Analytical weights",
+	   {"name": "Analytical Weights",
         "quantity": 2}
       ]
     },
@@ -140,13 +140,17 @@
     "activity": "Activity 5: Preparation And Use Of Quality Control Chart (Levey-Jennings Chart With Application Of The WestGard Rules)",
     "apparatus": 
       [{"name": "Control sera and brochures",
-        "quantity": 2},
+        "quantity": 2}, //not found in the inventory, must be brought by the students
        {"name": "Prepared quality control(Levey-Jennings) chart",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
        {"name": "Data of pre-analyzed control samples",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Carbon Paper",
+        "quantity": 2},
+	   {"name": "Meter Stick",
+        "quantity": 2},
        {"name": "Millimeter graphing papers",
-        "quantity": 4},
+        "quantity": 4}, //not found in the inventory, must be brought by the students
        {"name": "Colored pencils",
         "quantity": 5} //not found in the inventory, must be brought by the students
 	   {"name": "Calculator",
@@ -160,10 +164,10 @@
         "quantity": 2},
        {"name": "Prepared analyte solutions",
         "quantity": 3},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
        {"name": "Tissue paper",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
        {"name": "Spectrophotometer",
         "quantity": 1},
        {"name": "Chart illustration of the spectrophotometer",
@@ -184,15 +188,15 @@
     "apparatus": 
       [{"name": "Lancet",
         "quantity": 1},
-       {"name": "Venipuncture set",
+       {"name": "Venipuncture Set",
         "quantity": 8},
-        {"name": "Labeling tapes",
+        {"name": "Labeling Tapes",
         "quantity": 2}, //not found in the inventory, must be brought by the students
-       {"name": "Plain test tubes",
+       {"name": "Plain Test Tube",
         "quantity": 2},
        {"name": "Capillary tubing",
         "quantity": 2},
-	   {"name": "Test tube rack",
+	   {"name": "Test Rube Rack",
         "quantity": 1},
 	   {"name": "Gloves",
         "quantity": 1}
@@ -201,48 +205,48 @@
   "9": {
     "activity": "Activity 9: Sample Preparation For Chemistry Assay",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tube",
+       {"name": "Test Tube",
         "quantity": 2},
        {"name": "Pasteur pipets",
         "quantity": 2},
-       {"name": "Serologic pipet",
-        "quantity": 1},
+       {"name": "Serological Pipettes",
+        "quantity": 2},
        {"name": "Nescofilm",
         "quantity": 1},
-       {"name": "Applicator sticks",
+       {"name": "Applicator Sticks",
         "quantity": 3},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Labeling tape",
+       {"name": "Labeling Tape",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Clinical centrifuge",
+	   {"name": "Clinical Centrifuge",
         "quantity": 1}	
       ]
     },
   "10": {
     "activity": "Activity 10: Preparation Of Protein Free Filtrate",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
-       {"name": "Centrifuge tubes",
+       {"name": "Centrifuge Tubes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 4},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-       {"name": "Labeling tape",
+       {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube stopper",
+       {"name": "Test Tube Stopper",
         "quantity": 1},
 	   {"name": "Centrifuge",
         "quantity": 1}
@@ -251,25 +255,25 @@
   "11": {
     "activity": "Activity 11: Enzymatic-Colorimetric Glucose Oxidase-Pap Method (Trinder Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 2},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettes",
         "quantity": 2},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -284,25 +288,25 @@
   "12": {
     "activity": "Activity 12: Total Cholesterol Determination Enzymatic Colorimetric - Cholesterol Oxidase-Pap Method (Trinder Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -317,25 +321,25 @@
   "13": {
     "activity": "Activity 13: HDL-Cholesterol Determination",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 2},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -350,25 +354,25 @@
   "14": {
     "activity": "Activity 14: Triglycerides Determination",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -383,25 +387,25 @@
   "15": {
     "activity": "Activity 15: Blood Urea Nitrogen(BUN) Determination (Kinetic: Urease-Glutamate Dehydrogenase Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -416,27 +420,27 @@
   "16": {
     "activity": "Activity 16: Creatinine Determination (Colorimetric Method - JAFFE Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
 	   {"name": "Micropipette",
         "quantity": 1},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -451,27 +455,27 @@
   "17": {
     "activity": "Activity 17: Uric Acid Determination (Colorimetric: Uricase - Trinder Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
 	   {"name": "Micropipette",
         "quantity": 1},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -486,27 +490,27 @@
   "18": {
     "activity": "Activity 18: Total Protein Determination (Colorimetric Method - Biuret Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
 	   {"name": "Micropipette",
         "quantity": 1},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
@@ -521,27 +525,27 @@
   "19": {
     "activity": "Activity 19: Serum Albumin Determination (Colorimetric Method - Bromcresol Green Dye Binding Reaction)",
     "apparatus": 
-      [{"name": "Venipuncture set",
+      [{"name": "Venipuncture Set",
         "quantity": 1},
-       {"name": "Test tubes",
+       {"name": "Test Tube",
         "quantity": 3},
        {"name": "Cuvettes",
         "quantity": 2},
-       {"name": "Pasteur pipettes",
+       {"name": "Pasteur Pipets",
         "quantity": 3},
-       {"name": "Serologic pipettes",
+       {"name": "Serological Pipettestes",
         "quantity": 2},
 	   {"name": "Micropipette",
         "quantity": 1},
-       {"name": "Rubber pipettol",
+       {"name": "Rubber Pipettol",
         "quantity": 1},
-       {"name": "Test tube rack",
+       {"name": "Test Rube Rack",
         "quantity": 1},
-	   {"name": "Labeling tape",
+	   {"name": "Labeling Tape",
         "quantity": 1}, //not found in the inventory, must be brought by the students
 	   {"name": "Nescofilm",
         "quantity": 1},
-	   {"name": "Applicator sticks",
+	   {"name": "Applicator Sticks",
         "quantity": 3},
 	   {"name": "Timer",
         "quantity": 1}, //not found in the inventory, must be brought by the students
