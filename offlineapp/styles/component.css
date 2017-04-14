@@ -332,3 +332,6 @@ input.gn-search:focus {
 			width: 130%
 	}
 }
+#burgerButton {
+    padding: 0 30px;
+}

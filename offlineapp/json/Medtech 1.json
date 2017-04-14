@@ -1,138 +1,253 @@
 {
-"manualName": "Medtech 1",
-"chapters":{
+  "manualName": "Medtech 1",
+  "chapters": {
     "1": {
-        "activityName": "Experiment No. 1 STUDY OF INSTRUMENTS IN BLOOD BANKING",
-        "apparatus": 
-          [{"name": "Plain test tubes", 
-          "quantity": 1},
-          {"name": "Graduated centrifuge tube", 
-          "quantity": 1},
-          {"name": "Pasteur pipet", 
-          "quantity": 1},
-          {"name": "Serologic pipets", 
-          "quantity": 1},
-          {"name": "Glass syringe", 
-          "quantity": 1},
-          {"name": "Plain glass slide", 
-          "quantity": 1},
-          {"name": "Blood Typing Slide", 
-          "quantity": 1},
-          {"name": "Clinical centrifuge", 
-          "quantity": 1},
-          {"name": "Water Bath", 
-          "quantity": 1},
-          {"name": "Clinical sterilizer", 
-          "quantity": 1},
-          {"name": "Compound microscope", 
-          "quantity": 1},
-          {"name": "Laboratory view box", 
-          "quantity": 1},
-          {"name": "Refrigerator", 
-          "quantity": 1},
-          {"name": "Serofuge", 
-          "quantity": 1},
-          {"name": "Blood Bag", 
-          "quantity": 1},
-          {"name": "Toumiquet", 
-          "quantity": 1},
-          {"name": "Applicator stick", 
-          "quantity": 1},
-          {"name": "Test tube rack", 
-          "quantity": 1},
-          {"name": "Rubber pipetol", 
-          "quantity": 1},
-          {"name": "Wash bottle", 
-          "quantity": 1},
-          {"name": "Lancet", 
-          "quantity": 1},
-          {"name": "Cotton ball", 
-          "quantity": 10},
-          {"name": "Petri Dish",
-           "quantity": 1},
-          {"name": "Labeling tape", 
-          "quantity": 1},
-          {"name": "Parafilm", 
-          "quantity": 1}
-          ]
+      "activityName": "Experiment No. 1 STUDY OF INSTRUMENTS IN BLOOD BANKING",
+      "apparatus": [{
+          "name": "Plain test tubes",
+          "quantity": 1
         },
-        "2": {
-        "activityName": "Experiment No. 2 MATERIALS & EQUIPMENT in HISPATHOLOGY",
-        "apparatus": 
-          [{"name": "Serological Pipettes", 
-          "quantity": 1},
-          {"name": "Medicine Dropper", 
-          "quantity": 1},
-          {"name": "Watch Glass", 
-          "quantity": 1},
-          {"name": "Test Tube 13x100 & 16x150", 
-          "quantity": 1},
-          {"name": "Glass Slide", 
-          "quantity": 1},
-          {"name": "Cover Slip", 
-          "quantity": 1},
-          {"name": "Beaker", 
-          "quantity": 1},
-          {"name": "Graduated Cylinder", 
-          "quantity": 1},
-          {"name": "Volumetric Flask", 
-          "quantity": 1},
-          {"name": "Evaporating Dish", 
-          "quantity": 1},
-          {"name": "Thermometer", 
-          "quantity": 1},
-          {"name": "Counting Chamber", 
-          "quantity": 1},
-          {"name": "Dilulating Pipettes", 
-          "quantity": 1}
-          ]
+        {
+          "name": "Graduated centrifuge tube",
+          "quantity": 1
         },
-        "3": {
-        "activityName": "Experiment No. 3 GLASSWARES USED IN CLINICAL MICROSCOPY",
-        "apparatus": 
-          [{"name": "Coplin jar", 
-          "quantity": 1},
-          {"name": "Staining dish", 
-          "quantity": 1},
-          {"name": "Rack",
-           "quantity": 1},
-          {"name": "Beaker", 
-          "quantity": 1},
-          {"name": "Graduated cylinder", 
-          "quantity": 1},
-          {"name": "Volumetric flask", 
-          "quantity": 1},
-          {"name": "Strirring rod", 
-          "quantity": 1},
-          {"name": "Glass slide", 
-          "quantity": 1},
-          {"name": "Cover slip", 
-          "quantity": 1},
-          {"name": "Rotary microtome", 
-          "quantity": 1},
-          {"name": "Paraffin oven", 
-          "quantity": 1},
-          {"name": "Stretching table", 
-          "quantity": 1},
-          {"name": "Section spreading machine", 
-          "quantity": 1},
-          {"name": "Microtome blade", 
-          "quantity": 1},
-          {"name": "Microtome knide", 
-          "quantity": 1},
-          {"name": "Knife back", 
-          "quantity": 1},
-          {"name": "Knife holder",
-           "quantity": 1},
-          {"name": "Forcep", 
-          "quantity": 1},
-          {"name": "Hone and strop", 
-          "quantity": 1},
-          {"name": "Surgical blade", 
-          "quantity": 1},
-          {"name": "Timer", 
-          "quantity": 1}
-          ]
+        {
+          "name": "Pasteur pipet",
+          "quantity": 1
+        },
+        {
+          "name": "Serologic pipets",
+          "quantity": 1
+        },
+        {
+          "name": "Glass syringe",
+          "quantity": 1
+        },
+        {
+          "name": "Plain glass slide",
+          "quantity": 1
+        },
+        {
+          "name": "Blood Typing Slide",
+          "quantity": 1
+        },
+        {
+          "name": "Clinical centrifuge",
+          "quantity": 1
+        },
+        {
+          "name": "Water Bath",
+          "quantity": 1
+        },
+        {
+          "name": "Clinical sterilizer",
+          "quantity": 1
+        },
+        {
+          "name": "Compound microscope",
+          "quantity": 1
+        },
+        {
+          "name": "Laboratory view box",
+          "quantity": 1
+        },
+        {
+          "name": "Refrigerator",
+          "quantity": 1
+        },
+        {
+          "name": "Serofuge",
+          "quantity": 1
+        },
+        {
+          "name": "Blood Bag",
+          "quantity": 1
+        },
+        {
+          "name": "Toumiquet",
+          "quantity": 1
+        },
+        {
+          "name": "Applicator stick",
+          "quantity": 1
+        },
+        {
+          "name": "Test tube rack",
+          "quantity": 1
+        },
+        {
+          "name": "Rubber pipetol",
+          "quantity": 1
+        },
+        {
+          "name": "Wash bottle",
+          "quantity": 1
+        },
+        {
+          "name": "Lancet",
+          "quantity": 1
+        },
+        {
+          "name": "Cotton ball",
+          "quantity": 10
+        },
+        {
+          "name": "Petri Dish",
+          "quantity": 1
+        },
+        {
+          "name": "Labeling tape",
+          "quantity": 1
+        },
+        {
+          "name": "Parafilm",
+          "quantity": 1
         }
+      ]
+    },
+    "2": {
+      "activityName": "Experiment No. 2 MATERIALS & EQUIPMENT in HISPATHOLOGY",
+      "apparatus": [{
+          "name": "Serological Pipettes",
+          "quantity": 1
+        },
+        {
+          "name": "Medicine Dropper",
+          "quantity": 1
+        },
+        {
+          "name": "Watch Glass",
+          "quantity": 1
+        },
+        {
+          "name": "Test Tube 13x100 & 16x150",
+          "quantity": 1
+        },
+        {
+          "name": "Glass Slide",
+          "quantity": 1
+        },
+        {
+          "name": "Cover Slip",
+          "quantity": 1
+        },
+        {
+          "name": "Beaker",
+          "quantity": 1
+        },
+        {
+          "name": "Graduated Cylinder",
+          "quantity": 1
+        },
+        {
+          "name": "Volumetric Flask",
+          "quantity": 1
+        },
+        {
+          "name": "Evaporating Dish",
+          "quantity": 1
+        },
+        {
+          "name": "Thermometer",
+          "quantity": 1
+        },
+        {
+          "name": "Counting Chamber",
+          "quantity": 1
+        },
+        {
+          "name": "Dilulating Pipettes",
+          "quantity": 1
+        }
+      ]
+    },
+    "3": {
+      "activityName": "Experiment No. 3 GLASSWARES USED IN CLINICAL MICROSCOPY",
+      "apparatus": [{
+          "name": "Coplin jar",
+          "quantity": 1
+        },
+        {
+          "name": "Staining dish",
+          "quantity": 1
+        },
+        {
+          "name": "Rack",
+          "quantity": 1
+        },
+        {
+          "name": "Beaker",
+          "quantity": 1
+        },
+        {
+          "name": "Graduated cylinder",
+          "quantity": 1
+        },
+        {
+          "name": "Volumetric flask",
+          "quantity": 1
+        },
+        {
+          "name": "Strirring rod",
+          "quantity": 1
+        },
+        {
+          "name": "Glass slide",
+          "quantity": 1
+        },
+        {
+          "name": "Cover slip",
+          "quantity": 1
+        },
+        {
+          "name": "Rotary microtome",
+          "quantity": 1
+        },
+        {
+          "name": "Paraffin oven",
+          "quantity": 1
+        },
+        {
+          "name": "Stretching table",
+          "quantity": 1
+        },
+        {
+          "name": "Section spreading machine",
+          "quantity": 1
+        },
+        {
+          "name": "Microtome blade",
+          "quantity": 1
+        },
+        {
+          "name": "Microtome knide",
+          "quantity": 1
+        },
+        {
+          "name": "Knife back",
+          "quantity": 1
+        },
+        {
+          "name": "Knife holder",
+          "quantity": 1
+        },
+        {
+          "name": "Forcep",
+          "quantity": 1
+        },
+        {
+          "name": "Hone and strop",
+          "quantity": 1
+        },
+        {
+          "name": "Surgical blade",
+          "quantity": 1
+        },
+        {
+          "name": "Timer",
+          "quantity": 1
+        }
+      ]
     }
+  }
 }

@@ -11,11 +11,12 @@ var inventory;
 var bs;
 
 window.onload = function() {
+
     var addTab = document.getElementById("addTab")
     var borrowedTab = document.getElementById("borrowedTab")
     var returnedTab = document.getElementById("returnedTab")
     var borrowedAndReturnedTab = document.getElementById("borrowedAndReturnedTab")
-    
+
     // form and divs
     var addForm = document.getElementById("addForm")
     var borrowedDiv = document.getElementById("borrowedDiv")
@@ -32,7 +33,6 @@ window.onload = function() {
     var activityInput = document.getElementById("activity")
 
     addTab.onclick = function() {
-
         addForm.style.display = "block"
         borrowedDiv.style.display = "none"
         returnedDiv.style.display = "none"
@@ -101,17 +101,12 @@ window.onload = function() {
         option.setAttribute("value", manuals[i]);
         manual.add(option);
     }
-
-}
-function resizee(){
-    var button = document.getElementById("borrowedTab")
-    button.click();
 }
 
 function getReturnees() {
     rs = JSON.parse(localStorage.getItem('Returnees'))
     var returned = document.querySelectorAll(".returned");
-    
+
     returned[0].innerHTML = ""
     // returned[1].innerHTML = ""
 
@@ -128,7 +123,7 @@ function getReturnees() {
             var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
                 "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
             rows += "</div>";
-            
+
             var entry = document.createElement("div");
 
             var buttonsColumn = document.createElement("div")
@@ -158,17 +153,19 @@ function getReturnees() {
         }
     }
 }
-function getBorrowersAndReturnees(){
+
+function getBorrowersAndReturnees() {
     getBorrower();
     getReturnees();
 }
+
 function getBorrower() {
     bs = JSON.parse(localStorage.getItem('Borrowers'))
     var borrowed = document.querySelectorAll(".borrowed");
 
     borrowed[0].innerHTML = "";
     // borrowed[1].innerHTML = "";
-    
+
     if (bs === undefined || bs == null || typeof bs[0] == 'undefined') {
         // array empty or does not exist
         // alert()
@@ -182,7 +179,7 @@ function getBorrower() {
             var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
                 "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
 
-            
+
             var div = document.createElement("div");
             var entry = document.createElement("div");
 
@@ -192,9 +189,9 @@ function getBorrower() {
             var reviewButton = document.createElement("button");
             reviewButton.className = "reviewBtn"
             reviewButton.innerHTML = "Review"
-            reviewButton.id = "review"+idno
+            reviewButton.id = "review" + idno
             // reviewButton.setAttribute("data-id", idno)
-            var apparatusTable = document.createElement("table") 
+            var apparatusTable = document.createElement("table")
             reviewButton.onclick = function(appTable, id) {
                 return function() {
                     // Get the modal
@@ -204,7 +201,7 @@ function getBorrower() {
                     var closeBtn = document.createElement("span")
                     closeBtn.className = "close"
                     closeBtn.innerHTML = "&times;"
-                    closeBtn.onclick = function(){
+                    closeBtn.onclick = function() {
                         modal.style.display = "none";
                     }
 
@@ -214,7 +211,7 @@ function getBorrower() {
                         }
                     }
 
-                    var appTable = document.createElement("table") 
+                    var appTable = document.createElement("table")
                     var header = document.createElement("tr")
                     var quantityHeader = document.createElement("th")
                     var apparatus;
@@ -275,7 +272,7 @@ function getBorrower() {
                     // entry.parentElement.removechild(entry);
                     // document.getElementById("returned").innerHTML = ""
                     // document.getElementById("returnedMobile").innerHTML = ""
-                    
+
                 }
             }(idno);
 
@@ -291,7 +288,7 @@ function getBorrower() {
             entry.innerHTML = rows;
             entry.appendChild(buttonsColumn).parentNode
 
-            
+
             // alert("gg")
             // borrowedAndReturned.appendChild(entry.cloneNode(true));
             borrowed[0].appendChild(entry);
@@ -304,34 +301,34 @@ function getBorrower() {
 
 function addData() {
     alert('Added to borrowed table');
-        var rows = "";
-        var idno = document.getElementById("idno").value;
-        var name = document.getElementById("name").value;
-        var groupno = document.getElementById("groupno").value;
-        var instructor = document.getElementById("instructor").value;
-        var activity = document.getElementById("activities").value;
-        var borrowedApparatus;
+    var rows = "";
+    var idno = document.getElementById("idno").value;
+    var name = document.getElementById("name").value;
+    var groupno = document.getElementById("groupno").value;
+    var instructor = document.getElementById("instructor").value;
+    var activity = document.getElementById("activities").value;
+    var borrowedApparatus;
 
-        for (var cc = 1; cc <= Object.keys(b).length; cc++) {
-            if (cc == activity) {
-                borrowedApparatus = b[cc].apparatus;
-            }
+    for (var cc = 1; cc <= Object.keys(b).length; cc++) {
+        if (cc == activity) {
+            borrowedApparatus = b[cc].apparatus;
         }
+    }
 
-        borrower = {
-            idno: idno,
-            name: name,
-            groupNumber: groupno,
-            instructor: instructor,
-            borrowedApparatus: borrowedApparatus
-        };
-        // alert(borrower)
-        borrowers.push(borrower);
-        sync();
-        // inventorySync(idno);
-        // alert("jejejejeje")
-        getBorrower();
-        resetForm();
+    borrower = {
+        idno: idno,
+        name: name,
+        groupNumber: groupno,
+        instructor: instructor,
+        borrowedApparatus: borrowedApparatus
+    };
+    // alert(borrower)
+    borrowers.push(borrower);
+    sync();
+    // inventorySync(idno);
+    // alert("jejejejeje")
+    getBorrower();
+    resetForm();
 }
 
 // function inverntorSync(idno) {
@@ -440,52 +437,24 @@ function drop(ev) {
     btn.click()
 
     ev.target.appendChild(document.getElementById(data));
-
-}
-
-function setManual(manual) {
-    document.getElementById("download").setAttribute('onclick', "downloadManual('" + manual + "')");
-    //.onclick =  "downloadManual('"+manual+"')"
-}
-
-function downloadManual(manual) {
-    var xmlhttp = new XMLHttpRequest();
-    var url = "../json/" + manual + ".json";
-
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var arr = JSON.parse(this.responseText);
-            var i;
-
-            localStorage.setItem(manual, JSON.stringify(arr))
-            alert('Manual downloaded!');
-            a = JSON.parse(localStorage.getItem(manual));
-            var select = document.getElementById("manual");
-            // select.options[select.options.length] = new Option(a, i);
-            var manuals = [];
-            manuals.push(a.manualName);
-            localStorage.setItem('manuals', JSON.stringify(manuals))
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-
-    if (document.URL.indexOf("student.html") >= 0) {
-        location.href = "student.html";
-    }
-
 }
 
 function setActivities(man) {
-    manual = man;
-    a = JSON.parse(localStorage.getItem(manual));
-    b = a.chapters;
+    chosenManual = man;
+    document.getElementById('activities').innerHTML = ""
+    var downloadedManuals = JSON.parse(localStorage.getItem('manuals'))
+    downloadedManuals.forEach(function(element) {
+        if (element == chosenManual) {
+            a = JSON.parse(localStorage.getItem(element));
+            b = a.chapters;
 
-    for (i = 1; i <= Object.keys(b).length; i++) {
-        var x = document.getElementById("activities");
-        var option = document.createElement("option");
-        option.text = b[i].activityName;
-        option.setAttribute("value", i);
-        x.add(option);
-    }
+            for (i = 1; i <= Object.keys(b).length; i++) {
+                var x = document.getElementById("activities");
+                var option = document.createElement("option");
+                option.text = b[i].activityName;
+                option.setAttribute("value", i);
+                x.add(option);
+            }
+        }
+    })
 }

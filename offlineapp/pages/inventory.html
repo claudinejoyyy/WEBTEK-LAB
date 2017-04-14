@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
         <link rel="stylesheet" type="text/css" href="../styles/demo.css" />
         <link rel="stylesheet" type="text/css" href="../styles/component.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
         <link rel="stylesheet" type="text/css" href="../styles/modal.css">
         <script defer type="text/javascript" src="../scripts/modal.js"></script>
         <script type="text/javascript">
@@ -17,7 +18,7 @@
             }
         </script>
         <title>Add/Update Inventory</title>
-        <link rel="stylesheet" type="text/css" href="../styles/layout.css">
+        <link rel="stylesheet" type="text/css" href="../styles/student.css">
         <link rel="stylesheet" type="text/css" href="../styles/inventory.css">
         <script defer type="text/javascript" src="../scripts/inventory.js"></script>
     </head>
@@ -25,7 +26,7 @@
         <div class="container">
             <ul id="gn-menu" class="gn-menu-main">
                 <li class="gn-trigger">
-                    <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                    <a id="burgerButton" class="gn-icon gn-icon-menu"><span>Menu</span></a>
                     <nav class="gn-menu-wrapper">
                         <div class="gn-scroller">
                             <ul class="gn-menu">
@@ -33,7 +34,7 @@
                                     <a class="gn-icon gn-icon-earth" href="../index.html">Home</a>
                                 </li>
                                 <li>
-                                    <a id="BR"class="gn-icon gn-icon-search">Borrow</a>
+                                    <a class="gn-icon gn-icon-search" href="student.html">Borrow</a>
                                 </li>
                                 <li><a class="gn-icon gn-icon-article" href="pages/inventory.html">Inventory</a></li>
                                 <li><a class="gn-icon gn-icon-download" href="../pages/download.html">Download Manuals</a></li>
@@ -46,52 +47,43 @@
                     </nav>
                 </li>
                 <li><a href="#">HOME</a></li>
-                <li><a href="#"><span>Good Morning</span></a></li>
+                <li><a id="hehez" href="#"><span></span></a></li>
             </ul>
-            <header>
-                <h1>iBorrow <span>An offline application for borrowing/returning apparatus.</span><span>Developed by <a href="#">Pastor Corporation</a>.</span></h1>
-                <h2></h2>
-            </header>
-            <nav>
-                <a class="button" id="DR">Daily Report</a>
-                <a class="button" id="RN">Return</a>
-                <a class="button"  id="BR" href="student.html">Borrow</a>
-                <a class="button" href="download.html">Download Manual</a>
-                <a class="button" href="inventory.html">Inventory</a>
-            </nav>
-            <div class="row">
-                <div class="five columns">
-                    <h1>Add/Update Apparatus Inventory</h1>
-                    <button id="addNewItem">Add new item</button>
-                    <button id="updateItem">View Inventory</button>
-                </div>
-            </div>
-            <div id="add" class="row">
-                <div class="twelve columns">
-                    <h1>Add</h1>
-                    <form id="addApparatusForm">
-                        <strong><label for="apparatus">Apparatus:</label></strong>
-                        <input id="apparatus" type="text">
-                        <br>
-                        <strong><label for="quantity">Quantity:</label></strong>
-                        <input id="apparatusQuantity" type="number">
-                        <input type="submit" value="Add">
-                    </form>
-                </div>
-            </div>
-            <div id="update" class="row">
-                <div class="twelve columns">
-                    <div class="row">
-                        <div class="eight columns">
-                            <h1>Update</h1>
-                        </div>
-                        <div class="four columns">
-                            <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
-                        </div>
+            <div class="container main">
+                <div class="row">
+                    <div class="five columns">
+                        <h1>Add / Update Apparatus Inventory</h1>
+                        <button id="addNewItem">Add new item</button>
+                        <button id="updateItem">View Inventory</button>
                     </div>
-                    <div class="row searchArea">
-                        <table id="apparatusTable">
-                        </table>
+                </div>
+                <div id="add" class="row">
+                    <div class="twelve columns">
+                        <h1>Add</h1>
+                        <form id="addApparatusForm">
+                            <strong><label for="apparatus">Apparatus:</label></strong>
+                            <input id="apparatus" type="text">
+                            <br>
+                            <strong><label for="quantity">Quantity:</label></strong>
+                            <input id="apparatusQuantity" type="number">
+                            <input type="submit" value="Add">
+                        </form>
+                    </div>
+                </div>
+                <div id="update" class="row">
+                    <div class="twelve columns">
+                        <div class="row">
+                            <div class="eight columns">
+                                <h1>Update</h1>
+                            </div>
+                            <div class="four columns">
+                                <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
+                            </div>
+                        </div>
+                        <div class="row searchArea">
+                            <table id="apparatusTable">
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

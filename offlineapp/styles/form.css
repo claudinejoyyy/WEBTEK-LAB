@@ -107,7 +107,8 @@ html{
     width: auto;
 }
 
-.form-basic input#addBorrowerBtn{
+.form-basic input#addBorrowerBtn,
+.form-basic input#downloadManualBtn{
     display: block;
     border-radius: 2px;
     background-color:  #6caee0;

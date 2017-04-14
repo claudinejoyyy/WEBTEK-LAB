@@ -2,211 +2,167 @@
 	"manualName": "General Zoology 2",
 	"chapters": {
 		"1": {
-			"activity": "Activity 1: The Integumentary System",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Frog",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
-			  "quantity": 3},
-			 {"name": "X-S of Frog Skin",
-			  "quantity": 3} //not found in the inventory, must be brought by students
+			"activityName": "Activity 1: The Integumentary System",
+			"apparatus": [{
+					"name": "Compund Microscope",
+					"quantity": 1
+				},
+				{
+					"name": "Dissecting Pan",
+					"quantity": 3
+				}
 			]
 		},
 		"2": {
-			"activity": "Activity 2: The Muscular System",
-			"apparatus":
-			[{"name": "Skinned Frog",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
-			  "quantity": 3},
-			 {"name": "Dissecting Set",
-			  "quantity": 1},
-			 {"name": "Charts/References on the human mascular system",
-			  "quantity": 1} //not found in the inventory, must be brought by students
+			"activityName": "Activity 2: The Muscular System",
+			"apparatus": [{
+					"name": "Dissecting Pan",
+					"quantity": 3
+				},
+				{
+					"name": "Dissecting Set",
+					"quantity": 1
+				}
 			]
 		},
 		"3": {
-			"activity": "Activity 3: The Digestive System",
-			"apparatus":
-			[{"name": "Models of the human torso and mid-sagittal section of the human head",
-		      "quantity": 1}, //not found in the inventory, must be brought by students
-		     {"name": "Dissected Frog",
-		      "quantity": 1}, //not found in the inventory, must be brought by students
-		     {"name": "Dissecting Pan",
-		      "quantity": 3},
-		     {"name": "Dissecting Set",
-		      "quantity": 1},
-		     {"name": "Charts",
-		      "quantity": 1} //not found in the inventory, must be brought by students
+			"activityName": "Activity 3: The Digestive System",
+			"apparatus": [{
+					"name": "Dissecting Pan",
+					"quantity": 3
+				},
+				{
+					"name": "Dissecting Set",
+					"quantity": 1
+				}
 			]
 		},
 		"4": {
-			"activity": "Activity 4: Histology of Digestive Organs",
-			"apparatus":
-			[{"name": "Compound Microscope",
-			  "quantity": 1},
-			 {"name": "X-S of stomach, small intestine and large intestine",
-			  "quantity": 1} //not found in the inventory, must be brought by students
-			]
+			"activityName": "Activity 4: Histology of Digestive Organs",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		},
 		"5": {
-			"activity": "Activity 5: Histology of the Digestive Glands",
-			"apparatus":
-			[{"name": "Compound Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of X-S of the liver, pancreas, salivary glands (parotid, sublingual and submaxillary), stomach, small intestine",
-			  "quantity": 1} //not found in the inventory, must be brought by students
-			]
+			"activityName": "Activity 5: Histology of the Digestive Glands",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		},
 		"6": {
-			"activity": "Activity 6: The Respiratory System",
-			"apparatus":
-			[{"name": "Dissected Frog",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
-			  "quantity": 3}, 
-			 {"name": "Models of the human torso and mid-sagittal section of the head",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Charts",
-			  "quantity": 2} //not found in the inventory, must be brought by students
-			]
+			"activityName": "Activity 6: The Respiratory System",
+			"apparatus": [{
+				"name": "Dissecting Pan",
+				"quantity": 3
+			}]
 		},
 		"7": {
-			"activity": "Activity 7: The Circulatory System",
-			"apparatus":
-			[{"name": "Models of the human and the frog's circulatory system",
-			  "quantity": 1},
-			 {"name": "Charts",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Reference Books",
-			  "quantity": 3}
+			"activityName": "Activity 7: The Circulatory System",
+			"apparatus": [{
+					"name": "Models of the human and the frog's circulatory system",
+					"quantity": 1
+				},
+				{
+					"name": "Reference Books",
+					"quantity": 3
+				}
 			]
 		},
 		"8": {
-			"activity": "Activity 8: The Heart",
-			"apparatus":
-			[{"name": "Model of the human heart",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Preserved heart of the frog",
-			  "quantity": 7}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
-			  "quantity": 3},
-			 {"name": "Dissecting Set",
-			  "quantity": 1}
+			"activityName": "Activity 8: The Heart",
+			"apparatus": [{
+					"name": "Dissecting Pan",
+					"quantity": 3
+				},
+				{
+					"name": "Dissecting Set",
+					"quantity": 1
+				}
 			]
 		},
 		"9": {
-			"activity": "Activity 9: Histology of Blood Vessels",
-			"apparatus":
-			[{"name": "Compound Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of X-S of vein and artery",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Charts",
-			  "quantity": 2} //not found in the inventory, must be brought by students
-			]
+			"activityName": "Activity 9: Histology of Blood Vessels",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		},
 		"10": {
-			"activity": "Activity 10: The Human Urinary System",
-			"apparatus":
-			[{"name": "Models of the human urinary system",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Mid-sagittal section of the human kidney and nephron",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Charts",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Prepared Slide of the X-S of the kidney",
-			  "quantity": 1} //not found in the inventory, must be brought by students
-			 {"name": "Compound Microscope",
-			  "quantity": 1}
-			]
+			"activityName": "Activity 10: The Human Urinary System",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		},
 		"11": {
-			"activity": "Activity 11: The Frog's Urogenital System",
-			"apparatus":
-			[{"name": "Dissected Frog",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
-			  "quantity": 2},
-			 {"name": "Dissecting Set", 
-			  "quantity": 1}
+			"activityName": "Activity 11: The Frog's Urogenital System",
+			"apparatus": [{
+					"name": "Dissecting Pan",
+					"quantity": 2
+				},
+				{
+					"name": "Dissecting Set",
+					"quantity": 1
+				}
 			]
 		},
 		"12": {
-			"activity": "Activity 12: The Human Female Reproductive System",
-			"apparatus":
-			[{"name": "Model or chart of the internal organs of the human female reproductive system (frontal view)",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Prepared Slide of the X-S of the ovary",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Compound Microscope",
-			  "quantity": 1}
-			]
+			"activityName": "Activity 12: The Human Female Reproductive System",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		},
 		"13": {
-			"activity": "Activity 13: The Human Male Reproductive System",
-			"apparatus":
-			[{"name": "Model or chart of the human male reproductive system (lateral view)",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Cut section of testis",
-			  "quantity": 1} //not found in the inventory, must be brought by students
-			 {"name": "Prepared slides of the X-S of the testis",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Compound Microscope",
-			  "quantity": 1}
-			]
+			"activityName": "Activity 13: The Human Male Reproductive System",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		},
 		"14": {
-			"activity": "Activity 14: The Frog's Nervous System",
-			"apparatus":
-			[{"name": "Models and charts of the frog's nervous system and brain",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Prepared Slide of the X-S of the frog's spinal cord",
-			  "quantity": 1},
-			 {"name": "Compound Microscope",
-			  "quantity": 1},
-			 {"name": "5x Eyepiece",
-			  "quantity": 1}
+			"activityName": "Activity 14: The Frog's Nervous System",
+			"apparatus": [{
+					"name": "Prepared Slide of the X-S of the frog's spinal cord",
+					"quantity": 1
+				},
+				{
+					"name": "Compound Microscope",
+					"quantity": 1
+				},
+				{
+					"name": "5x Eyepiece",
+					"quantity": 1
+				}
 			]
 		},
 		"15": {
-			"activity": "Activity 15: The Human Nervous System",
-			"apparatus":
-			[{"name": "Models/Charts of the human nervous system",
-			  "quantity": 3}, //not found in the inventory, must be brought by students
-			 {"name": "Model of the human brain",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Prepared Slide of the X-S of the human spinal cord",
-			  "quantity": 3}, //not found in the inventory, must be brought by students
-			 {"name": "Compound Microscope",
-			  "quantity": 1},
-			 {"name": "5x Eyepiece or a hand lens",
-			  "quantity": 1}
+			"activityName": "Activity 15: The Human Nervous System",
+			"apparatus": [{
+					"name": "Compound Microscope",
+					"quantity": 1
+				},
+				{
+					"name": "5x Eyepiece or a hand lens",
+					"quantity": 1
+				}
 			]
 		},
 		"16": {
-			"activity": "Activity 16: The Skeletal System",
-			"apparatus":
-			[{"name": "Model of the human skeleton and the frog's skeleton",
-			  "quantity": 1},
-			  {"name": "Charts",
-			   "quantity": 1}, //not found in the inventory, must be brought by students
-			  {"name": "Reference Books",
-			   "quantity": 2} //not found in the inventory, must be brought by students
-			]
+			"activityName": "Activity 16: The Skeletal System",
+			"apparatus": [{
+				"name": "Model of the human skeleton and the frog's skeleton",
+				"quantity": 1
+			}]
 		},
-		"16": {
-			"activity": "Activity 16: Embryology",
-			"apparatus":
-			[{"name": "Compound Microscope",
-			  "quantity": 1},
-			  {"name": "Frog's unfertilized egg and fertilized egg",
-			   "quantity": 1}, //not found in the inventory, must be brought by students
-			  {"name": "Reference Books",
-			   "quantity": 2} //not found in the inventory, must be brought by students
-			]
+		"17": {
+			"activityName": "Activity 16: Embryology",
+			"apparatus": [{
+				"name": "Compound Microscope",
+				"quantity": 1
+			}]
 		}
 	}
 }

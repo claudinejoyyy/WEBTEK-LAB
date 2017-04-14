@@ -1,329 +1,545 @@
 {
-  "manualName": "College Physics 1",
-  "chapters":{
-    "1":{
-      "activity": "Activity 1: Measurements",
-      "apparatus": 
-        [{"name": "Vernier Caliper",
-          "quantity": 1},
-         {"name": "Micrometer Screw",
-          "quantity": 1}, 
-         {"name": "Spherometer",
-          "quantity": 1},
-         {"name": "Metal Cylinder",
-          "quantity": 1},
-         {"name": "Head Lens",
-          "quantity": 1},
-         {"name": "Ruler",
-          "quantity": 1}
-        ]
-      }
-    },
-  "2": {
-    "activity": "Activity 2: Uniformly Accelerated Motion",
-    "apparatus": 
-      [{"name": "Trolley",
-        "quantity": 1},
-       {"name": "Metal Rail",
-        "quantity": 1},
-       {"name": "Iron Stand",
-        "quantity": 1},
-       {"name": "Stopwatch",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1}
+  "manualName": "Physics 1A",
+  "chapters": {
+    "1": {
+      "activityName": "Activity 1: Measurements",
+      "apparatus": [{
+          "name": "Vernier Caliper",
+          "quantity": 1
+        },
+        {
+          "name": "Micrometer Screw",
+          "quantity": 1
+        },
+        {
+          "name": "Spherometer",
+          "quantity": 1
+        },
+        {
+          "name": "Metal Cylinder",
+          "quantity": 1
+        },
+        {
+          "name": "Head Lens",
+          "quantity": 1
+        },
+        {
+          "name": "Ruler",
+          "quantity": 1
+        }
       ]
     },
-  "3": {
-    "activity": "Activity 3: Vectors",
-    "apparatus": 
-      [{"name": "Force Table",
-        "quantity": 1},
-       {"name": "Pulleys",
-        "quantity": 3},
-        {"name": "Clamps",
-        "quantity": 3},
-       {"name": "Pans",
-        "quantity": 3},
-       {"name": "Set of Slotted Masses",
-        "quantity": 1},
-       {"name": "Spirit Level",
-        "quantity": 1},
-       {"name": "Ruler",
-        "quantity": 1},
-       {"name": "Protractor",
-        "quantity": 1},
-       {"name": "Force Scale",
-        "quantity": 1}
+    "2": {
+      "activityName": "Activity 2: Uniformly Accelerated Motion",
+      "apparatus": [{
+          "name": "Trolley",
+          "quantity": 1
+        },
+        {
+          "name": "Metal Rail",
+          "quantity": 1
+        },
+        {
+          "name": "Iron Stand",
+          "quantity": 1
+        },
+        {
+          "name": "Stopwatch",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        }
       ]
     },
-  "4": {
-    "activity": "Activity 4: Motion of a Free Falling Body",
-    "apparatus": 
-      [{"name": "Dextrose Bottle",
-        "quantity": 1},
-       {"name": "Stop Watch",
-        "quantity": 1},
-       {"name": "Water Container",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1},
-       {"name": "Iron Stand",
-        "quantity": 1}
+    "3": {
+      "activityName": "Activity 3: Vectors",
+      "apparatus": [{
+          "name": "Force Table",
+          "quantity": 1
+        },
+        {
+          "name": "Pulleys",
+          "quantity": 3
+        },
+        {
+          "name": "Clamps",
+          "quantity": 3
+        },
+        {
+          "name": "Pans",
+          "quantity": 3
+        },
+        {
+          "name": "Set of Slotted Masses",
+          "quantity": 1
+        },
+        {
+          "name": "Spirit Level",
+          "quantity": 1
+        },
+        {
+          "name": "Ruler",
+          "quantity": 1
+        },
+        {
+          "name": "Protractor",
+          "quantity": 1
+        },
+        {
+          "name": "Force Scale",
+          "quantity": 1
+        }
       ]
     },
-  "5": {
-    "activity": "Activity 5: Projectile Motion",
-    "apparatus": 
-      [{"name": "Spring Gun with Metal Ball",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 2},
-       {"name": "Plywood Board",
-        "quantity": 1},
-       {"name": "Carbon Paper",
-        "quantity": 1},
-       {"name": "Coupon Bond",
-        "quantity": 1}
+    "4": {
+      "activityName": "Activity 4: Motion of a Free Falling Body",
+      "apparatus": [{
+          "name": "Dextrose Bottle",
+          "quantity": 1
+        },
+        {
+          "name": "Stop Watch",
+          "quantity": 1
+        },
+        {
+          "name": "Water Container",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        },
+        {
+          "name": "Iron Stand",
+          "quantity": 1
+        }
       ]
     },
-  "6": {
-    "activity": "Activity 6: Kinetic and Static Friction",
-    "apparatus": 
-      [{"name": "Wooden Plane",
-        "quantity": 1},
-       {"name": "Wooden Block",
-        "quantity": 1},
-       {"name": "Rubber Sole",
-        "quantity": 1},
-       {"name": "Spring Balance",
-        "quantity": 1},
-       {"name": "Iron Stand",
-        "quantity": 1},
-       {"name": "Set of Weights",
-        "quantity": 1}
+    "5": {
+      "activityName": "Activity 5: Projectile Motion",
+      "apparatus": [{
+          "name": "Spring Gun with Metal Ball",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 2
+        },
+        {
+          "name": "Plywood Board",
+          "quantity": 1
+        },
+        {
+          "name": "Carbon Paper",
+          "quantity": 1
+        },
+        {
+          "name": "Coupon Bond",
+          "quantity": 1
+        }
       ]
     },
-  "7": {
-    "activity": "Activity 7: Newton's Second Law of Motion",
-    "apparatus": 
-      [{"name": "Atwood's Machine",
-        "quantity": 1},
-       {"name": "Rotating Pulley",
-        "quantity": 1},
-       {"name": "Pans",
-        "quantity": 2},
-       {"name": "String",
-        "quantity": 1},
-       {"name": "Set of Slotted Weights",
-        "quantity": 1},
-       {"name": "Stopwatch",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1}
+    "6": {
+      "activityName": "Activity 6: Kinetic and Static Friction",
+      "apparatus": [{
+          "name": "Wooden Plane",
+          "quantity": 1
+        },
+        {
+          "name": "Wooden Block",
+          "quantity": 1
+        },
+        {
+          "name": "Rubber Sole",
+          "quantity": 1
+        },
+        {
+          "name": "Spring Balance",
+          "quantity": 1
+        },
+        {
+          "name": "Iron Stand",
+          "quantity": 1
+        },
+        {
+          "name": "Set of Weights",
+          "quantity": 1
+        }
       ]
     },
-  "8": {
-    "activity": "Activity 8: Torque or Moment of a Force",
-    "apparatus": 
-      [{"name": "Student's Model Balance",
-        "quantity": 1},
-       {"name": "Wide Pan",
-        "quantity": 2},
-        {"name": "Hanger",
-        "quantity": 2},
-       {"name": "Set of Brass Weights",
-        "quantity": 1},
-       {"name": "Platform Balance",
-        "quantity": 1}
+    "7": {
+      "activityName": "Activity 7: Newton's Second Law of Motion",
+      "apparatus": [{
+          "name": "Atwood's Machine",
+          "quantity": 1
+        },
+        {
+          "name": "Rotating Pulley",
+          "quantity": 1
+        },
+        {
+          "name": "Pans",
+          "quantity": 2
+        },
+        {
+          "name": "String",
+          "quantity": 1
+        },
+        {
+          "name": "Set of Slotted Weights",
+          "quantity": 1
+        },
+        {
+          "name": "Stopwatch",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        }
       ]
     },
-  "9": {
-    "activity": "Activity 9: Static Equilibrium",
-    "apparatus": 
-      [{"name": "Model Crane",
-        "quantity": 1},
-       {"name": "Large Iron Stand",
-        "quantity": 1},
-       {"name": "Tensile Spring Scale",
-        "quantity": 1},
-       {"name": "Compressive Spring Scale",
-        "quantity": 1},
-       {"name": "Pan",
-        "quantity": 1},
-       {"name": "Mass(4 kg)",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1},
-       {"name": "Big Protractor",
-        "quantity": 1},
-       {"name": "Spirit Level",
-        "quantity": 1}
+    "8": {
+      "activityName": "Activity 8: Torque or Moment of a Force",
+      "apparatus": [{
+          "name": "Student's Model Balance",
+          "quantity": 1
+        },
+        {
+          "name": "Wide Pan",
+          "quantity": 2
+        },
+        {
+          "name": "Hanger",
+          "quantity": 2
+        },
+        {
+          "name": "Set of Brass Weights",
+          "quantity": 1
+        },
+        {
+          "name": "Platform Balance",
+          "quantity": 1
+        }
       ]
     },
-  "10": {
-    "activity": "Activity 10: The Compound Wheel and Axle",
-    "apparatus": 
-      [{"name": "Compound Wheel and Axle",
-        "quantity": 1},
-       {"name": "String",
-        "quantity": 2},
-       {"name": "Movable Pulley",
-        "quantity": 1},
-       {"name": "Set of Slotted Weights",
-        "quantity": 1},
-       {"name": "Set of Brass Weights",
-        "quantity": 1},
-       {"name": "Pans of Holding Weights",
-        "quantity": 2},
-       {"name": "Iron Stand",
-        "quantity": 1},
-       {"name": "Clamp",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1}
+    "9": {
+      "activityName": "Activity 9: Static Equilibrium",
+      "apparatus": [{
+          "name": "Model Crane",
+          "quantity": 1
+        },
+        {
+          "name": "Large Iron Stand",
+          "quantity": 1
+        },
+        {
+          "name": "Tensile Spring Scale",
+          "quantity": 1
+        },
+        {
+          "name": "Compressive Spring Scale",
+          "quantity": 1
+        },
+        {
+          "name": "Pan",
+          "quantity": 1
+        },
+        {
+          "name": "Mass(4 kg)",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        },
+        {
+          "name": "Big Protractor",
+          "quantity": 1
+        },
+        {
+          "name": "Spirit Level",
+          "quantity": 1
+        }
       ]
     },
-  "11": {
-    "activity": "Activity 11: Rotational Inertia",
-    "apparatus": 
-      [{"name": "Rotational Inertia Disk",
-        "quantity": 1},
-       {"name": "Small Pan",
-        "quantity": 1},
-       {"name": "Set of Brass Weights",
-        "quantity": 1},
-       {"name": "Stopwatch",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1},
-       {"name": "String (2-Meters Long)",
-        "quantity": 1},
-       {"name": "Vernier Caliper",
-        "quantity": 1}
+    "10": {
+      "activityName": "Activity 10: The Compound Wheel and Axle",
+      "apparatus": [{
+          "name": "Compound Wheel and Axle",
+          "quantity": 1
+        },
+        {
+          "name": "String",
+          "quantity": 2
+        },
+        {
+          "name": "Movable Pulley",
+          "quantity": 1
+        },
+        {
+          "name": "Set of Slotted Weights",
+          "quantity": 1
+        },
+        {
+          "name": "Set of Brass Weights",
+          "quantity": 1
+        },
+        {
+          "name": "Pans of Holding Weights",
+          "quantity": 2
+        },
+        {
+          "name": "Iron Stand",
+          "quantity": 1
+        },
+        {
+          "name": "Clamp",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        }
       ]
     },
-  "12": {
-    "activity": "Activity 12: Coefficient of Restitution",
-    "apparatus": 
-      [{"name": "Small Ball",
-        "quantity": 1},
-       {"name": "Wood",
-        "quantity": 1},
-       {"name": "Meter Stick",
-        "quantity": 1}
+    "11": {
+      "activityName": "Activity 11: Rotational Inertia",
+      "apparatus": [{
+          "name": "Rotational Inertia Disk",
+          "quantity": 1
+        },
+        {
+          "name": "Small Pan",
+          "quantity": 1
+        },
+        {
+          "name": "Set of Brass Weights",
+          "quantity": 1
+        },
+        {
+          "name": "Stopwatch",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        },
+        {
+          "name": "String (2-Meters Long)",
+          "quantity": 1
+        },
+        {
+          "name": "Vernier Caliper",
+          "quantity": 1
+        }
       ]
     },
-  "13": {
-    "activity": "Activity 13: Hooke's Law of Elasticity",
-    "apparatus": 
-      [{"name": "Cylindrical Spring",
-        "quantity": 1},
-       {"name": "Calibrated Vertical Stand",
-        "quantity": 1},
-       {"name": "Pan",
-        "quantity": 1},
-       {"name": "Set of weights",
-        "quantity": 1}
+    "12": {
+      "activityName": "Activity 12: Coefficient of Restitution",
+      "apparatus": [{
+          "name": "Small Ball",
+          "quantity": 1
+        },
+        {
+          "name": "Wood",
+          "quantity": 1
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        }
       ]
     },
-  "14": {
-    "activity": "Activity 14: Boyle's Law",
-    "apparatus": 
-      [{"name": "Boyle's Law Apparatus",
-        "quantity": 1},
-       {"name": "Bottle of Mercury",
-        "quantity": 1},
-       {"name": "Medicine Dropper",
-        "quantity": 1},
-       {"name": "Barometer",
-        "quantity": 1},
-       {"name": "Glass Funnel",
-        "quantity": 1},
-       {"name": "Ruler",
-        "quantity": 1}
+    "13": {
+      "activityName": "Activity 13: Hooke's Law of Elasticity",
+      "apparatus": [{
+          "name": "Cylindrical Spring",
+          "quantity": 1
+        },
+        {
+          "name": "Calibrated Vertical Stand",
+          "quantity": 1
+        },
+        {
+          "name": "Pan",
+          "quantity": 1
+        },
+        {
+          "name": "Set of weights",
+          "quantity": 1
+        }
       ]
     },
-  "15": {
-    "activity": "Activity 15: Specific Gravity by Archimedes Principle",
-    "apparatus": 
-      [{"name": "Iron Stand",
-        "quantity": 1},
-       {"name": "Cork",
-        "quantity": 1},
-       {"name": "Brass",
-        "quantity": 1},
-       {"name": "Bottle of Alcohol",
-        "quantity": 1},
-       {"name": "Bottle of Kerosene",
-        "quantity": 1},
-       {"name": "Metal Sinker",
-        "quantity": 1},
-       {"name": "Triple Beam Balance",
-        "quantity": 1},
-       {"name": "Hydrometer",
-        "quantity": 1},
-       {"name": "Hydrometer Jar",
-        "quantity": 1},
-       {"name": "String",
-        "quantity": 1},
-       {"name": "Beaker",
-        "quantity": 1}
+    "14": {
+      "activityName": "Activity 14: Boyle's Law",
+      "apparatus": [{
+          "name": "Boyle's Law Apparatus",
+          "quantity": 1
+        },
+        {
+          "name": "Bottle of Mercury",
+          "quantity": 1
+        },
+        {
+          "name": "Medicine Dropper",
+          "quantity": 1
+        },
+        {
+          "name": "Barometer",
+          "quantity": 1
+        },
+        {
+          "name": "Glass Funnel",
+          "quantity": 1
+        },
+        {
+          "name": "Ruler",
+          "quantity": 1
+        }
       ]
     },
-  "16": {
-    "activity": "Activity 16: Coefficient of Linear Expansion",
-    "apparatus": 
-      [{"name": "Linear Expansion Apparatus",
-        "quantity": 1},
-       {"name": "Thermometer",
-        "quantity": 1},
-       {"name": "Electric Stove",
-        "quantity": 1},
-       {"name": "Glass Flask",
-        "quantity": 1},
-       {"name": "Rubber Stopper",
-        "quantity": 1},
-       {"name": "Rubber Tubing",
-        "quantity": 1},
-       {"name": "Metal Rod",
-        "quantity": 2},
-       {"name": "Meter Stick",
-        "quantity": 1}
+    "15": {
+      "activityName": "Activity 15: Specific Gravity by Archimedes Principle",
+      "apparatus": [{
+          "name": "Iron Stand",
+          "quantity": 1
+        },
+        {
+          "name": "Cork",
+          "quantity": 1
+        },
+        {
+          "name": "Brass",
+          "quantity": 1
+        },
+        {
+          "name": "Bottle of Alcohol",
+          "quantity": 1
+        },
+        {
+          "name": "Bottle of Kerosene",
+          "quantity": 1
+        },
+        {
+          "name": "Metal Sinker",
+          "quantity": 1
+        },
+        {
+          "name": "Triple Beam Balance",
+          "quantity": 1
+        },
+        {
+          "name": "Hydrometer",
+          "quantity": 1
+        },
+        {
+          "name": "Hydrometer Jar",
+          "quantity": 1
+        },
+        {
+          "name": "String",
+          "quantity": 1
+        },
+        {
+          "name": "Beaker",
+          "quantity": 1
+        }
       ]
     },
-  "17": {
-    "activity": "Activity 17: Specific Heat of Solids",
-    "apparatus": 
-      [{"name": "Calorimeter",
-        "quantity": 1},
-       {"name": "Triple Beam Balance",
-        "quantity": 1},
-       {"name": "Electric Stove",
-        "quantity": 1},
-       {"name": "String (about 30cm)",
-        "quantity": 1},
-       {"name": "Metal",
-        "quantity": 2},
-       {"name": "Thermometer",
-        "quantity": 1},
-       {"name": "Water Container",
-        "quantity": 1}
+    "16": {
+      "activityName": "Activity 16: Coefficient of Linear Expansion",
+      "apparatus": [{
+          "name": "Linear Expansion Apparatus",
+          "quantity": 1
+        },
+        {
+          "name": "Thermometer",
+          "quantity": 1
+        },
+        {
+          "name": "Electric Stove",
+          "quantity": 1
+        },
+        {
+          "name": "Glass Flask",
+          "quantity": 1
+        },
+        {
+          "name": "Rubber Stopper",
+          "quantity": 1
+        },
+        {
+          "name": "Rubber Tubing",
+          "quantity": 1
+        },
+        {
+          "name": "Metal Rod",
+          "quantity": 2
+        },
+        {
+          "name": "Meter Stick",
+          "quantity": 1
+        }
       ]
     },
-  "18": {
-    "activity": "Activity 18: Heat of Fusion of Ice",
-    "apparatus": 
-      [{"name": "Calorimeter",
-        "quantity": 1},
-       {"name": "Thermometer",
-        "quantity": 1},
-       {"name": "Water Container",
-        "quantity": 1},
-       {"name": "Triple Beam Balance",
-        "quantity": 1},
-       {"name": "Electric Stove",
-        "quantity": 1}
+    "17": {
+      "activityName": "Activity 17: Specific Heat of Solids",
+      "apparatus": [{
+          "name": "Calorimeter",
+          "quantity": 1
+        },
+        {
+          "name": "Triple Beam Balance",
+          "quantity": 1
+        },
+        {
+          "name": "Electric Stove",
+          "quantity": 1
+        },
+        {
+          "name": "String (about 30cm)",
+          "quantity": 1
+        },
+        {
+          "name": "Metal",
+          "quantity": 2
+        },
+        {
+          "name": "Thermometer",
+          "quantity": 1
+        },
+        {
+          "name": "Water Container",
+          "quantity": 1
+        }
+      ]
+    },
+    "18": {
+      "activityName": "Activity 18: Heat of Fusion of Ice",
+      "apparatus": [{
+          "name": "Calorimeter",
+          "quantity": 1
+        },
+        {
+          "name": "Thermometer",
+          "quantity": 1
+        },
+        {
+          "name": "Water Container",
+          "quantity": 1
+        },
+        {
+          "name": "Triple Beam Balance",
+          "quantity": 1
+        },
+        {
+          "name": "Electric Stove",
+          "quantity": 1
+        }
       ]
     }
+  }
 }

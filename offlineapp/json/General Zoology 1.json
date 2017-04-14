@@ -2,14 +2,14 @@
 	"manualName": "General Zoology 1",
 	"chapters": {
 		"1": {
-			"activity": "Activity 1: The Compound Microscope",
+			"activityName": "Activity 1: The Compound Microscope",
 			"apparatus":
 			[{"name": "Compund Microscope (Different Models)",
 			  "quantity": 3}
 			]
 		},
 		"2": {
-			"activity": "Activity 2: Exercises in Focusing",
+			"activityName": "Activity 2: Exercises in Focusing",
 			"apparatus":
 			[{"name": "Compund Microscope",
 			  "quantity": 2},
@@ -20,46 +20,32 @@
 			 {"name": "Medicine Dropper",
 			  "quantity": 1},
 			 {"name": "Cotton Fiber",
-			  "quantity": 10},
-			 {"name": "Plain White Paper",
-			  "quantity": 2} //not found in the inventory, must be brought by students
+			  "quantity": 10}
 			]
 		},
 		"3": {
-			"activity": "Activity 3: Magnification",
+			"activityName": "Activity 3: Magnification",
 			"apparatus":
 			[{"name": "Compund Microscope",
-		      "quantity": 1},
-		     {"name": "Prepared Slide of Euglena and Amoeba",
-		      "quantity": 2} //not found in the inventory, must be brought by students
+		      "quantity": 1}
 			]
 		},
 		"4": {
-			"activity": "Activity 4: The Animal Cell",
+			"activityName": "Activity 4: The Animal Cell",
 			"apparatus":
 			[{"name": "Compund Microscope",
 			  "quantity": 1},
-			 {"name": "Prepared Slides of Paramecium, Squamous Cells, and Onion Root Tip",
-			  "quantity": 3}, //not found in the inventory, must be brought by students
 			 {"name": "Chart on typical animal cell",
 			  "quantity": 2},
 			 {"name": "Chart on typical plant cell",
-			  "quantity": 2}, 
-			 {"name": "Reference Books",
-			  "quantity": 2} //not found in the inventory, must be brought by students
+			  "quantity": 2}
 			]
 		},
 		"5": {
-			"activity": "Activity 5: Animal Cell Diversity as to Shape",
+			"activityName": "Activity 5: Animal Cell Diversity as to Shape",
 			"apparatus":
 			[{"name": "Compund Microscope",
 			  "quantity": 1},
-			 {"name": "Prepared Slides of L-S Smooth Muscles and Skeletal Muscles",
-			  "quantity": 4}, //not found in the inventory, must be brought by students
-			 {"name": "Human Blood Smear",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Frog's Blood Smear",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
 			 {"name": "Amoeba (in a bottle)",
 			  "quantity": 1},
 			 {"name": "Chromatophore",
@@ -67,12 +53,10 @@
 			]
 		},
 		"6": {
-			"activity": "Activity 6: Cell Division",
+			"activityName": "Activity 6: Cell Division",
 			"apparatus":
 			[{"name": "Compund Microscope",
 			  "quantity": 1},
-			 {"name": "Prepared Slides of Ascaris or Alluim Cepa and Paramecium in Fusion",
-			  "quantity": 3}, //not found in the inventory, must be brought by students
 			 {"name": "Chart on Mitosis",
 			  "quantity": 1},
 			 {"name": "Reference Books",
@@ -80,7 +64,7 @@
 			]
 		},
 		"7": {
-			"activity": "Activity 7: Physiological Activities of Cells",
+			"activityName": "Activity 7: Physiological Activities of Cells",
 			"apparatus":
 			[{"name": "Beaker",
 			  "quantity": 2},
@@ -92,8 +76,6 @@
 			  "quantity": 1},
 			 {"name": "Ringer's Solution (Bottle)",
 			  "quantity": 1},
-			 {"name": "Internal Lining of Pig's Intestine",
-			  "quantity": 5}, //not found in the inventory, must be brought by students
 			 {"name": "Iron Stand",
 			  "quantity": 1},
 			 {"name": "Iron Clamp",
@@ -103,88 +85,60 @@
 			]
 		},
 		"8": {
-			"activity": "Activity 8: Epithelial Tissues",
+			"activityName": "Activity 8: Epithelial Tissues",
 			"apparatus":
 			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of X-S of Blood Vessels, Small Intestine, Kidney, Trachea, Human Skin, Urinary Bladder and Urethra",
-			  "quantity": 7} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		},
 		"9": {
-			"activity": "Activity 9: Connective Tissues",
+			"activityName": "Activity 9: Connective Tissues",
 			"apparatus":
 			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of Dense Fibrous Connective Tissues, Loose Fibrous, Elastic, Reticular and Adipose Tissues",
-			  "quantity": 5}, //not found in the inventory, must be brought by students
-			 {"name": "Reference Books",
-			  "quantity": 2} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		},
 		"10": {
-			"activity": "Activity 10: Supportive Tissues",
+			"activityName": "Activity 10: Supportive Tissues",
 			"apparatus":
 			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of Hyaline",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Elastic and Fibrocartilage",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Reference",
-			  "quantity": 1} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		},
 		"11": {
-			"activity": "Activity 11: Vascular Tissue",
+			"activityName": "Activity 11: Vascular Tissue",
 			"apparatus":
 			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of Human and Frog Blood Smears",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "Reference", 
-			  "quantity": 1} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		},
 		"12": {
-			"activity": "Activity 12: Nervous Tissue",
+			"activityName": "Activity 12: Nervous Tissue",
 			"apparatus":
 			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of X-S of Frog's Spinal Cord",
-			  "quantity": 3}, //not found in the inventory, must be brought by students
-			 {"name": "L-S of Medullated and Unmedullated Nerve Fibers",
-			  "quantity": 2}, //not found in the inventory, must be brought by students
-			 {"name": "X-S of Medullated and Unmedullated Nerve Fibers",
-			  "quantity": 2} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		},
 		"13": {
-			"activity": "Activity 13: Muscular Tissues",
+			"activityName": "Activity 13: Muscular Tissues",
 			"apparatus":
 			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Prepared Slides of Skeletal Muscles, Cardiac Muscles and Smooth Muscles (L-S)",
-			  "quantity": 3} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		},
 		"14": {
-			"activity": "Activity 14: External Anatomy of the Frog",
+			"activityName": "Activity 14: External Anatomy of the Frog",
 			"apparatus":
-			[{"name": "Live Frog",
-			  "quantity": 1}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
+			[{"name": "Dissecting Pan",
 			  "quantity": 1},
 			 {"name": "Chloroform (Bottle)",
 			  "quantity": 1}
 			]
 		},
 		"15": {
-			"activity": "Activity 15: Dissection and Anatomy of the Frog",
+			"activityName": "Activity 15: Dissection and Anatomy of the Frog",
 			"apparatus":
-			[{"name": "Frog",
-			  "quantity": 3}, //not found in the inventory, must be brought by students
-			 {"name": "Dissecting Pan",
+			[{"name": "Dissecting Pan",
 			  "quantity": 2},
 			 {"name": "Dissecting Instrument",
 			  "quantity": 3},
@@ -195,14 +149,10 @@
 			]
 		},
 		"16": {
-			"activity": "Activity 16: Human Internal Organs",
+			"activityName": "Activity 16: Human Internal Organs",
 			"apparatus":
 			[{"name": "Human Torso Model",
-			  "quantity": 1},
-			  {"name": "Chart on Human Internal Organs",
-			   "quantity": 1}, //not found in the inventory, must be brought by students
-			  {"name": "Reference Books",
-			   "quantity": 2} //not found in the inventory, must be brought by students
+			  "quantity": 1}
 			]
 		}
 	}
