@@ -1,167 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
     <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="../styles/form.css">
+        <link rel="stylesheet" type="text/css" href="../styles/modal.css">
+        <link rel="stylesheet" type="text/css" href="../styles/student.css">
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/demo.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/component.css" />
+        <script defer type="text/javascript" src="../scripts/scripts.js"></script>
+        <script defertype="text/javascript"src="../scripts/events.js"></script>
     </head>
-    <link rel="stylesheet" type="text/css" href="../styles/layout.css">
-    <script defer type="text/javascript" src="../scripts/events.js"></script>
-    <script defer type="text/javascript" src="../scripts/scripts.js"></script>
-    <script defer type="text/javascript" src="../scripts/modal.js"></script>
     <body>
-        <div id="id01"></div>
         <div class="container main">
-            <div class="row t">
-                <div id = "data" class="six columns">
-                    <h2>Add Borrower Form</h2>
-                    <h6><strong>NOTE</strong>: If you haven't downloaded any manual Download a manual first. You can download manuals <a id="BR">here.</a></h6>
-                    <form id = "person" onsubmit="addData()">
-                        <strong>ID Number:</strong> &nbsp;&nbsp;<input id = "idno" name = "idno" type = "number"  oninput="idLengthCheck(this)" min = "2000000" max ="2169999" maxlength="7" required>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>Group Number:</strong> &nbsp;&nbsp;<input id = "groupno" name = "groupno" type = "number" oninput="grpLengthCheck(this)" min = "1" max ="20" maxlength="2" required>
-                        <br>
-                        <strong>Name:</strong> &nbsp;&nbsp;<input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*' required>
-                        <br>
-                        <strong>Instructor:</strong> &nbsp;&nbsp;
-                        <select id = "instructor" name = "instructor">
-                            <option>Instructor 1</option>
-                            <option>Instructor 2</option>
-                            <option>Instructor 3</option>
-                        </select>
-                        &nbsp;&nbsp;
-                        <strong>Manual:</strong>
-                        <select name="manuals" onchange="setActivities(this.value)" id="manual">
-                            <option selected disabled>Choose here</option>
-                        </select>
-                        <br>
-                        <strong>Activity:</strong>
-                        <select name="activities" onchange="getApparatus(this.value)" id="activities">
-                            <option selected disabled>Choose here</option>
-                        </select>
-                        <br><br>
-                        <input id = "button" type = "button" value = " Reset " onclick = "resetForm()">&nbsp;&nbsp;&nbsp;
-                        <input id = "submit" type = "submit" value = " Add ">
+            <ul id="gn-menu" class="gn-menu-main">
+                <li class="gn-trigger">
+                    <a id="burgerButton"class="gn-icon gn-icon-menu"><span>Menu</span></a>
+                    <nav class="gn-menu-wrapper">
+                        <div class="gn-scroller">
+                            <ul class="gn-menu">
+                                <li>
+                                    <a class="gn-icon gn-icon-earth" href="../index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="gn-icon gn-icon-search" href="student.html">Borrow</a>
+                                </li>
+                                <li><a class="gn-icon gn-icon-article" href="inventory.html">Inventory</a></li>
+                                <li><a class="gn-icon gn-icon-download" href="download.html">Download Manuals</a></li>
+                                <li>
+                                    <a class="gn-icon gn-icon-archive">Reports</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </li>
+                <li id="addTab"><a href="#">ADD</a></li>
+                <li id="borrowedTab"><a href="#">Borrowed</a></li>
+                <li id="returnedTab"><a href="#">Returned</a></li>
+                <li id="borrowedAndReturnedTab"><a href="#">Borrowed / Returned</a></li>
+                <li id="hehez"><a href="#"><span></span></a></li>
+            </ul>
+            <div id="addForm" class="row">
+                <div class="twelve columns">
+                    <form id = "person" onsubmit="addData()" class="form-basic">
+                        <div class="form-title-row">
+                            <h1>Add Borrower</h1>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                            <span>ID Number</span>
+                            <input id = "idno" name = "idno" type = "number" required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                            <span>Name</span>
+                            <input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*' required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                            <span>Group Number</span>
+                            <input id = "groupno" name = "groupno" type = "number"required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                <span>Instructor</span>
+                                <select id = "instructor" name = "instructor" required>
+                                    <option>Instructor 1</option>
+                                    <option>Instructor 2</option>
+                                    <option>Instructor 3</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                <span>Manual</span>
+                                <select name="manuals" onchange="setActivities(this.value)" id="manual" required>
+                                    <option selected disabled value="">Choose here</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                                <span>Activity</span>
+                                <select name="activities" onchange="getApparatus(this.value)" id="activities" required>
+                                    <option selected disabled>Choose here</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <input id="addBorrowerBtn" type="submit" value="Add Borrower"></input>
+                        </div>
                     </form>
                 </div>
-                <div id="tebol"class="six columns">
-                    <!-- <table iborder="1">
-                        <tr>
-                            <th>asdasd</th>
-                        </tr>
-                    </table> -->
-                </div>
             </div>
-            <div class="row">
-                <div class="six columns">
-                    <div class="row">
-                        <div class="eight columns">
-                            <h3>Borrowed</h3>
+            <!-- For desktop -->
+        </div>
+        <div class="container">
+            <div id="borrowedAndReturnedDiv" class="row">
+                <div class="row">
+                    <div  id="borrowedDiv" class="six columns">
+                        <div class="row">
+                            <div class="eight columns">
+                                <h3>Borrowed</h3>
+                            </div>
+                            <div class="four columns">
+                                <input type="text" id="borrowedInput" onkeyup="searchBorrowed()" placeholder="Search.." class="searchInput">
+                            </div>
                         </div>
-                        <div class="four columns">
-                            <input type="text" id="borrowedInput" onkeyup="searchBorrowed()" placeholder="Search.." class="searchInput">
+                        <!-- <hr> -->
+                        <div class="row">
+                            <!-- Borrowed Column -->
+                            <div class="twelve columns entry field borrowed">
+                            </div>
                         </div>
                     </div>
-                    <hr>
-                </div>
-                <div class="six columns">
-                    <div class="row">
-                        <div class="eight columns">
-                            <h3>Returned</h3>
+                    <div id="returnedDiv" class="six columns">
+                        <div class="row">
+                            <div class="eight columns">
+                                <h3>Returned</h3>
+                            </div>
+                            <div class="four columns">
+                                <input type="text" id="returnedInput" onkeyup="searchReturned()" placeholder="Search.." class="searchInput">
+                            </div>
                         </div>
-                        <div class="four columns">
-                            <input type="text" id="returnedInput" onkeyup="searchReturned()" placeholder="Search.." class="searchInput">
+                        <div class="row">
+                            <!-- Returned Column -->
+                            <div class="twelve columns entry droptarget field returned"  ondrop="drop(event)" ondragover="allowDrop(event)">
+                            </div>
                         </div>
+                        <!-- <hr> -->
                     </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Borrowed Column -->
-                <div class="six columns entry" id="borrowed">
-                </div>
-                <div class="six columns entry droptarget" id="returned" ondrop="drop(event)" ondragover="allowDrop(event)">
-                </div>
-            </div>
-            <div id="myModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h3>Download manual</h3>
-                    <form action="">
-                        <select name="manuals" onchange="setManual(this.value)">
-                            <option selected disabled>Choose here</option>
-                            <option value="Medtech 1">Medtech1</option>
-                            <option value="manual2">Manual 2</option>
-                        </select>
-                    </form>
-                    <button id="download" onclick="downloadManual()">Download</button>
-                </div>
-            </div>
-
-            <!-- <div id="aw"></div> -->
-            <!-- <div class="container"> -->
-            <!-- </div> -->
-            <div id="reviewModal" class="modal">
-                <!-- Modal content -->
-                <div class="modal-content" id="aw">
-                    <!-- <span class="close">&times;</span>
-                    <h3>Download manual</h3>
-                    <form action="">
-                        <select name="manuals" onchange="setManual(this.value)">
-                            <option selected disabled>Choose here</option>
-                            <option value="Medtech 1">Medtech1</option>
-                            <option value="manual2">Manual 2</option>
-                        </select>
-                    </form>
-                    <button id="download" onclick="downloadManual()">Download</button> -->
                 </div>
             </div>
         </div>
+        <div id="reviewModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content" id="aw">
+            </div>
+        </div>
+        <!-- /container -->
+        <script src="../scripts/classie.js"></script>
+        <script src="../scripts/gnmenu.js"></script>
         <script>
-        function searchBorrowed() {
-        // Declare variables 
-        // alert()
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("borrowedInput");
-        filter = input.value.toUpperCase();
-        div = document.getElementById("borrowed");
-        entries = div.getElementsByClassName("entry");
-        // alert(entries.length)
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < entries.length; i++) {
-            entry = entries[i].getElementsByClassName("ten columns")[0];
-                if (entry) {
-                    // alert(entry.innerHTML)
-                    if (entry.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    entries[i].style.display = "";
-                    } else {
-                        entries[i].style.display = "none";
-                    }
-                } 
-        }
-        }
-
-        function searchReturned() {
-        // Declare variables 
-        // alert()
-        var input, filter, table, tr, td, i;
-        input = document.getElementById("returnedInput");
-        filter = input.value.toUpperCase();
-        div = document.getElementById("returned");
-        entries = div.getElementsByClassName("entry");
-        // alert(entries.length)
-
-        // Loop through all table rows, and hide those who don't match the search query
-        for (i = 0; i < entries.length; i++) {
-            entry = entries[i].getElementsByClassName("ten columns")[0];
-                if (entry) {
-                    // alert(entry.innerHTML)
-                    if (entry.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    entries[i].style.display = "";
-                    } else {
-                        entries[i].style.display = "none";
-                    }
-                } 
-        }
-        }
+            new gnMenu( document.getElementById( 'gn-menu' ) );
         </script>
     </body>
 </html>

@@ -29,6 +29,10 @@
 		line-height: 60px;
 }
 
+#burgerButton{
+  padding: 0 30px;
+}
+
 .gn-menu-main {
 		position: fixed;
 		top: 0;
@@ -81,7 +85,7 @@
 }
 
 .gn-menu-main > li > a {
-		padding: 0 30px;
+		padding: 0 10px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-weight: bold;

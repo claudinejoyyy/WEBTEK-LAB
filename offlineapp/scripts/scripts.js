@@ -11,6 +11,67 @@ var inventory;
 var bs;
 
 window.onload = function() {
+    var addTab = document.getElementById("addTab")
+    var borrowedTab = document.getElementById("borrowedTab")
+    var returnedTab = document.getElementById("returnedTab")
+    var borrowedAndReturnedTab = document.getElementById("borrowedAndReturnedTab")
+    
+    // form and divs
+    var addForm = document.getElementById("addForm")
+    var borrowedDiv = document.getElementById("borrowedDiv")
+    var returnedDiv = document.getElementById("returnedDiv")
+    var borrowedAndReturnedDiv = document.getElementById("borrowedAndReturnedDiv")
+
+    // form Inputs
+    var idInput = document.getElementById("idno")
+    var nameInput = document.getElementById("name")
+    var grpInput = document.getElementById("grp")
+    var idInput = document.getElementById("idno")
+    var instructorInput = document.getElementById("instructor")
+    var manualInput = document.getElementById("manual")
+    var activityInput = document.getElementById("activity")
+
+    addTab.onclick = function() {
+
+        addForm.style.display = "block"
+        borrowedDiv.style.display = "none"
+        returnedDiv.style.display = "none"
+        // borrowedAndReturnedDiv.style.display = "none"
+    }
+
+    borrowedAndReturnedTab.onclick = function() {
+        addForm.style.display = "none"
+        borrowedDiv.style.display = "block"
+        returnedDiv.style.display = "block"
+        // borrowedAndReturnedDiv.style.display = "block"
+        return getBorrowersAndReturnees();
+    }
+
+    borrowedTab.onclick = function() {
+        addForm.style.display = "none"
+        borrowedDiv.style.display = "block"
+        returnedDiv.style.display = "none"
+        // borrowedAndReturnedDiv.style.display = "block"
+        return getBorrower();
+    }
+
+    returnedTab.onclick = function() {
+        addForm.style.display = "none"
+        borrowedDiv.style.display = "none"
+        returnedDiv.style.display = "block"
+        // borrowedAndReturnedDiv.style.display = "block"
+        return getReturnees();
+    }
+    idInput.min = "2000000";
+    idInput.max = "2169999";
+    idInput.maxLength = "7";
+    idInput.required = true;
+    addTab.click();
+
+    var grpInput = document.getElementById("groupno")
+    grpInput.min = "1"
+    grpInput.max = "20"
+    grpInput.maxlength = "1"
     if (document.cookie.indexOf("session=Valid") == -1) {
         location.href = "validate-login.html";
     }
@@ -40,25 +101,24 @@ window.onload = function() {
         option.setAttribute("value", manuals[i]);
         manual.add(option);
     }
-}
 
-function idLengthCheck(object) {
-    if (object.value.length > object.maxLength)
-        object.value = object.value.slice(0, object.maxLength)
 }
-
-function grpLengthCheck(object) {
-    if (object.value.length > object.maxLength)
-        object.value = object.value.slice(0, object.maxLength)
+function resizee(){
+    var button = document.getElementById("borrowedTab")
+    button.click();
 }
 
 function getReturnees() {
     rs = JSON.parse(localStorage.getItem('Returnees'))
+    var returned = document.querySelectorAll(".returned");
+    
+    returned[0].innerHTML = ""
+    // returned[1].innerHTML = ""
+
     if (rs === undefined || rs == null || typeof rs[0] === 'undefined') {
         // array empty or does not exist
 
     } else {
-
         for (var i = 0; i < rs.length; i++) {
             var idno = rs[i].idno;
             var name = rs[i].name;
@@ -68,7 +128,7 @@ function getReturnees() {
             var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
                 "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
             rows += "</div>";
-            var borrowed = document.querySelector("#returned");
+            
             var entry = document.createElement("div");
 
             var buttonsColumn = document.createElement("div")
@@ -93,13 +153,22 @@ function getReturnees() {
             entry.innerHTML = rows;
             entry.appendChild(buttonsColumn).parentNode
 
-            borrowed.appendChild(entry);
+            returned[0].appendChild(entry);
+            // returned[1].appendChild(entry.cloneNode(true));
         }
     }
 }
-
+function getBorrowersAndReturnees(){
+    getBorrower();
+    getReturnees();
+}
 function getBorrower() {
     bs = JSON.parse(localStorage.getItem('Borrowers'))
+    var borrowed = document.querySelectorAll(".borrowed");
+
+    borrowed[0].innerHTML = "";
+    // borrowed[1].innerHTML = "";
+    
     if (bs === undefined || bs == null || typeof bs[0] == 'undefined') {
         // array empty or does not exist
         // alert()
@@ -113,7 +182,7 @@ function getBorrower() {
             var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
                 "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
 
-            var borrowed = document.querySelector("#borrowed");
+            
             var div = document.createElement("div");
             var entry = document.createElement("div");
 
@@ -121,30 +190,43 @@ function getBorrower() {
             buttonsColumn.className = "two columns"
 
             var reviewButton = document.createElement("button");
-            reviewButton.className = "reviewBtn" + idno
+            reviewButton.className = "reviewBtn"
             reviewButton.innerHTML = "Review"
+            reviewButton.id = "review"+idno
             // reviewButton.setAttribute("data-id", idno)
-            reviewButton.onclick = function(id) {
+            var apparatusTable = document.createElement("table") 
+            reviewButton.onclick = function(appTable, id) {
                 return function() {
-                    // alert(id)
                     // Get the modal
                     var modal = document.getElementById("reviewModal")
-                    // var divTable = document.getElementById("tebol")
                     var inner = document.getElementById("aw")
-                    // modal.innerHTML = "";
+                    inner.innerHTML = "";
+                    var closeBtn = document.createElement("span")
+                    closeBtn.className = "close"
+                    closeBtn.innerHTML = "&times;"
+                    closeBtn.onclick = function(){
+                        modal.style.display = "none";
+                    }
 
-                    var apparatusTable = document.createElement("table")
-                    apparatusTable.border = "1"
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    var appTable = document.createElement("table") 
                     var header = document.createElement("tr")
-                    var apparatusHeader = document.createElement("th")
-                    apparatusHeader.innerHTML = "Apparatus"
                     var quantityHeader = document.createElement("th")
-                    quantityHeader.innerHTML = "Quantity"
                     var apparatus;
+
+                    var apparatusHeader = document.createElement("th")
+                    apparatusTable.border = "1"
+                    apparatusHeader.innerHTML = "Apparatus"
+                    quantityHeader.innerHTML = "Quantity"
 
                     header.appendChild(apparatusHeader)
                     header.appendChild(quantityHeader)
-                    apparatusTable.appendChild(header)
+                    appTable.appendChild(header)
 
                     for (var i = 0; i < borrowers.length; i++) {
                         if (borrowers[i].idno == id) {
@@ -155,7 +237,6 @@ function getBorrower() {
 
                     for (var i = 0; i < apparatus.length; i++) {
                         var row = document.createElement("tr")
-                        // alert(row)
                         var app = document.createElement("td");
                         app.innerHTML = apparatus[i].name
                         var quantity = document.createElement("td");
@@ -163,38 +244,42 @@ function getBorrower() {
 
                         row.appendChild(app);
                         row.appendChild(quantity);
-                        apparatusTable.appendChild(row);
+                        appTable.appendChild(row);
                     };
-
-                    inner.appendChild(apparatusTable);
+                    inner.appendChild(closeBtn);
+                    inner.appendChild(appTable);
                     modal.style.display = "block";
-                    //pogi dito
                 }
-            }(idno);
+            }(apparatusTable, idno);
 
             var returnButton = document.createElement("button");
             returnButton.className = "returnBtn"
             returnButton.innerHTML = "Return"
             // reviewButton.setAttribute("data-id", idno)
+
             returnButton.onclick = function(id) {
                 return function() {
                     alert("Student with id number " + id + " put to returned column")
-                    for (var i = 0; i < borrowers.length; i++) {
+                    for (var i = 0; i <= borrowers.length; i++) {
                         if (borrowers[i].idno == id) {
                             returnee = borrowers[i];
                             returnees.push(returnee);
                             borrowers.splice(i, 1);
                             sync();
+                            getReturnees();
                             break;
                         }
+                        alert()
                     }
                     document.getElementById(id).remove();
                     // entry.parentElement.removechild(entry);
-                    document.getElementById("returned").innerHTML = ""
-                    getReturnees();
+                    // document.getElementById("returned").innerHTML = ""
+                    // document.getElementById("returnedMobile").innerHTML = ""
+                    
                 }
             }(idno);
 
+            console.log("aw")
             //make table row draggable
             entry.id = idno
             entry.className = "row entry"
@@ -206,19 +291,19 @@ function getBorrower() {
             entry.innerHTML = rows;
             entry.appendChild(buttonsColumn).parentNode
 
-            borrowed.appendChild(entry);
+            
+            // alert("gg")
+            // borrowedAndReturned.appendChild(entry.cloneNode(true));
+            borrowed[0].appendChild(entry);
+            // borrowed[1].appendChild(entry.cloneNode(true));
+            // alert(borrowed.innerHTML)
+
         }
     }
 }
 
 function addData() {
     alert('Added to borrowed table');
-    var x = document.getElementById("groupno").value;
-    var y = document.getElementById("name").value;
-    var letters = '/^[a-zA-Z]+$/';
-    if ((parseInt(x) != (x)) && (y == parseInt(y))) {
-        alert("Wrong Value Entered");
-    } else {
         var rows = "";
         var idno = document.getElementById("idno").value;
         var name = document.getElementById("name").value;
@@ -240,33 +325,32 @@ function addData() {
             instructor: instructor,
             borrowedApparatus: borrowedApparatus
         };
-        alert()
+        // alert(borrower)
         borrowers.push(borrower);
         sync();
-        inventorySync(idno);
-        alert("jejejejeje")
+        // inventorySync(idno);
+        // alert("jejejejeje")
         getBorrower();
         resetForm();
-    }
 }
 
-function inverntorSync(idno) {
-    alert("jeje")
-    var borrowedApp
-    var students = JSON.parse(localStorage.getItem('Borrowers'))
-    for (var i = 0; i < students.length; i++) {
-        if (students[i].idno === idno) {
-            borrowedApp = students[i].apparatus
-            break;
-        }
-    }
-    alert("whoawets")
-    console.log(borrowedApp)
-    // for (var i = 0; i < borrowedApp.length; i++) {
+// function inverntorSync(idno) {
+//     alert("jeje")
+//     var borrowedApp
+//     var students = JSON.parse(localStorage.getItem('Borrowers'))
+//     for (var i = 0; i < students.length; i++) {
+//         if (students[i].idno === idno) {
+//             borrowedApp = students[i].apparatus
+//             break;
+//         }
+//     }
+//     alert("whoawets")
+//     console.log(borrowedApp)
+//     for (var i = 0; i < borrowedApp.length; i++) {
 
-    // };
+//     };
 
-}
+// }
 
 function returns(idno) {
     for (var i = 0; i < borrowers.length; i++) {
@@ -283,38 +367,39 @@ function returns(idno) {
 function sync() {
     localStorage.setItem('Borrowers', JSON.stringify(borrowers));
     localStorage.setItem('Returnees', JSON.stringify(returnees));
+    // getBorrower();
+    // getReturnees();
 }
 
-function getApparatus(activity) {
-    var xmlhttp = new XMLHttpRequest();
-    var url = "../json/activities.json";
+// function getApparatus(activity) {
+//     var xmlhttp = new XMLHttpRequest();
+//     var url = "../json/activities.json";
 
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var arr = JSON.parse(this.responseText);
-            var out = "<th>Apparatus</th>";
-            var i;
-            var j;
+//     xmlhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             var arr = JSON.parse(this.responseText);
+//             var out = "<th>Apparatus</th>";
+//             var i;
+//             var j;
 
-            for (i = 0; i < arr.length; i++) {
-                if (arr[i].activity === activity) {
-                    for (j = 0; j < arr[i].apparatus.length; j++) {
-                        out += '<tr><td>' + arr[i].apparatus[j] + '</td></tr>'
-                    }
-                }
-            }
-            document.getElementById("apparatus").innerHTML = out;
-        }
-    };
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-}
+//             for (i = 0; i < arr.length; i++) {
+//                 if (arr[i].activity === activity) {
+//                     for (j = 0; j < arr[i].apparatus.length; j++) {
+//                         out += '<tr><td>' + arr[i].apparatus[j] + '</td></tr>'
+//                     }
+//                 }
+//             }
+//             document.getElementById("apparatus").innerHTML = out;
+//         }
+//     };
+//     xmlhttp.open("GET", url, true);
+//     xmlhttp.send();
+// }
 
 function getApparatus(chapterNumber) {
-    manual = JSON.parse(localStorage.getItem(manual));
-    // console.log(manual)
-    var apparatus = manual.chapters[chapterNumber].apparatus;
-    // console.log(apparatus)
+    var manualObject = JSON.parse(localStorage.getItem(manual));
+    console.log(manualObject)
+    var apparatus = manualObject.chapters[chapterNumber].apparatus;
 }
 
 function resetForm() {
