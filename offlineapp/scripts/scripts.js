@@ -6,7 +6,7 @@ var borrower;
 var returnee;
 var source;
 var manuals;
-var manual;
+var chosenManual;
 var inventory;
 var bs;
 
@@ -75,7 +75,6 @@ window.onload = function() {
     if (document.cookie.indexOf("session=Valid") == -1) {
         location.href = "validate-login.html";
     }
-    // setInventory
     if (document.URL.indexOf("student.html") >= 0) {
         if (localStorage.getItem("manuals") === null) {
             if (window.confirm('You havent downloaded any manual.\n\nDo you want to download now?')) {
@@ -85,6 +84,7 @@ window.onload = function() {
         getBorrower();
         getReturnees();
     }
+
     borrowers = JSON.parse(localStorage.getItem("Borrowers"));
     returnees = JSON.parse(localStorage.getItem("Returnees"));
     if (borrowers == null || returnees == null) {
@@ -93,12 +93,13 @@ window.onload = function() {
     }
 
     manuals = JSON.parse(localStorage.getItem('manuals'))
-
+    var manual = document.getElementById("manual");
+    // console.log(manuals)
     for (i = 0; i < manuals.length; i++) {
-        var manual = document.getElementById("manual");
         var option = document.createElement("option");
-        option.text = manuals[i]
-        option.setAttribute("value", manuals[i]);
+        option.text = manuals[i].manualName
+        // console.log
+        option.setAttribute("value", manuals[i].manualName);
         manual.add(option);
     }
 }
@@ -192,6 +193,7 @@ function getBorrower() {
             reviewButton.id = "review" + idno
             // reviewButton.setAttribute("data-id", idno)
             var apparatusTable = document.createElement("table")
+
             reviewButton.onclick = function(appTable, id) {
                 return function() {
                     // Get the modal
@@ -212,6 +214,7 @@ function getBorrower() {
                     }
 
                     var appTable = document.createElement("table")
+                    appTable.className = "apparatusTable"
                     var header = document.createElement("tr")
                     var quantityHeader = document.createElement("th")
                     var apparatus;
@@ -303,18 +306,36 @@ function addData() {
     alert('Added to borrowed table');
     var rows = "";
     var idno = document.getElementById("idno").value;
-    var name = document.getElementById("name").value;
+    var surname = document.getElementById("surname").value;
+    var firstName = document.getElementById("firstName").value;
     var groupno = document.getElementById("groupno").value;
     var instructor = document.getElementById("instructor").value;
     var activity = document.getElementById("activities").value;
     var borrowedApparatus;
 
-    for (var cc = 1; cc <= Object.keys(b).length; cc++) {
-        if (cc == activity) {
+    surname = surname.trim().toUpperCase();
+    firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+
+    var name = surname+", "+firstName
+
+    for (var cc = 0; cc < Object.keys(b).length; cc++) {
+        if (b[cc].activityName == activity) {
             borrowedApparatus = b[cc].apparatus;
+            // alert(borrowedApparatus)
         }
     }
 
+    inventory = JSON.parse(localStorage.getItem('inventory'))
+    borrowedApparatus.forEach(function(borrowedApparatus){
+        inventory.forEach(function(inventoryApparatus){
+            if(borrowedApparatus.name == inventoryApparatus.item){
+                inventoryApparatus.quantity -= borrowedApparatus.quantity
+                alert("awwwwww")
+                inventorySync();
+            }
+        })
+    })
+    alert("g")
     borrower = {
         idno: idno,
         name: name,
@@ -322,32 +343,16 @@ function addData() {
         instructor: instructor,
         borrowedApparatus: borrowedApparatus
     };
-    // alert(borrower)
+
     borrowers.push(borrower);
     sync();
-    // inventorySync(idno);
-    // alert("jejejejeje")
     getBorrower();
     resetForm();
 }
 
-// function inverntorSync(idno) {
-//     alert("jeje")
-//     var borrowedApp
-//     var students = JSON.parse(localStorage.getItem('Borrowers'))
-//     for (var i = 0; i < students.length; i++) {
-//         if (students[i].idno === idno) {
-//             borrowedApp = students[i].apparatus
-//             break;
-//         }
-//     }
-//     alert("whoawets")
-//     console.log(borrowedApp)
-//     for (var i = 0; i < borrowedApp.length; i++) {
-
-//     };
-
-// }
+function inventorySync() {
+    localStorage.setItem('inventory', JSON.stringify(inventory))
+}
 
 function returns(idno) {
     for (var i = 0; i < borrowers.length; i++) {
@@ -393,10 +398,27 @@ function sync() {
 //     xmlhttp.send();
 // }
 
-function getApparatus(chapterNumber) {
-    var manualObject = JSON.parse(localStorage.getItem(manual));
-    console.log(manualObject)
-    var apparatus = manualObject.chapters[chapterNumber].apparatus;
+function getApparatus(activityName) {
+    // var manualObject;
+    var apparatus = []
+    var chapters = []
+    var downloadedManuals = JSON.parse(localStorage.getItem('manuals'));
+    console.log(downloadedManuals)
+    downloadedManuals.forEach(function(element1){
+        if(element1.manualName === chosenManual){
+            // alert()
+            // console.log(manualObject)
+            chapters = element1.chapters
+            // [chapterNumber].apparatus;
+        }
+    })
+    console.log(typeof chapters)
+    chapters.forEach(function(element2){
+                if(element2.activityName === activityName){
+                    apparatus = element2.apparatus;
+                }
+            })
+    
 }
 
 function resetForm() {
@@ -440,19 +462,22 @@ function drop(ev) {
 }
 
 function setActivities(man) {
+
     chosenManual = man;
     document.getElementById('activities').innerHTML = ""
     var downloadedManuals = JSON.parse(localStorage.getItem('manuals'))
     downloadedManuals.forEach(function(element) {
-        if (element == chosenManual) {
-            a = JSON.parse(localStorage.getItem(element));
-            b = a.chapters;
+        if (element.manualName === chosenManual) {
+            // a = JSON.parse(localStorage.getItem(element));
+            b = element.chapters;
+            console.log(b)
 
-            for (i = 1; i <= Object.keys(b).length; i++) {
+            for (i = 0; i < b.length; i++) {
                 var x = document.getElementById("activities");
                 var option = document.createElement("option");
+                console.log(b[i].activityName)
                 option.text = b[i].activityName;
-                option.setAttribute("value", i);
+                option.setAttribute("value", b[i].activityName);
                 x.add(option);
             }
         }

@@ -1,159 +1,208 @@
 {
 	"manualName": "General Zoology 1",
-	"chapters": {
-		"1": {
+	"chapters": [{
 			"activityName": "Activity 1: The Compound Microscope",
-			"apparatus":
-			[{"name": "Compund Microscope (Different Models)",
-			  "quantity": 3}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope (Different Models)",
+				"quantity": 3
+			}]
 		},
-		"2": {
+		{
 			"activityName": "Activity 2: Exercises in Focusing",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 2},
-			 {"name": "Glass Slide",
-			  "quantity": 5},
-			 {"name": "Cover Slip",
-			  "quantity": 5},
-			 {"name": "Medicine Dropper",
-			  "quantity": 1},
-			 {"name": "Cotton Fiber",
-			  "quantity": 10}
+			"apparatus": [{
+					"name": "Compund Microscope",
+					"quantity": 2
+				},
+				{
+					"name": "Glass Slide",
+					"quantity": 5
+				},
+				{
+					"name": "Cover Slip",
+					"quantity": 5
+				},
+				{
+					"name": "Medicine Dropper",
+					"quantity": 1
+				},
+				{
+					"name": "Cotton Fiber",
+					"quantity": 10
+				}
 			]
 		},
-		"3": {
+		{
 			"activityName": "Activity 3: Magnification",
-			"apparatus":
-			[{"name": "Compund Microscope",
-		      "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"4": {
+		{
 			"activityName": "Activity 4: The Animal Cell",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Chart on typical animal cell",
-			  "quantity": 2},
-			 {"name": "Chart on typical plant cell",
-			  "quantity": 2}
+			"apparatus": [{
+					"name": "Compund Microscope",
+					"quantity": 1
+				},
+				{
+					"name": "Chart on typical animal cell",
+					"quantity": 2
+				},
+				{
+					"name": "Chart on typical plant cell",
+					"quantity": 2
+				}
 			]
 		},
-		"5": {
+		{
 			"activityName": "Activity 5: Animal Cell Diversity as to Shape",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Amoeba (in a bottle)",
-			  "quantity": 1},
-			 {"name": "Chromatophore",
-			  "quantity": 3}
+			"apparatus": [{
+					"name": "Compund Microscope",
+					"quantity": 1
+				},
+				{
+					"name": "Amoeba (in a bottle)",
+					"quantity": 1
+				},
+				{
+					"name": "Chromatophore",
+					"quantity": 3
+				}
 			]
 		},
-		"6": {
+		{
 			"activityName": "Activity 6: Cell Division",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1},
-			 {"name": "Chart on Mitosis",
-			  "quantity": 1},
-			 {"name": "Reference Books",
-			  "quantity": 2}
+			"apparatus": [{
+					"name": "Compund Microscope",
+					"quantity": 1
+				},
+				{
+					"name": "Chart on Mitosis",
+					"quantity": 1
+				},
+				{
+					"name": "Reference Books",
+					"quantity": 2
+				}
 			]
 		},
-		"7": {
+		{
 			"activityName": "Activity 7: Physiological Activities of Cells",
-			"apparatus":
-			[{"name": "Beaker",
-			  "quantity": 2},
-			 {"name": "Medicine Dropper",
-			  "quantity": 1},
-			 {"name": "Osmometer Tube",
-			  "quantity": 3},
-			 {"name": "Methylene Blue Solution (Bottle)",
-			  "quantity": 1},
-			 {"name": "Ringer's Solution (Bottle)",
-			  "quantity": 1},
-			 {"name": "Iron Stand",
-			  "quantity": 1},
-			 {"name": "Iron Clamp",
-			  "quantity": 1},
-			 {"name": "Cork",
-			  "quantity": 1}
+			"apparatus": [{
+					"name": "Beaker",
+					"quantity": 2
+				},
+				{
+					"name": "Medicine Dropper",
+					"quantity": 1
+				},
+				{
+					"name": "Osmometer Tube",
+					"quantity": 3
+				},
+				{
+					"name": "Methylene Blue Solution (Bottle)",
+					"quantity": 1
+				},
+				{
+					"name": "Ringer's Solution (Bottle)",
+					"quantity": 1
+				},
+				{
+					"name": "Iron Stand",
+					"quantity": 1
+				},
+				{
+					"name": "Iron Clamp",
+					"quantity": 1
+				},
+				{
+					"name": "Cork",
+					"quantity": 1
+				}
 			]
 		},
-		"8": {
+		{
 			"activityName": "Activity 8: Epithelial Tissues",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"9": {
+		{
 			"activityName": "Activity 9: Connective Tissues",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"10": {
+		{
 			"activityName": "Activity 10: Supportive Tissues",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"11": {
+		{
 			"activityName": "Activity 11: Vascular Tissue",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"12": {
+		{
 			"activityName": "Activity 12: Nervous Tissue",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"13": {
+		{
 			"activityName": "Activity 13: Muscular Tissues",
-			"apparatus":
-			[{"name": "Compund Microscope",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Compund Microscope",
+				"quantity": 1
+			}]
 		},
-		"14": {
+		{
 			"activityName": "Activity 14: External Anatomy of the Frog",
-			"apparatus":
-			[{"name": "Dissecting Pan",
-			  "quantity": 1},
-			 {"name": "Chloroform (Bottle)",
-			  "quantity": 1}
+			"apparatus": [{
+					"name": "Dissecting Pan",
+					"quantity": 1
+				},
+				{
+					"name": "Chloroform (Bottle)",
+					"quantity": 1
+				}
 			]
 		},
-		"15": {
+		{
 			"activityName": "Activity 15: Dissection and Anatomy of the Frog",
-			"apparatus":
-			[{"name": "Dissecting Pan",
-			  "quantity": 2},
-			 {"name": "Dissecting Instrument",
-			  "quantity": 3},
-			 {"name": "Chloroform (Bottle)",
-			  "quantity": 1},
-			 {"name": "Cotton Ball",
-			  "quantity": 15}
+			"apparatus": [{
+					"name": "Dissecting Pan",
+					"quantity": 2
+				},
+				{
+					"name": "Dissecting Instrument",
+					"quantity": 3
+				},
+				{
+					"name": "Chloroform (Bottle)",
+					"quantity": 1
+				},
+				{
+					"name": "Cotton Ball",
+					"quantity": 15
+				}
 			]
 		},
-		"16": {
+		{
 			"activityName": "Activity 16: Human Internal Organs",
-			"apparatus":
-			[{"name": "Human Torso Model",
-			  "quantity": 1}
-			]
+			"apparatus": [{
+				"name": "Human Torso Model",
+				"quantity": 1
+			}]
 		}
-	}
+
+	]
 }

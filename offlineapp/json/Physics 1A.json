@@ -1,7 +1,6 @@
 {
   "manualName": "Physics 1A",
-  "chapters": {
-    "1": {
+  "chapters": [{
       "activityName": "Activity 1: Measurements",
       "apparatus": [{
           "name": "Vernier Caliper",
@@ -29,7 +28,7 @@
         }
       ]
     },
-    "2": {
+    {
       "activityName": "Activity 2: Uniformly Accelerated Motion",
       "apparatus": [{
           "name": "Trolley",
@@ -53,7 +52,7 @@
         }
       ]
     },
-    "3": {
+    {
       "activityName": "Activity 3: Vectors",
       "apparatus": [{
           "name": "Force Table",
@@ -93,7 +92,7 @@
         }
       ]
     },
-    "4": {
+    {
       "activityName": "Activity 4: Motion of a Free Falling Body",
       "apparatus": [{
           "name": "Dextrose Bottle",
@@ -117,7 +116,7 @@
         }
       ]
     },
-    "5": {
+    {
       "activityName": "Activity 5: Projectile Motion",
       "apparatus": [{
           "name": "Spring Gun with Metal Ball",
@@ -141,7 +140,7 @@
         }
       ]
     },
-    "6": {
+    {
       "activityName": "Activity 6: Kinetic and Static Friction",
       "apparatus": [{
           "name": "Wooden Plane",
@@ -169,7 +168,7 @@
         }
       ]
     },
-    "7": {
+    {
       "activityName": "Activity 7: Newton's Second Law of Motion",
       "apparatus": [{
           "name": "Atwood's Machine",
@@ -201,7 +200,7 @@
         }
       ]
     },
-    "8": {
+    {
       "activityName": "Activity 8: Torque or Moment of a Force",
       "apparatus": [{
           "name": "Student's Model Balance",
@@ -225,7 +224,7 @@
         }
       ]
     },
-    "9": {
+    {
       "activityName": "Activity 9: Static Equilibrium",
       "apparatus": [{
           "name": "Model Crane",
@@ -265,7 +264,7 @@
         }
       ]
     },
-    "10": {
+    {
       "activityName": "Activity 10: The Compound Wheel and Axle",
       "apparatus": [{
           "name": "Compound Wheel and Axle",
@@ -305,7 +304,7 @@
         }
       ]
     },
-    "11": {
+    {
       "activityName": "Activity 11: Rotational Inertia",
       "apparatus": [{
           "name": "Rotational Inertia Disk",
@@ -337,7 +336,7 @@
         }
       ]
     },
-    "12": {
+    {
       "activityName": "Activity 12: Coefficient of Restitution",
       "apparatus": [{
           "name": "Small Ball",
@@ -353,7 +352,7 @@
         }
       ]
     },
-    "13": {
+    {
       "activityName": "Activity 13: Hooke's Law of Elasticity",
       "apparatus": [{
           "name": "Cylindrical Spring",
@@ -373,7 +372,7 @@
         }
       ]
     },
-    "14": {
+    {
       "activityName": "Activity 14: Boyle's Law",
       "apparatus": [{
           "name": "Boyle's Law Apparatus",
@@ -401,7 +400,7 @@
         }
       ]
     },
-    "15": {
+    {
       "activityName": "Activity 15: Specific Gravity by Archimedes Principle",
       "apparatus": [{
           "name": "Iron Stand",
@@ -449,7 +448,7 @@
         }
       ]
     },
-    "16": {
+    {
       "activityName": "Activity 16: Coefficient of Linear Expansion",
       "apparatus": [{
           "name": "Linear Expansion Apparatus",
@@ -485,7 +484,7 @@
         }
       ]
     },
-    "17": {
+    {
       "activityName": "Activity 17: Specific Heat of Solids",
       "apparatus": [{
           "name": "Calorimeter",
@@ -517,7 +516,7 @@
         }
       ]
     },
-    "18": {
+    {
       "activityName": "Activity 18: Heat of Fusion of Ice",
       "apparatus": [{
           "name": "Calorimeter",
@@ -541,5 +540,6 @@
         }
       ]
     }
-  }
+
+  ]
 }

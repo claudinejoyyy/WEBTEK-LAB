@@ -1,7 +1,6 @@
 {
   "manualName": "Chemistry 1",
-  "chapters": {
-    "1": {
+  "chapters": [{
       "activityName": "Activity 1: The Bunsen Burner",
       "apparatus": [{
           "name": "Bunsen Burner",
@@ -21,7 +20,7 @@
         }
       ]
     },
-    "2": {
+    {
       "activityName": "Activity 2: Common Laboratory Measurements",
       "apparatus": [{
           "name": "Zinc",
@@ -41,7 +40,7 @@
         }
       ]
     },
-    "3": {
+    {
       "activityName": "Activity 3: Physical and Chemical Changes",
       "apparatus": [{
           "name": "Bunsen Burner",
@@ -105,7 +104,7 @@
         }
       ]
     },
-    "4": {
+    {
       "activityName": "Activity 4: Law of Conservation of Mass",
       "apparatus": [{
           "name": "Big Corks",
@@ -133,7 +132,7 @@
         }
       ]
     },
-    "5": {
+    {
       "activityName": "Activity 7: Types of Chemical Reactions",
       "apparatus": [{
           "name": "Bunsen Burner",
@@ -173,7 +172,7 @@
         }
       ]
     },
-    "6": {
+    {
       "activityName": "Activity 8: Formula of a Hydrate",
       "apparatus": [{
           "name": "Bunsen Burner",
@@ -205,7 +204,7 @@
         }
       ]
     },
-    "7": {
+    {
       "activityName": "Activity 9: Percentage Yield of a Chemical Reactions",
       "apparatus": [{
           "name": "Bunsen Burner",
@@ -245,7 +244,7 @@
         }
       ]
     },
-    "8": {
+    {
       "activityName": "Activity 10: Boyle's Law",
       "apparatus": [{
           "name": "Boyle's Law apparatus",
@@ -261,7 +260,7 @@
         }
       ]
     },
-    "9": {
+    {
       "activityName": "Activity 11: Graham's Law",
       "apparatus": [{
           "name": "Safety Goggles",
@@ -313,7 +312,7 @@
         }
       ]
     },
-    "10": {
+    {
       "activityName": "Activity 12: Charles's Law",
       "apparatus": [{
           "name": "Boiling Stones",
@@ -365,7 +364,7 @@
         }
       ]
     },
-    "11": {
+    {
       "activityName": "Activity 13: Preparation and Properties of Oxygen",
       "apparatus": [{
           "name": "Bunsen Burner",
@@ -417,7 +416,7 @@
         }
       ]
     },
-    "12": {
+    {
       "activityName": "Activity 14: Preparation and Properties of Hydrogen",
       "apparatus": [{
           "name": "500 mL Suction Flask",
@@ -473,5 +472,6 @@
         }
       ]
     }
-  }
+
+  ]
 }

@@ -1,9 +1,5 @@
-window.onload = function(){
-
-}
 function setManual(manual) {
     document.getElementById("downloadForm").setAttribute('onsubmit', "downloadManual('" + manual + "')");
-    //.onclick =  "downloadManual('"+manual+"')"
 }
 
 function downloadManual(manual) {
@@ -12,25 +8,31 @@ function downloadManual(manual) {
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            var downloadedManual = JSON.parse(this.responseText);
-
-            // manuals.push(downloadedManual)
-            // localStorage.setItem("manuals", JSON.stringify(downloadedManual))
-            // alert(downloadedManual.manualName+" was downloaded.")
-            // var i;
-            console.log(downloadedManual)
-            localStorage.setItem(manual, JSON.stringify(downloadedManual))
-            alert('Manual downloaded!');
-            var a = JSON.parse(localStorage.getItem(manual));
-            var select = document.getElementById("manual");
-            // select.options[select.options.length] = new Option(a, i);
-            // var manuals = [];
-            var manuals = JSON.parse(localStorage.getItem('manuals'));   
-             if(manuals == null){
+            var downloadedManual = JSON.parse(this.responseText)
+            var manuals = JSON.parse(localStorage.getItem('manuals'))
+            var flag = true;
+            if(manuals === null){
                 manuals = [];
-             }
-            manuals.push(a.manualName);
-            localStorage.setItem('manuals', JSON.stringify(manuals))
+                manuals.push(downloadedManual);
+                localStorage.setItem('manuals', JSON.stringify(manuals))
+                alert("Success! Downloaded "+downloadedManual.manualName+" manual!")
+                
+             } else{
+                alert()
+                for (var i = 0; i < manuals.length; i++) {
+                    if(manuals[i].manualName === downloadedManual.manualName){
+                        alert(downloadedManual.manualName+" manual is ALREADY DOWNLOADED.")
+                        flag = false;
+                        break;
+                    }
+                };
+                if(flag === true){
+                    manuals.push(downloadedManual);
+                localStorage.setItem('manuals', JSON.stringify(manuals))
+                alert("Success! Downloaded "+downloadedManual.manualName+" manual!")
+                }
+                
+            }           
         }
     };
     xmlhttp.open("GET", url, true);

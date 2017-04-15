@@ -1,7 +1,6 @@
 {
 	"manualName": "General Zoology 2",
-	"chapters": {
-		"1": {
+	"chapters": [{
 			"activityName": "Activity 1: The Integumentary System",
 			"apparatus": [{
 					"name": "Compund Microscope",
@@ -13,7 +12,7 @@
 				}
 			]
 		},
-		"2": {
+		{
 			"activityName": "Activity 2: The Muscular System",
 			"apparatus": [{
 					"name": "Dissecting Pan",
@@ -25,7 +24,7 @@
 				}
 			]
 		},
-		"3": {
+		{
 			"activityName": "Activity 3: The Digestive System",
 			"apparatus": [{
 					"name": "Dissecting Pan",
@@ -37,28 +36,30 @@
 				}
 			]
 		},
-		"4": {
+		{
 			"activityName": "Activity 4: Histology of Digestive Organs",
 			"apparatus": [{
 				"name": "Compound Microscope",
 				"quantity": 1
 			}]
 		},
-		"5": {
-			"activityName": "Activity 5: Histology of the Digestive Glands",
-			"apparatus": [{
-				"name": "Compound Microscope",
-				"quantity": 1
-			}]
+		{
+			"5": {
+				"activityName": "Activity 5: Histology of the Digestive Glands",
+				"apparatus": [{
+					"name": "Compound Microscope",
+					"quantity": 1
+				}]
+			}
 		},
-		"6": {
+		{
 			"activityName": "Activity 6: The Respiratory System",
 			"apparatus": [{
 				"name": "Dissecting Pan",
 				"quantity": 3
 			}]
 		},
-		"7": {
+		{
 			"activityName": "Activity 7: The Circulatory System",
 			"apparatus": [{
 					"name": "Models of the human and the frog's circulatory system",
@@ -70,7 +71,7 @@
 				}
 			]
 		},
-		"8": {
+		{
 			"activityName": "Activity 8: The Heart",
 			"apparatus": [{
 					"name": "Dissecting Pan",
@@ -82,21 +83,21 @@
 				}
 			]
 		},
-		"9": {
+		{
 			"activityName": "Activity 9: Histology of Blood Vessels",
 			"apparatus": [{
 				"name": "Compound Microscope",
 				"quantity": 1
 			}]
 		},
-		"10": {
+		{
 			"activityName": "Activity 10: The Human Urinary System",
 			"apparatus": [{
 				"name": "Compound Microscope",
 				"quantity": 1
 			}]
 		},
-		"11": {
+		{
 			"activityName": "Activity 11: The Frog's Urogenital System",
 			"apparatus": [{
 					"name": "Dissecting Pan",
@@ -108,21 +109,21 @@
 				}
 			]
 		},
-		"12": {
+		{
 			"activityName": "Activity 12: The Human Female Reproductive System",
 			"apparatus": [{
 				"name": "Compound Microscope",
 				"quantity": 1
 			}]
 		},
-		"13": {
+		{
 			"activityName": "Activity 13: The Human Male Reproductive System",
 			"apparatus": [{
 				"name": "Compound Microscope",
 				"quantity": 1
 			}]
 		},
-		"14": {
+		{
 			"activityName": "Activity 14: The Frog's Nervous System",
 			"apparatus": [{
 					"name": "Prepared Slide of the X-S of the frog's spinal cord",
@@ -138,7 +139,7 @@
 				}
 			]
 		},
-		"15": {
+		{
 			"activityName": "Activity 15: The Human Nervous System",
 			"apparatus": [{
 					"name": "Compound Microscope",
@@ -150,19 +151,20 @@
 				}
 			]
 		},
-		"16": {
+		{
 			"activityName": "Activity 16: The Skeletal System",
 			"apparatus": [{
 				"name": "Model of the human skeleton and the frog's skeleton",
 				"quantity": 1
 			}]
 		},
-		"17": {
+		{
 			"activityName": "Activity 16: Embryology",
 			"apparatus": [{
 				"name": "Compound Microscope",
 				"quantity": 1
 			}]
 		}
-	}
+
+	]
 }

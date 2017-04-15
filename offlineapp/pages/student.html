@@ -14,6 +14,8 @@
         <script defer type="text/javascript" src="../scripts/scripts.js"></script>
         <script defertype="txt/javascript"src="../scripts/events.js"></script>
         <link rel="stylesheet" type="text/css" href="../styles/layout.css">
+        <link rel="stylesheet" type="text/css" href="../styles/tables.css">
+        <script type="text/javascript" src="../scripts/preload.js"></script>
     </head>
     <body>
         <div class="container main">
@@ -58,8 +60,14 @@
                         </div>
                         <div class="form-row">
                             <label>
-                            <span>Name</span>
-                            <input id = "name" name = "name" type = "text" pattern='[A-Za-z\\s]*' required>
+                            <span>Surname</span>
+                            <input id = "surname" name = "surname" type = "text" pattern='[A-Za-z\s]*' required>
+                            </label>
+                        </div>
+                        <div class="form-row">
+                            <label>
+                            <span>First Name</span>
+                            <input id = "firstName" name = "firstname" type = "text" pattern='[A-Za-z\s]*' required>
                             </label>
                         </div>
                         <div class="form-row">

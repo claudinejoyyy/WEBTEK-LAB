@@ -16,11 +16,11 @@
 }
 
 /* For devices larger than 400px */
-@media (min-width: 400px) {
+/*@media (min-width: 400px) {
   .container {
     width: 80%;
     padding: 0; }
-}
+}*/
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {

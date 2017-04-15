@@ -1,7 +1,6 @@
 {
   "manualName": "Medtech 1",
-  "chapters": {
-    "1": {
+  "chapters": [{
       "activityName": "Experiment No. 1 STUDY OF INSTRUMENTS IN BLOOD BANKING",
       "apparatus": [{
           "name": "Plain test tubes",
@@ -105,7 +104,7 @@
         }
       ]
     },
-    "2": {
+    {
       "activityName": "Experiment No. 2 MATERIALS & EQUIPMENT in HISPATHOLOGY",
       "apparatus": [{
           "name": "Serological Pipettes",
@@ -161,7 +160,7 @@
         }
       ]
     },
-    "3": {
+    {
       "activityName": "Experiment No. 3 GLASSWARES USED IN CLINICAL MICROSCOPY",
       "apparatus": [{
           "name": "Coplin jar",
@@ -249,5 +248,6 @@
         }
       ]
     }
-  }
+
+  ]
 }
