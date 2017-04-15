@@ -67,7 +67,7 @@
 				{
 					"name": "Reference Books",
 					"quantity": 3
-				}
+				} //not found in the inventory, must be brought by the students
 			]
 		},
 		"8": {
@@ -145,7 +145,7 @@
 					"quantity": 1
 				},
 				{
-					"name": "5x Eyepiece or a hand lens",
+					"name": "5x Eyepiece ",
 					"quantity": 1
 				}
 			]
