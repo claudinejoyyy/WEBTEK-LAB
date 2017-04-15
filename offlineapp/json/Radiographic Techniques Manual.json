@@ -1,0 +1,115 @@
+{
+  "manualName": "Radiographic Techniques Laboratory Manual",
+  "chapters":{
+  "2": {
+    "activity": "Activity 2: Radiographic Accessories",
+    "apparatus": 
+      [{"name": "Lead gown",
+          "quantity": 1}, //not found in the inventory, must be brought by the students
+	   {"name": "Gloves",
+          "quantity": 1},
+	   {"name": "Lead shield", 
+          "quantity": 1},
+	   {"name": "Gonadal shields",
+          "quantity": 1},
+	   {"name": "Aperture",
+          "quantity": 1}, 
+	   {"name": "Filter",
+          "quantity": 1},
+	   {"name": "Cone",
+        "quantity": 1},
+       {"name": "Cylinder",
+        "quantity": 1},
+       {"name": "Cassette",
+        "quantity": 1}, 
+       {"name": "Vertical cassette holder",
+        "quantity": 1},
+       {"name": "Radiographic table",
+        "quantity": 1},
+       {"name": "Bucky tray",
+        "quantity": 1},
+       {"name": "X-ray caliper",
+        "quantity": 1},
+       {"name": "Lead markers",
+        "quantity": 1},
+       {"name": "Grid",
+        "quantity": 1},
+       {"name": "Sandbag",
+        "quantity": 1},
+       {"name": "Angliner",
+        "quantity": 1},
+       {"name": "Gianturco positioning liner",
+        "quantity": 1}
+       
+      ]
+    },
+  "3": {
+    "activity": "Activity 3: The X-Ray Tube",
+    "apparatus": 
+      [{"name": "Illustrations of X-Ray",
+        "quantity": 1}, 
+       {"name": "Tubes",
+        "quantity": 1},
+       {"name": "Actual X-Ray of Tubes",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Reference Books",
+        "quantity": 1} //not found in the inventory, must be brought by the students
+      ]
+    },
+  "4": {
+    "activity": "Activity 4: The X-Ray Tube Housing And Collimator",
+    "apparatus": 
+      [{"name": "Reference Books",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Housing Model",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Laboratory collimator",
+        "quantity": 1}
+      ]
+    },
+  "5": {
+    "activity": "Activity 5: The Control Panel)",
+    "apparatus": 
+      [{"name": "Reference Books",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Laboratory control console",
+        "quantity": 1},
+      ]
+    },
+  "7": {
+    "activity": "Activity 7: Radiographic Quality Factor: Density",
+    "apparatus": 
+      [{"name": "Reference Book",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Negatoscope",
+        "quantity": 1}
+      ]
+    },
+  "8": {
+    "activity": "Activity 8: Radiographic Quality Factor: Contrast",
+    "apparatus": 
+      [{"name": "Reference Book",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Negatoscope",
+        "quantity": 1}
+      ]
+    },
+  "9": {
+    "activity": "Activity 9: Radiographic Quality Factor: Detail and Distortion",
+    "apparatus": 
+      [{"name": "Cassette",
+        "quantity": 1}, 
+       {"name": "Lead markers",
+        "quantity": 1},	//not found in the inventory, must be brought by the students
+       {"name": "Lead sheet",
+        "quantity": 1},
+       {"name": "5 peso coins",
+        "quantity": 1}, //not found in the inventory, must be brought by the students
+       {"name": "Ampules",
+        "quantity": 1},
+       {"name": "Radiographic machine",
+        "quantity": 1},
+      ]
+    }
+ 
+}
