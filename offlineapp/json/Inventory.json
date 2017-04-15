@@ -1,6 +1,15 @@
 [{
+	"item": "Angliner",
+	"quantity": 10
+}, {
 	"item": "Amoeba (Bottle)",
 	"quantity": 4
+}, {
+	"item": "Ampules",
+	"quantity": 27
+}, {
+	"item": "Aperture",
+	"quantity": 10
 }, {
 	"item": "Applicator Stick",
 	"quantity": 70
@@ -56,6 +65,9 @@
 	"item": "Brass",
 	"quantity": 20
 }, {
+	"item": "Bucky Tray",
+	"quantity": 12
+}, {
 	"item": "Bunsen Burner",
 	"quantity": 25
 }, {
@@ -67,6 +79,9 @@
 }, {
 	"item": "Carbon Paper",
 	"quantity": 70
+}, {
+	"item": "Cassette",
+	"quantity": 15
 }, {
 	"item": "Chart on Human Internal Organs",
 	"quantity": 10
@@ -107,6 +122,9 @@
 	"item": "Compressive Spring Scale",
 	"quantity": 11
 }, {
+	"item": "Cone",
+	"quantity": 15
+}, {
 	"item": "Coplin Jar",
 	"quantity": 18
 }, {
@@ -129,6 +147,9 @@
 	"quantity": 58
 }, {
 	"item": "Crucible Tong",
+	"quantity": 20
+}, {
+	"item": "Cylinder",
 	"quantity": 20
 }, {
 	"item": "Cylindrical Spring",
@@ -158,6 +179,12 @@
 	"item": "Evaporating Dish",
 	"quantity": 75
 }, {
+	"item": "5x Eyepiece",
+	"quantity": 65
+}, {
+	"item": "Filter",
+	"quantity": 30
+}, {
 	"item": "Forcep",
 	"quantity": 56
 }, {
@@ -166,6 +193,9 @@
 }, {
 	"item": "Force Table",
 	"quantity": 16
+}, {
+	"item": "Gianturco positioning liner",
+	"quantity": 10
 }, {
 	"item": "Glass Flask",
 	"quantity": 25
@@ -191,8 +221,14 @@
 	"item": "10 mL Graduated Cylinder",
 	"quantity": 50
 }, {
+	"item": "Grid",
+	"quantity": 15
+}, {
 	"item": "Gloves",
 	"quantity": 50
+}, {
+	"item": "Gonadal shields",
+	"quantity": 15
 }, {
 	"item": "Hanger",
 	"quantity": 21
@@ -212,6 +248,9 @@
 	"item": "Hydrometer Jar",
 	"quantity": 35
 }, {
+	"item": "Illustrations of X-Ray",
+	"quantity": 20
+}, {
 	"item": "Iron Clamp",
 	"quantity": 20
 }, {
@@ -230,6 +269,12 @@
 	"item": "Labeling Tape",
 	"quantity": 55
 }, {
+	"item": "Laboratory collimator",
+	"quantity": 34
+}, {
+	"item": "Laboratory control console",
+	"quantity": 25
+}, {
 	"item": "Laboratory View Box",
 	"quantity": 34
 }, {
@@ -238,6 +283,15 @@
 }, {
 	"item": "Large Iron Stand",
 	"quantity": 10
+}, {
+	"item": "Lead markers",
+	"quantity": 18
+}, {
+	"item": "Lead sheet",
+	"quantity": 70
+}, {
+	"item": "Lead shield",
+	"quantity": 20
 }, {
 	"item": "Linear Expansion Apparatus",
 	"quantity": 14
@@ -284,8 +338,14 @@
 	"item": "Model Crane",
 	"quantity": 10
 }, {
+	"item": "Model of the human skeleton and the frog's skeleton",
+	"quantity": 25
+}, {
 	"item": "Movable Pulley",
 	"quantity": 13
+}, {
+	"item": "Negatoscope",
+	"quantity": 25
 }, {
 	"item": "Osmometer Tube",
 	"quantity": 46
@@ -329,11 +389,20 @@
 	"item": "Protractor",
 	"quantity": 30
 }, {
+	"item": "Prepared Slide of the X-S of the frog's spinal cord",
+	"quantity": 30
+}, {
 	"item": "Pulley",
 	"quantity": 18
 }, {
 	"item": "Rack",
 	"quantity": 12
+}, {
+	"item": "Radiographic machine",
+	"quantity": 34
+}, {
+	"item": "Radiographic table",
+	"quantity": 15
 }, {
 	"item": "Refrigerator",
 	"quantity": 3
@@ -367,6 +436,9 @@
 }, {
 	"item": "Safety Goggles",
 	"quantity": 100
+}, {
+	"item": "Sandbag",
+	"quantity": 50
 }, {
 	"item": "Section Spreading Machine",
 	"quantity": 4
@@ -470,6 +542,9 @@
 	"item": "Trolley",
 	"quantity": 18
 }, {
+	"item": "Tubes",
+	"quantity": 30
+}, {
 	"item": "Tweezer",
 	"quantity": 80
 }, {
@@ -478,6 +553,9 @@
 }, {
 	"item": "Vernier Caliper",
 	"quantity": 17
+}, {
+	"item": "Vertical cassette holder",
+	"quantity": 25
 }, {
 	"item": "Volumetric Flask",
 	"quantity": 34
@@ -514,6 +592,9 @@
 }, {
 	"item": "Wooden Splinter",
 	"quantity": 200
+}, {
+	"item": "X-ray caliper",
+	"quantity": 10
 }, {
 	"item": "Zinc",
 	"quantity": 100

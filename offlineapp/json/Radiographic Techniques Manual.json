@@ -4,35 +4,39 @@
   "2": {
     "activity": "Activity 2: Radiographic Accessories",
     "apparatus": 
-      [{"name": "Lead gown"
+      [{"name": "Lead gown",
           "quantity": 1}, //not found in the inventory, must be brought by the students
-	   {"name": "Gloves"
-          "quantity": 1}, //not found in the inventory, must be brought by the students
-	   {"name": "Lead shield"  
+	   {"name": "Gloves",
           "quantity": 1},
-	   {"name": "Gonadal shields"
+	   {"name": "Lead shield", 
           "quantity": 1},
-	   {"name": "Aperture"
+	   {"name": "Gonadal shields",
+          "quantity": 1},
+	   {"name": "Aperture",
           "quantity": 1}, 
-	   {"name": "Filter"
-          "quantity": 1}, //not found in the inventory, must be brought by the students	
-	   {"name": "Cone and Cylinder",
+	   {"name": "Filter",
+          "quantity": 1},
+	   {"name": "Cone",
         "quantity": 1},
-       {"name": "Cassette with intensifying screens",
+       {"name": "Cylinder",
+        "quantity": 1},
+       {"name": "Cassette",
         "quantity": 1}, 
        {"name": "Vertical cassette holder",
         "quantity": 1},
-       {"name": "Radiographic table with bucky tray",
+       {"name": "Radiographic table",
+        "quantity": 1},
+       {"name": "Bucky tray",
         "quantity": 1},
        {"name": "X-ray caliper",
         "quantity": 1},
        {"name": "Lead markers",
         "quantity": 1},
-       {"name": "grid",
+       {"name": "Grid",
         "quantity": 1},
-       {"name": "sandbag",
+       {"name": "Sandbag",
         "quantity": 1},
-       {"name": "angliner",
+       {"name": "Angliner",
         "quantity": 1},
        {"name": "Gianturco positioning liner",
         "quantity": 1}
@@ -47,7 +51,7 @@
        {"name": "Tubes",
         "quantity": 1},
        {"name": "Actual X-Ray of Tubes",
-        "quantity": 1},
+        "quantity": 1}, //not found in the inventory, must be brought by the students
        {"name": "Reference Books",
         "quantity": 1} //not found in the inventory, must be brought by the students
       ]
@@ -93,11 +97,11 @@
   "9": {
     "activity": "Activity 9: Radiographic Quality Factor: Detail and Distortion",
     "apparatus": 
-      [{"name": "11x14 cassette loaded with fresh film",
+      [{"name": "Cassette",
         "quantity": 1}, 
-       {"name": "Lead markers (#s 1-4)",
+       {"name": "Lead markers",
         "quantity": 1},	//not found in the inventory, must be brought by the students
-       {"name": "Lead sheets",
+       {"name": "Lead sheet",
         "quantity": 1},
        {"name": "5 peso coins",
         "quantity": 1}, //not found in the inventory, must be brought by the students
