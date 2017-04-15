@@ -4,14 +4,14 @@
 		"1": {
 			"activityName": "Activity 1: The Compound Microscope",
 			"apparatus":
-			[{"name": "Compund Microscope (Different Models)",
+			[{"name": "Compound Microscope",
 			  "quantity": 3}
 			]
 		},
 		"2": {
 			"activityName": "Activity 2: Exercises in Focusing",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 2},
 			 {"name": "Glass Slide",
 			  "quantity": 5},
@@ -26,27 +26,27 @@
 		"3": {
 			"activityName": "Activity 3: Magnification",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 		      "quantity": 1}
 			]
 		},
 		"4": {
 			"activityName": "Activity 4: The Animal Cell",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1},
-			 {"name": "Chart on typical animal cell",
+			 {"name": "Chart on Typical Animal Cell",
 			  "quantity": 2},
-			 {"name": "Chart on typical plant cell",
+			 {"name": "Chart on Typical Plant Cell",
 			  "quantity": 2}
 			]
 		},
 		"5": {
 			"activityName": "Activity 5: Animal Cell Diversity as to Shape",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1},
-			 {"name": "Amoeba (in a bottle)",
+			 {"name": "Amoeba (Bottle)",
 			  "quantity": 1},
 			 {"name": "Chromatophore",
 			  "quantity": 3}
@@ -55,12 +55,12 @@
 		"6": {
 			"activityName": "Activity 6: Cell Division",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1},
 			 {"name": "Chart on Mitosis",
 			  "quantity": 1},
 			 {"name": "Reference Books",
-			  "quantity": 2}
+			  "quantity": 2} //not found in the inventory, must be brought by the students
 			]
 		},
 		"7": {
@@ -87,42 +87,42 @@
 		"8": {
 			"activityName": "Activity 8: Epithelial Tissues",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1}
 			]
 		},
 		"9": {
 			"activityName": "Activity 9: Connective Tissues",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1}
 			]
 		},
 		"10": {
 			"activityName": "Activity 10: Supportive Tissues",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1}
 			]
 		},
 		"11": {
 			"activityName": "Activity 11: Vascular Tissue",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1}
 			]
 		},
 		"12": {
 			"activityName": "Activity 12: Nervous Tissue",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1}
 			]
 		},
 		"13": {
 			"activityName": "Activity 13: Muscular Tissues",
 			"apparatus":
-			[{"name": "Compund Microscope",
+			[{"name": "Compound Microscope",
 			  "quantity": 1}
 			]
 		},
