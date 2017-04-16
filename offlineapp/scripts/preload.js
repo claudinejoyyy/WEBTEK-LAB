@@ -1,8 +1,10 @@
 window.onload = function(){
-	var inventory = JSON.parse(localStorage.getItem('inventory'))
-    if(inventory == null){
-        setInventory();
-    }
+    if (document.cookie.indexOf("session=Valid") == -1) {
+        location.href = "pages/form-login.html";
+    } else{
+	    var inventory = JSON.parse(localStorage.getItem('inventory'))
+        if(inventory == null) setInventory();
+    }s
 }
     
 function setInventory() {

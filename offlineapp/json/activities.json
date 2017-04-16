@@ -1,0 +1,24 @@
+{
+"1": {
+"activity": "Activity 1",
+"apparatus": 
+  ["test tube",
+  "bunsen burner"
+  ]
+},
+"2": {
+"activity": "Activity 2",
+"apparatus": 
+  ["pestle",
+  "mortar",
+  "lighter"
+  ]
+},
+"3": {
+"activity": "Activity 3",
+"apparatus": 
+  ["magnifying glass",
+  "dropper"
+  ]
+}
+}
