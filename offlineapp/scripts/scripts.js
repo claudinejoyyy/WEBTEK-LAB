@@ -120,24 +120,88 @@ function getReturnees() {
             var name = rs[i].name;
             var groupno = rs[i].groupNumber
             var instructor = rs[i].instructor
-
+            var activity = rs[i].activity
+            var manual = rs[i].manual
             var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
-                "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
-            rows += "</div>";
+                "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" 
+                + instructor + "<br>"+"<strong>Manual: </strong>" + manual +
+                 "<br>"+"<strong>Activity: </strong>" + activity +"</div>";
 
+
+            var div = document.createElement("div");
             var entry = document.createElement("div");
 
             var buttonsColumn = document.createElement("div")
             buttonsColumn.className = "two columns"
 
             var reviewButton = document.createElement("button");
+            reviewButton.className = "reviewBtn"
             reviewButton.innerHTML = "Review"
-            // reviewButton.setAttribute("data-id", idno)
-            reviewButton.onclick = function(id) {
+            reviewButton.id = "review"
+            var apparatusTable = document.createElement("table")
+
+            reviewButton.onclick = function(appTable, id, activityTitle) {
                 return function() {
-                    alert(id)
+                    var modal = document.getElementById("reviewModal")
+                    var inner = document.getElementById("aw")
+                    var closeBtn = document.createElement("span")
+                    var appTable = document.createElement("table")
+                    var header = document.createElement("tr")
+                    var quantityHeader = document.createElement("th")
+                    var apparatusHeader = document.createElement("th")
+                    var apparatus;
+                    
+                    closeBtn.className = "close"
+                    closeBtn.innerHTML = "&times;"
+                    closeBtn.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    window.onclick = function(event) {
+                        if (event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+
+                    inner.innerHTML = "";
+                    appTable.className = "apparatusTable"
+                    // apparatusTable.border = "1"
+                    apparatusHeader.innerHTML = "Apparatus"
+                    quantityHeader.innerHTML = "Quantity"
+
+                    header.appendChild(apparatusHeader)
+                    header.appendChild(quantityHeader)
+                    appTable.appendChild(header)
+
+                    for (var i = 0; i < returnees.length; i++) {
+                        if (returnees[i].idno == id && returnees[i].activity === activityTitle) {
+                            alert(returnees[i].activity)
+                            var apparatus = returnees[i].borrowedApparatus
+                            break;
+                        }
+                    }
+
+                    for (var i = 0; i < apparatus.length; i++) {
+                        var row = document.createElement("tr")
+                        var app = document.createElement("td");
+                        app.innerHTML = apparatus[i].name
+                        var quantity = document.createElement("td");
+                        quantity.innerHTML = apparatus[i].quantity
+                        var item = apparatus[i]
+
+                        row.appendChild(app);
+                        row.appendChild(quantity);
+                        appTable.appendChild(row);
+                    };
+                    var tableTitle = document.createElement('h3')
+                    tableTitle.innerHTML = "Borrowed Apparatus"
+
+                    inner.appendChild(closeBtn);
+                    inner.appendChild(tableTitle)
+                    inner.appendChild(appTable);
+                    modal.style.display = "block";
                 }
-            }(idno);
+            }(apparatusTable, idno, activity);
 
             //make table row draggable
             entry.id = idno
@@ -150,7 +214,7 @@ function getReturnees() {
             entry.appendChild(buttonsColumn).parentNode
 
             returned[0].appendChild(entry);
-            // returned[1].appendChild(entry.cloneNode(true));
+            
         }
     }
 }
@@ -177,8 +241,12 @@ function getBorrower() {
             var name = bs[i].name;
             var groupno = bs[i].groupNumber
             var instructor = bs[i].instructor
+            var activity = bs[i].activity
+            var manual = bs[i].manual
             var rows = "<div class='ten columns'>" + "<strong>ID No.: </strong>" + idno + "<br>" + "<strong>Name: </strong>" + name +
-                "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" + instructor + "</div>";
+                "<br>" + "<strong>Group: </strong>" + groupno + "<br>" + "<strong>Instructor: </strong>" 
+                + instructor + "<br>"+"<strong>Manual: </strong>" + manual +
+                 "<br>"+"<strong>Activity: </strong>" + activity +"</div>";
 
 
             var div = document.createElement("div");
@@ -190,17 +258,23 @@ function getBorrower() {
             var reviewButton = document.createElement("button");
             reviewButton.className = "reviewBtn"
             reviewButton.innerHTML = "Review"
-            reviewButton.id = "review" + idno
-            // reviewButton.setAttribute("data-id", idno)
+            reviewButton.id = "review"
             var apparatusTable = document.createElement("table")
 
-            reviewButton.onclick = function(appTable, id) {
+            reviewButton.onclick = function(appTable, id, actTitle) {
                 return function() {
                     // Get the modal
                     var modal = document.getElementById("reviewModal")
                     var inner = document.getElementById("aw")
-                    inner.innerHTML = "";
                     var closeBtn = document.createElement("span")
+                    var appTable = document.createElement("table")
+                    var header = document.createElement("tr")
+                    var quantityHeader = document.createElement("th")
+                    var apparatusHeader = document.createElement("th")
+                    var apparatus;
+
+                    
+                    
                     closeBtn.className = "close"
                     closeBtn.innerHTML = "&times;"
                     closeBtn.onclick = function() {
@@ -213,14 +287,9 @@ function getBorrower() {
                         }
                     }
 
-                    var appTable = document.createElement("table")
+                    inner.innerHTML = "";
                     appTable.className = "apparatusTable"
-                    var header = document.createElement("tr")
-                    var quantityHeader = document.createElement("th")
-                    var apparatus;
-
-                    var apparatusHeader = document.createElement("th")
-                    apparatusTable.border = "1"
+                    // apparatusTable.border = "1"
                     apparatusHeader.innerHTML = "Apparatus"
                     quantityHeader.innerHTML = "Quantity"
 
@@ -229,7 +298,7 @@ function getBorrower() {
                     appTable.appendChild(header)
 
                     for (var i = 0; i < borrowers.length; i++) {
-                        if (borrowers[i].idno == id) {
+                        if (borrowers[i].idno == id && borrowers[i].activity === actTitle) {
                             var apparatus = borrowers[i].borrowedApparatus
                             break;
                         }
@@ -241,27 +310,183 @@ function getBorrower() {
                         app.innerHTML = apparatus[i].name
                         var quantity = document.createElement("td");
                         quantity.innerHTML = apparatus[i].quantity
+                        var item = apparatus[i]
+
+                        // alert(id)
+                        //id gamitin mo
+
+                        app.onclick = function(idNumber, activityName, apparatus){
+                            return function(){
+                                alert("shet")
+                                var brokenApparatus;
+
+                                var brokenAppModal = document.getElementById('brokenAppModal')
+                                var inner2 = document.getElementById('aww')
+                                var heading  = document.createElement('h3')
+                                var form = document.createElement('form')
+                                var label = document.createElement('label')
+                                var qtyInput = document.createElement('input')
+                                var submitBtn = document.createElement('input')
+                                var closeBtn = document.createElement("span")
+                                 submitBtn.className = "submitBtn"
+                                inner2.innerHTML = "";
+
+                                heading.id = "brokenApparatus"
+                                heading.innerHTML = apparatus.name
+                                label.innerHTML = "Broken Quantity: "
+
+                                qtyInput.id = "brokenQty"
+                                qtyInput.type = "number"
+                                qtyInput.min = "1"
+                                qtyInput.max = apparatus.quantity
+                                qtyInput.required = true;
+
+                                submitBtn.type = "submit"
+                                submitBtn.value = "Submit"
+
+                                closeBtn.className = "close"
+                                closeBtn.innerHTML = "&times;"
+                                label.innerHTML = "Broken Quantity"
+
+                                closeBtn.onclick = function() {
+                                    brokenAppModal.style.display = "none";
+                                }
+
+                                modal.onclick = function(event) {
+                                    if (event.target == modal) {
+                                        brokenAppModal.style.display = "none";
+                                    }
+                                }
+                                form.className = "form-basic"
+                                form.onsubmit = function(id, activity){
+                                    return function(){
+                                        var brokenAppModal = document.getElementById("brokenAppModal")
+                                        var reviewModal = document.getElementById("reviewModal")
+                                        var borrowers = JSON.parse(localStorage.getItem('Borrowers'))
+                                        var brokenApparatus = document.getElementById('brokenApparatus').innerHTML
+                                        var brokenApparatusQuantity = document.getElementById('brokenQty').value
+                                        var brokenBorrower
+                                        var updatedBorrower;
+                                        var updatedApparatus;
+                                        var updatedApparatusQuantity;
+                                        var indexOfBorrower
+                                        var indexOfApparatus
+
+                                        borrowers.forEach(function(borrower){
+                                            if(id === borrower.idno && activity === borrower.activity){
+                                                brokenBorrowerName = borrower.name
+                                                var apparatuses = borrower.borrowedApparatus
+                                                apparatuses.forEach(function(apparatus){
+                                                    if(apparatus.name === brokenApparatus){
+                                                        alert()
+                                                        apparatus.quantity -= brokenApparatusQuantity;
+                                                        updatedApparatusQuantity = apparatus.quantity
+                                                        indexOfApparatus = apparatuses.indexOf(apparatus)
+                                                        updatedApparatus = apparatus
+                                                        console.log(updatedApparatus)
+                                                    }
+                                                })
+                                                alert("nag match")
+                                                indexOfBorrower = borrowers.indexOf(borrower)
+                                                updatedBorrower = borrower
+                                            }
+                                        })
+                                        // updatedApparatus.quantity = brokenApparatusQuantity
+                                        updatedBorrower.borrowedApparatus[indexOfApparatus] = updatedApparatus
+                                        borrowers[indexOfBorrower] = updatedBorrower
+                                        localStorage.setItem('Borrowers', JSON.stringify(borrowers))
+
+                                        var brokenApparatuses = JSON.parse(localStorage.getItem('brokenApparatuses'))
+                                        if(brokenApparatuses == null){
+                                            brokenApparatuses = []
+                                        }
+
+                                        brokenBorrower = {
+                                            apparatusName: brokenApparatus,
+                                            quantity: brokenApparatusQuantity,
+                                            studentID: id,
+                                            studentName: brokenBorrowerName
+                                        }
+                                        brokenApparatuses.push(brokenBorrower)
+                                        localStorage.setItem('brokenApparatus', JSON.stringify(brokenApparatuses))
+                                        alert("Successfully added to borrowers with broken apparatuses list.")
+
+                                        brokenAppModal.style.display = "none"
+
+
+                                    }
+                                }(idNumber, activityName)
+                                var divLabel = document.createElement('div')
+                                divLabel.className = "form-title-row"
+                                var header = document.createElement('h2')
+                                header.innerHTML = apparatus.name
+                                divLabel.appendChild(header)
+
+                                var divFormRow = document.createElement('div')
+                                divFormRow.className = "form-row"
+                                var formRowLabel = document.createElement("label")
+                                var formRowSpan = document.createElement("span")
+                                formRowSpan.innerHTML = "Broken Quantity: "
+                                formRowLabel.appendChild(formRowSpan)
+                                divFormRow.appendChild(formRowLabel)
+                                divFormRow.appendChild(qtyInput)
+
+                                // form.appendChild(divLabel)
+                                // form.appendChild(qtyInput)
+                                form.appendChild(divLabel)
+                                form.appendChild(divFormRow)
+                                form.appendChild(submitBtn)
+
+                                inner2.appendChild(closeBtn)
+                                // inner2.appendChild(heading)
+                                inner2.appendChild(form)
+
+                                brokenAppModal.style.display = "block"
+                            }
+                        }(id, actTitle, item)
 
                         row.appendChild(app);
                         row.appendChild(quantity);
                         appTable.appendChild(row);
                     };
+                    var tableTitle = document.createElement('h3')
+                    tableTitle.innerHTML = "Borrowed Apparatus"
+
                     inner.appendChild(closeBtn);
+                    inner.appendChild(tableTitle)
                     inner.appendChild(appTable);
                     modal.style.display = "block";
                 }
-            }(apparatusTable, idno);
+            }(apparatusTable, idno, activity);
 
             var returnButton = document.createElement("button");
             returnButton.className = "returnBtn"
             returnButton.innerHTML = "Return"
             // reviewButton.setAttribute("data-id", idno)
 
-            returnButton.onclick = function(id) {
+            returnButton.onclick = function(id, activityTitle) {
                 return function() {
-                    alert("Student with id number " + id + " put to returned column")
+                    alert("Student with id number " + id + " put to returned column.")
                     for (var i = 0; i <= borrowers.length; i++) {
-                        if (borrowers[i].idno == id) {
+                        if (borrowers[i].idno === id && borrowers[i].activity === activityTitle) {
+                            var inventory = JSON.parse(localStorage.getItem('inventory'))
+                            var apparatusIndex
+                            var updatedApparatus;
+                            var updatedApparatusQuantity;
+                            var updatedInventory;
+
+                            inventory.forEach(function(inventoryItem){
+                                borrowers[i].borrowedApparatus.forEach(function(borrowedApparatus){
+                                    if(inventoryItem.item === borrowedApparatus.name){
+                                        apparatusIndex = inventory.indexOf(inventoryItem)
+                                        inventoryItem.quantity += borrowedApparatus.quantity
+                                        updatedApparatusQuantity = inventoryItem.quantity
+                                        updatedApparatus = inventoryItem
+                                    }
+                                })
+                            })
+                            inventory[apparatusIndex] = updatedApparatus;
+                            localStorage.setItem('inventory', JSON.stringify(inventory))
                             returnee = borrowers[i];
                             returnees.push(returnee);
                             borrowers.splice(i, 1);
@@ -269,35 +494,26 @@ function getBorrower() {
                             getReturnees();
                             break;
                         }
-                        alert()
+                        alert("Inventory was synced.")
                     }
                     document.getElementById(id).remove();
-                    // entry.parentElement.removechild(entry);
-                    // document.getElementById("returned").innerHTML = ""
-                    // document.getElementById("returnedMobile").innerHTML = ""
-
                 }
-            }(idno);
+            }(idno, activity);
 
-            console.log("aw")
+            // console.log("aw")
             //make table row draggable
             entry.id = idno
             entry.className = "row entry"
             entry.setAttribute("draggable", "true");
             entry.setAttribute("ondragstart", "drag(event)");
 
+            buttonsColumn.style.padding = "30px 0px "
             buttonsColumn.appendChild(reviewButton);
             buttonsColumn.appendChild(returnButton);
             entry.innerHTML = rows;
             entry.appendChild(buttonsColumn).parentNode
 
-
-            // alert("gg")
-            // borrowedAndReturned.appendChild(entry.cloneNode(true));
             borrowed[0].appendChild(entry);
-            // borrowed[1].appendChild(entry.cloneNode(true));
-            // alert(borrowed.innerHTML)
-
         }
     }
 }
@@ -311,6 +527,7 @@ function addData() {
     var groupno = document.getElementById("groupno").value;
     var instructor = document.getElementById("instructor").value;
     var activity = document.getElementById("activities").value;
+    var manual = document.getElementById("manual").value;
     var borrowedApparatus;
 
     surname = surname.trim().toUpperCase();
@@ -330,17 +547,19 @@ function addData() {
         inventory.forEach(function(inventoryApparatus){
             if(borrowedApparatus.name == inventoryApparatus.item){
                 inventoryApparatus.quantity -= borrowedApparatus.quantity
-                alert("awwwwww")
+                // alert("awwwwww")
                 inventorySync();
             }
         })
     })
-    alert("g")
+    // alert("g")
     borrower = {
         idno: idno,
         name: name,
         groupNumber: groupno,
         instructor: instructor,
+        manual: manual,
+        activity: activity,
         borrowedApparatus: borrowedApparatus
     };
 
@@ -369,37 +588,9 @@ function returns(idno) {
 function sync() {
     localStorage.setItem('Borrowers', JSON.stringify(borrowers));
     localStorage.setItem('Returnees', JSON.stringify(returnees));
-    // getBorrower();
-    // getReturnees();
 }
 
-// function getApparatus(activity) {
-//     var xmlhttp = new XMLHttpRequest();
-//     var url = "../json/activities.json";
-
-//     xmlhttp.onreadystatechange = function() {
-//         if (this.readyState == 4 && this.status == 200) {
-//             var arr = JSON.parse(this.responseText);
-//             var out = "<th>Apparatus</th>";
-//             var i;
-//             var j;
-
-//             for (i = 0; i < arr.length; i++) {
-//                 if (arr[i].activity === activity) {
-//                     for (j = 0; j < arr[i].apparatus.length; j++) {
-//                         out += '<tr><td>' + arr[i].apparatus[j] + '</td></tr>'
-//                     }
-//                 }
-//             }
-//             document.getElementById("apparatus").innerHTML = out;
-//         }
-//     };
-//     xmlhttp.open("GET", url, true);
-//     xmlhttp.send();
-// }
-
 function getApparatus(activityName) {
-    // var manualObject;
     var apparatus = []
     var chapters = []
     var downloadedManuals = JSON.parse(localStorage.getItem('manuals'));

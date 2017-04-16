@@ -64,11 +64,7 @@
 			"apparatus": [{
 					"name": "Models of the human and the frog's circulatory system",
 					"quantity": 1
-				},
-				{
-					"name": "Reference Books",
-					"quantity": 3
-				} //not found in the inventory, must be brought by the students
+				}
 			]
 		},
 		{
@@ -146,7 +142,7 @@
 					"quantity": 1
 				},
 				{
-					"name": "5x Eyepiece ",
+					"name": "5x Eyepiece or a hand lens",
 					"quantity": 1
 				}
 			]

@@ -12,9 +12,17 @@
         <link rel="stylesheet" type="text/css" href="../styles/modal.css">
         <link rel="stylesheet" type="text/css" href="../styles/student.css">
         <link rel="stylesheet" type="text/css" href="../styles/inventory.css">
-        <script defer type="text/javascript" src="../scripts/modal.js"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                if (document.cookie.indexOf("session=Valid") == -1) {
+                    location.href = "pages/validate-login.html";
+                }   
+            }
+        </script>
         <script type="text/javascript" src="../scripts/preload.js"></script>
         <script defer type="text/javascript" src="../scripts/inventory.js"></script>
+        <link rel="stylesheet" type="text/css" href="../styles/form.css">
+        <link rel="stylesheet" type="text/css" href="../scripts/modal.js">
     </head>
     <body>
         <div class="container">
@@ -30,12 +38,10 @@
                                 <li>
                                     <a class="gn-icon gn-icon-search" href="student.html">Borrow</a>
                                 </li>
+                                <li><a class="gn-icon gn-icon-article" href="pages/inventory.html">Inventory</a></li>
+                                <li><a class="gn-icon gn-icon-download" href="../pages/download.html">Download Manuals</a></li>
                                 <li>
-                                    <a class="gn-icon gn-icon-article" href="pages/inventory.html">Inventory</a></li>
-                                <li>
-                                    <a class="gn-icon gn-icon-download" href="pages/download.html">Download Manuals</a></li>
-                                <li>
-                                    <a class="gn-icon gn-icon-archive" href="pages/reports.html">Reports</a>
+                                    <a class="gn-icon gn-icon-archive">Reports</a>
                                 </li>
                             </ul>
                         </div>
@@ -47,42 +53,70 @@
             </ul>
             <div class="container main">
                 <div class="row">
-                    <div class="five columns">
-                        <h1>Add / Update Apparatus Inventory</h1>
-                        <button id="addNewItem">Add new item</button>
-                        <button id="updateItem">View Inventory</button>
+                    <div class="twelve columns">
+                        <div class="row">
+                            <div class="twelve columns">
+                                <h1>Add / Update Apparatus Inventory</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="twelve columns">
+                                <button id="updateItem">View Inventory</button> 
+                                <button id="addNewItem">Add NEW Item</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="add" class="row">
                     <div class="twelve columns">
-                        <h1>Add</h1>
-                        <form id="addApparatusForm">
-                            <strong><label for="apparatus">Apparatus:</label></strong>
-                            <input id="apparatus" type="text">
-                            <br>
-                            <strong><label for="quantity">Quantity:</label></strong>
-                            <input id="apparatusQuantity" type="number">
-                            <input type="submit" value="Add">
-                        </form>
-                    </div>
-                </div>
-                <div id="update" class="row">
-                    <div class="twelve columns">
                         <div class="row">
-                            <div class="eight columns">
-                                <h1>Update</h1>
+                            <div class="twelve columns">
+                                <form id="addApparatusForm"  onsubmit="addData()" class="form-basic">
+                                    <div class="form-title-row">
+                                        <h1>Add Apparatus</h1>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>
+                                        <span>Apparatus</span>
+                                        <input id = "apparatus" type = "text" required>
+                                        </label>
+                                    </div>
+                                    <div class="form-row">
+                                        <label>
+                                        <span>Quantity</span>
+                                        <input id = "apparatusQuantity" type = "number" required>
+                                        </label>
+                                    </div>
+                                    <div class="form-row">
+                                        <input id="addBorrowerBtn" type="submit" value="Add"></input>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="four columns">
-                                <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
-                            </div>
-                        </div>
-                        <div class="row searchArea">
-                            <table id="apparatusTable">
-                            </table>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="update" class="row">
+                <div class="twelve columns">
+                    <div class="row">
+                        <div class="eight columns">
+                            <h1>Update</h1>
+                        </div>
+                        <div class="four columns">
+                            <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
+                        </div>
+                    </div>
+                    <div class="row searchArea">
+                        <table id="apparatusTable">
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div id="apparatusModal" class="modal">
+                <div class="modal-content" id="aw">
+                </div>
+            </div>
+        </div>
         </div>
         <script src="../scripts/classie.js"></script>
         <script src="../scripts/gnmenu.js"></script>

@@ -12,7 +12,29 @@
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
+#reviewModal{
+    z-index: 18;
+}
+#brokenAppModal{
+    z-index: 19;
+    padding-top: 150px;
+}
+#brokenQty{
+    /*max-width: 100px;*/
+width: 60%;
+}
+.submitBtn{
+    display: block;
+}
+/*@media (max-width: 672){
+    #brokenAppModal div.modal-content{
+        max-width: 80%;
+    }
+}*/
+#brokenAppModal div.modal-content{
+    max-width: 50%;
+    width: 100%;
+}
 /* Modal Content */
 .modal-content {
     background-color: #fefefe;
@@ -36,6 +58,9 @@
     cursor: pointer;
 }
 
-th,tr{
+th, tr, label, #aww h3, #aw h3{
     color: black;
+}
+td:hover{
+    cursor: pointer;
 }

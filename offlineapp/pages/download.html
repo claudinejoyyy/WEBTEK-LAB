@@ -10,6 +10,13 @@
         <link rel="stylesheet" type="text/css" href="../styles/component.css" />
         <link rel="stylesheet" type="text/css" href="../styles/student.css" />
         <link rel="stylesheet" type="text/css" href="../styles/layout.css" />
+        <script type="text/javascript">
+            window.onload = function(){
+                if (document.cookie.indexOf("session=Valid") == -1) {
+                    location.href = "pages/validate-login.html";
+                }   
+            }
+        </script>
 		<script defer type="text/javascript" src="../scripts/downloadManual.js"></script>
         <script type="text/javascript" src="../scripts/preload.js"></script>
         <link rel="stylesheet" type="text/css" href="../styles/form.css">
@@ -28,12 +35,10 @@
                                 <li>
                                     <a id="BR"class="gn-icon gn-icon-search" href="student.html">Borrow</a>
                                 </li>
+                                <li><a class="gn-icon gn-icon-article" href="inventory.html">Inventory</a></li>
+                                <li><a class="gn-icon gn-icon-download" href="download.html">Download Manuals</a></li>
                                 <li>
-                                    <a class="gn-icon gn-icon-article" href="inventory.html">Inventory</a></li>
-                                <li>
-                                    <a class="gn-icon gn-icon-download" href="download.html">Download Manuals</a></li>
-                                <li>
-                                    <a class="gn-icon gn-icon-archive" href="reports.html">Reports</a>
+                                    <a class="gn-icon gn-icon-archive">Reports</a>
                                 </li>
                             </ul>
                         </div>
