@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Login Form</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Form</title>
     <script src = "../scripts/login.js"></script>
-	<link rel="stylesheet" href="../styles/demo.css">
-	<link rel="stylesheet" href="../styles/form-login.css">
+    <link rel="stylesheet" href="../styles/demo.css">
+    <link rel="stylesheet" href="../styles/form-login.css">
 </head>
     <div class="main-content">
-        <form class="form-login" method="post" action="#" onsubmit="validate()">
+        <form onsubmit="validate()" class="form-login" method="post" action="#">
             <div class="form-log-in-with-username">
                 <div class="form-white-background">
                     <div class="form-title-row">
@@ -19,17 +19,17 @@
                     <div class="form-row">
                         <label>
                             <span>Username</span>
-                            <input type="username" name="username">
+                            <input type="text" name="username" id="username">
                         </label>
                     </div>
                     <div class="form-row">
                         <label>
                             <span>Password</span>
-                            <input type="password" name="password">
+                            <input type="password" name="password" id="password">
                         </label>
                     </div>
                     <div class="form-row">
-                        <button type="submit">Log in</button>
+                        <button type="submit" class="button">Log in</button>
                     </div>
                 </div>
             </div>
