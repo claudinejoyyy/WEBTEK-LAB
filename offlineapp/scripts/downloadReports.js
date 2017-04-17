@@ -21,7 +21,7 @@ function convertArrayOfObjectsToCSV(studentsWithBrokenApparatuses) {
             keys.forEach(function(key) {
                 if (ctr > 0) result += columnDelimiter;
 
-                result += item[key];
+                result += ('"'+item[key]+'"');
                 ctr++;
             });
             result += lineDelimiter;
@@ -29,8 +29,10 @@ function convertArrayOfObjectsToCSV(studentsWithBrokenApparatuses) {
 
         return result;
     }
-    function downloadCSV(args) {  
-        var data, filename, link;
+    function downloadCSV(args) { 
+        var brokenArray = JSON.parse(localStorage.getItem('brokenAppratus'))
+        
+            var data, filename, link;
         var csv = convertArrayOfObjectsToCSV({
             data: studentsWithBrokenApparatuses
         });
@@ -47,4 +49,6 @@ function convertArrayOfObjectsToCSV(studentsWithBrokenApparatuses) {
         link.setAttribute('href', data);
         link.setAttribute('download', filename);
         link.click();
+        
+        
     }

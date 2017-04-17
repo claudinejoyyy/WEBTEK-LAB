@@ -13,7 +13,7 @@
 
 #apparatusTable th, #apparatusTable td {
     text-align: left; /* Left-align text */
-    padding: 12px; /* Add padding */
+    padding: 14px; /* Add padding */
 }
 
 #apparatusTable tr {

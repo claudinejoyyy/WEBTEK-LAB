@@ -45,10 +45,8 @@ function addApparatusToInventory() {
     var quantity = +document.getElementById("apparatusQuantity").value;
     var apparatusInventory = JSON.parse(localStorage.getItem('inventory'))
     var flag = true;
-    // alert(item)
     apparatusInventory.forEach(function(apparatus) {
         if (item.toUpperCase() == apparatus.item.toUpperCase()) {
-            // alert()
             flag = false;
         }
     })
@@ -165,11 +163,9 @@ function displayInventory() {
 
                         inventory.forEach(function(apparatus) {
                             if (apparatus.item == appName) {
-                                alert('yahoo')
                                 apparatusIndex = inventory.indexOf(apparatus)
                                 apparatus.quantity -= qty
                                 updatedApparatus = apparatus
-                                alert("JEJE")
                             }
                         })
                         inventory[apparatusIndex] = updatedApparatus;
@@ -256,7 +252,7 @@ function displayInventory() {
                         inventory.forEach(function(apparatus) {
                             if (apparatus.item == appName) {
                                 apparatusIndex = inventory.indexOf(apparatus)
-                                apparatus.quantity = (apparatus.quantity + qty)
+                                apparatus.quantity = (parseInt(apparatus.quantity) + parseInt(qty))
                                 updatedApparatus = apparatus
                             }
                         })

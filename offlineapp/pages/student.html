@@ -34,7 +34,7 @@
                                 <li><a class="gn-icon gn-icon-article" href="inventory.html">Inventory</a></li>
                                 <li><a class="gn-icon gn-icon-download" href="download.html">Download Manuals</a></li>
                                 <li>
-                                    <a class="gn-icon gn-icon-archive">Reports</a>
+                                    <a class="gn-icon gn-icon-archive" href="../pages/reports.html">Reports</a>
                                 </li>
                             </ul>
                         </div>
@@ -48,7 +48,7 @@
             </ul>
             <div id="addForm" class="row">
                 <div class="twelve columns">
-                    <form id = "person" onsubmit="addData()" class="form-basic">
+                    <form id = "person" class="form-basic" onsubmit="redirect()">
                         <div class="form-title-row">
                             <h1>Add Borrower</h1>
                         </div>
@@ -103,7 +103,7 @@
                             </label>
                         </div>
                         <div class="form-row">
-                            <input id="addBorrowerBtn" type="submit" value="Add Borrower"></input>
+                            <input id="addBorrowerBtn" value="Add Borrower" type="submit" onclick="redirect()">Add Borrower</input>
                         </div>
                     </form>
                 </div>
@@ -164,6 +164,46 @@
         <script src="../scripts/gnmenu.js"></script>
         <script>
             new gnMenu( document.getElementById( 'gn-menu' ) );
+        </script>
+        <script>
+        function searchBorrowed() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("borrowedInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("borrowed");
+        entries = div.getElementsByClassName("row entry");
+
+        for (i = 0; i < entries.length; i++) {
+            entry = entries[i].getElementsByClassName("ten columns")[0];
+                if (entry) {
+                    if (entry.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    entries[i].style.display = "";
+                    } else {
+                        entries[i].style.display = "none";
+                    }
+                } 
+        }
+        }
+
+        function searchReturned() {
+        var input, filter, table, tr, td, i;
+        input = document.getElementById("returnedInput");
+        filter = input.value.toUpperCase();
+        div = document.getElementById("returned");
+        entries = div.getElementsByClassName("row entry");
+
+        for (i = 0; i < entries.length; i++) {
+            entry = entries[i].getElementsByClassName("ten columns")[0];
+                if (entry) {
+                    // alert(entry.innerHTML)
+                    if (entry.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                    entries[i].style.display = "";
+                    } else {
+                        entries[i].style.display = "none";
+                    }
+                } 
+        }
+        }
         </script>
     </body>
 </html>

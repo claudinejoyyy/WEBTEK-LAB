@@ -94,15 +94,18 @@ window.onload = function() {
 
     manuals = JSON.parse(localStorage.getItem('manuals'))
     var manual = document.getElementById("manual");
-    // console.log(manuals)
     for (i = 0; i < manuals.length; i++) {
         var option = document.createElement("option");
         option.text = manuals[i].manualName
-        // console.log
         option.setAttribute("value", manuals[i].manualName);
         manual.add(option);
     }
 }
+
+            function redirect(){
+                addData()
+                location.href = "student.html"
+            }
 
 function getReturnees() {
     rs = JSON.parse(localStorage.getItem('Returnees'))
@@ -175,7 +178,6 @@ function getReturnees() {
 
                     for (var i = 0; i < returnees.length; i++) {
                         if (returnees[i].idno == id && returnees[i].activity === activityTitle) {
-                            alert(returnees[i].activity)
                             var apparatus = returnees[i].borrowedApparatus
                             break;
                         }
@@ -312,14 +314,9 @@ function getBorrower() {
                         quantity.innerHTML = apparatus[i].quantity
                         var item = apparatus[i]
 
-                        // alert(id)
-                        //id gamitin mo
-
                         app.onclick = function(idNumber, activityName, apparatus){
                             return function(){
-                                alert("shet")
                                 var brokenApparatus;
-
                                 var brokenAppModal = document.getElementById('brokenAppModal')
                                 var inner2 = document.getElementById('aww')
                                 var heading  = document.createElement('h3')
@@ -328,7 +325,7 @@ function getBorrower() {
                                 var qtyInput = document.createElement('input')
                                 var submitBtn = document.createElement('input')
                                 var closeBtn = document.createElement("span")
-                                 submitBtn.className = "submitBtn"
+                                submitBtn.className = "submitBtn"
                                 inner2.innerHTML = "";
 
                                 heading.id = "brokenApparatus"
@@ -378,15 +375,12 @@ function getBorrower() {
                                                 var apparatuses = borrower.borrowedApparatus
                                                 apparatuses.forEach(function(apparatus){
                                                     if(apparatus.name === brokenApparatus){
-                                                        alert()
                                                         apparatus.quantity -= brokenApparatusQuantity;
                                                         updatedApparatusQuantity = apparatus.quantity
                                                         indexOfApparatus = apparatuses.indexOf(apparatus)
                                                         updatedApparatus = apparatus
-                                                        console.log(updatedApparatus)
                                                     }
                                                 })
-                                                alert("nag match")
                                                 indexOfBorrower = borrowers.indexOf(borrower)
                                                 updatedBorrower = borrower
                                             }
@@ -402,10 +396,10 @@ function getBorrower() {
                                         }
 
                                         brokenBorrower = {
-                                            apparatusName: brokenApparatus,
-                                            quantity: brokenApparatusQuantity,
                                             studentID: id,
-                                            studentName: brokenBorrowerName
+                                            studentName: brokenBorrowerName,
+                                            apparatusName: brokenApparatus,
+                                            quantity: brokenApparatusQuantity
                                         }
                                         brokenApparatuses.push(brokenBorrower)
                                         localStorage.setItem('brokenApparatus', JSON.stringify(brokenApparatuses))
@@ -419,6 +413,7 @@ function getBorrower() {
                                 var divLabel = document.createElement('div')
                                 divLabel.className = "form-title-row"
                                 var header = document.createElement('h2')
+                                header.id = "brokenApparatus"
                                 header.innerHTML = apparatus.name
                                 divLabel.appendChild(header)
 
@@ -500,7 +495,6 @@ function getBorrower() {
                 }
             }(idno, activity);
 
-            // console.log("aw")
             //make table row draggable
             entry.id = idno
             entry.className = "row entry"
@@ -538,7 +532,6 @@ function addData() {
     for (var cc = 0; cc < Object.keys(b).length; cc++) {
         if (b[cc].activityName == activity) {
             borrowedApparatus = b[cc].apparatus;
-            // alert(borrowedApparatus)
         }
     }
 
@@ -547,12 +540,10 @@ function addData() {
         inventory.forEach(function(inventoryApparatus){
             if(borrowedApparatus.name == inventoryApparatus.item){
                 inventoryApparatus.quantity -= borrowedApparatus.quantity
-                // alert("awwwwww")
                 inventorySync();
             }
         })
     })
-    // alert("g")
     borrower = {
         idno: idno,
         name: name,
@@ -565,8 +556,9 @@ function addData() {
 
     borrowers.push(borrower);
     sync();
+    location.href = "student.html"
     getBorrower();
-    resetForm();
+    
 }
 
 function inventorySync() {
@@ -594,16 +586,11 @@ function getApparatus(activityName) {
     var apparatus = []
     var chapters = []
     var downloadedManuals = JSON.parse(localStorage.getItem('manuals'));
-    console.log(downloadedManuals)
     downloadedManuals.forEach(function(element1){
         if(element1.manualName === chosenManual){
-            // alert()
-            // console.log(manualObject)
             chapters = element1.chapters
-            // [chapterNumber].apparatus;
         }
     })
-    console.log(typeof chapters)
     chapters.forEach(function(element2){
                 if(element2.activityName === activityName){
                     apparatus = element2.apparatus;
@@ -661,12 +648,10 @@ function setActivities(man) {
         if (element.manualName === chosenManual) {
             // a = JSON.parse(localStorage.getItem(element));
             b = element.chapters;
-            console.log(b)
 
             for (i = 0; i < b.length; i++) {
                 var x = document.getElementById("activities");
                 var option = document.createElement("option");
-                console.log(b[i].activityName)
                 option.text = b[i].activityName;
                 option.setAttribute("value", b[i].activityName);
                 x.add(option);

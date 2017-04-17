@@ -107,7 +107,7 @@ html{
     width: auto;
 }
 
-.form-basic input#addBorrowerBtn,
+.form-basic button#addBorrowerBtn,
 .form-basic input#downloadManualBtn,
 .form-basic input#deleteApparatusBtn,
 .form-basic input#addApparatusBtn{

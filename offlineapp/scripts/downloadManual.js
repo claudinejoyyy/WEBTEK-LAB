@@ -11,14 +11,13 @@ function downloadManual(manual) {
             var downloadedManual = JSON.parse(this.responseText)
             var manuals = JSON.parse(localStorage.getItem('manuals'))
             var flag = true;
-            if(manuals === null){
+            if(manuals == null){
                 manuals = [];
                 manuals.push(downloadedManual);
                 localStorage.setItem('manuals', JSON.stringify(manuals))
                 alert("Success! Downloaded "+downloadedManual.manualName+" manual!")
                 
              } else{
-                alert()
                 for (var i = 0; i < manuals.length; i++) {
                     if(manuals[i].manualName === downloadedManual.manualName){
                         alert(downloadedManual.manualName+" manual is ALREADY DOWNLOADED.")
@@ -27,7 +26,7 @@ function downloadManual(manual) {
                     }
                 };
                 if(flag === true){
-                    manuals.push(downloadedManual);
+                manuals.push(downloadedManual);
                 localStorage.setItem('manuals', JSON.stringify(manuals))
                 alert("Success! Downloaded "+downloadedManual.manualName+" manual!")
                 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Add/Update Inventory</title>
+        <title>Reports</title>
         <link rel="stylesheet" type="text/css" href="../styles/normalize.css" />
         <link rel="stylesheet" type="text/css" href="../styles/demo.css" />
         <link rel="stylesheet" type="text/css" href="../styles/component.css" />
@@ -12,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="../styles/modal.css">
         <link rel="stylesheet" type="text/css" href="../styles/student.css">
         <link rel="stylesheet" type="text/css" href="../styles/inventory.css">
+        <link rel="stylesheet" type="text/css" href="../styles/form.css">
+        <link rel="stylesheet" type="text/css" href="../scripts/modal.js">
         <script type="text/javascript">
             window.onload = function(){
                 if (document.cookie.indexOf("session=Valid") == -1) {
@@ -20,8 +22,8 @@
             }
         </script>
         <script defer type="text/javascript" src="../scripts/inventory.js"></script>
-        <link rel="stylesheet" type="text/css" href="../styles/form.css">
-        <link rel="stylesheet" type="text/css" href="../scripts/modal.js">
+        <script defer type="text/javascript" src="../scripts/downloadReports.js"></script>
+        <script defer type="text/javascript" src="../scripts/reports.js"></script>
     </head>
     <body>
         <div class="container">
@@ -47,7 +49,7 @@
                         <!-- /gn-scroller -->
                     </nav>
                 </li>
-                <li><a href="#">INVENTORY</a></li>
+                <li><a href="#">REPORTS</a></li>
                 <li><a id="hehez" href="#"><span></span></a></li>
             </ul>
             <div class="container main">
@@ -55,64 +57,31 @@
                     <div class="twelve columns">
                         <div class="row">
                             <div class="twelve columns">
-                                <h1>Add / Update Apparatus Inventory</h1>
+                                <h1>Broken Apparatuses Report</h1>
                             </div>
                         </div>
                         <div class="row">
                             <div class="twelve columns">
-                                <button id="updateItem">View Inventory</button> 
-                                <button id="addNewItem">Add NEW Item</button>
+                                <button id="updateItem" onclick='downloadCSV({ filename: "brokenApparatusByStudents.csv" });'>Download Report</button> 
                             </div>
                         </div>
                     </div>
                 </div>
-                <div id="add" class="row">
+                <div id="brokenDiv" class="row">
                     <div class="twelve columns">
                         <div class="row">
-                            <div class="twelve columns">
-                                <form id="addApparatusForm"  onsubmit="addData()" class="form-basic">
-                                    <div class="form-title-row">
-                                        <h1>Add Apparatus</h1>
-                                    </div>
-                                    <div class="form-row">
-                                        <label>
-                                        <span>Apparatus</span>
-                                        <input id = "apparatus" type = "text" required>
-                                        </label>
-                                    </div>
-                                    <div class="form-row">
-                                        <label>
-                                        <span>Quantity</span>
-                                        <input id = "apparatusQuantity" type = "number" required>
-                                        </label>
-                                    </div>
-                                    <div class="form-row">
-                                        <input id="addBorrowerBtn" type="submit" value="Add"></input>
-                                    </div>
-                                </form>
+                            <div class="eight columns">
+                                <h1>List</h1>
+                            </div>
+                            <div class="four columns">
+                                <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
                             </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div id="update" class="row">
-                <div class="twelve columns">
-                    <div class="row">
-                        <div class="eight columns">
-                            <h1>Update</h1>
-                        </div>
-                        <div class="four columns">
-                            <input type="text" id="search" onkeyup="searchApparatus()" placeholder="Search.." class="searchInput">
+                        <div class="row searchArea">
+                            <table id="apparatusTable">
+                            </table>
                         </div>
                     </div>
-                    <div class="row searchArea">
-                        <table id="apparatusTable">
-                        </table>
-                    </div>
-                </div>
-            </div>
-            <div id="apparatusModal" class="modal">
-                <div class="modal-content" id="aw">
                 </div>
             </div>
         </div>
