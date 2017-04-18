@@ -101,12 +101,6 @@ window.onload = function() {
         manual.add(option);
     }
 }
-
-            function redirect(){
-                addData()
-                location.href = "student.html"
-            }
-
 function getReturnees() {
     rs = JSON.parse(localStorage.getItem('Returnees'))
     var returned = document.querySelectorAll(".returned");

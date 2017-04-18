@@ -11,7 +11,7 @@ window.onload = function() {
 
 function setInventory() {
     var xmlhttp = new XMLHttpRequest();
-    var url = "/json/Inventory.json";
+    var url = "json/Inventory.json";
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
