@@ -1,5 +1,7 @@
 # WEBTEK-LAB
 
-**Jenmar, Josh** - login verification first before user can access other web pages
+**RUN CHROME WITH EXTENDED COMMAND IN COMMAND LINE**
 
-**Aerhielle, Claudine** - json files of manuals, design of web pages
+    -go to directory of chrome.exe
+
+    -run   chrome --allow-file-access-from-files
